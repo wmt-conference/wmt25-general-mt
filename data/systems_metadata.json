@@ -64,11 +64,6 @@
         "constrained": true,
         "description": "Eole NLP Submission uses Tower+ 9B model with an extra layer for quality estimation.\r\n\r\nIt generates multiple hypotheses and rank them according to an internal score."
     },
-    "GIIFT": {
-        "filename": "wmt25genmt.multi-multi.wmt25mt_updated.jsonl.gz.59",
-        "constrained": false,
-        "description": ""
-    },
     "Algharb": {
         "filename": "wmt25genmt.multi-multi.algharb.71",
         "constrained": true,
