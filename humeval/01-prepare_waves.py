@@ -38,7 +38,7 @@ LANG_TO_3 = {
     "it": "ita",
 }
 
-with contextlib.chdir(pathlib.Path(__file__).parent):
+with contextlib.chdir(pathlib.Path(__file__).parent.parent):
     with open("data/wmt25-genmt.jsonl", "r") as f:
         data = [json.loads(x) for x in f.readlines()]
     # take only the information we need
