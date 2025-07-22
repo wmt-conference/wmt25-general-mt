@@ -15,10 +15,11 @@ def read_file_with_fallback(path: pathlib.Path) -> str:
     raise UnicodeDecodeError(f"Cannot decode file: {path}")
 
 LANGS = {
-    "en-cs_CZ", "cs-uk_UA", "cs-de_DE", "en-et_EE", "en-is_IS", "en-ja_JP", "ja-zh_CN", "en-ar_EG", "en-sr_Cyrl_RS",
+    "en-cs_CZ", "cs-uk_UA", "cs-de_DE", "en-et_EE", "en-is_IS", "en-ja_JP", "en-ar_EG", "en-sr_Cyrl_RS",
     "en-sr_Latn_RS",
     "en-ru_RU", "en-uk_UA", "en-ko_KR", "en-bho_IN", "en-mas_KE", "en-zh_CN", "en-it_IT",
     # en-de_DE is done by Google
+    # ja-zh_CN is done by Google
 }
 LANG_TO_3 = {
     "en": "eng",
@@ -54,9 +55,9 @@ with contextlib.chdir(pathlib.Path(__file__).parent.parent):
             "screenshot": x["screenshot"],
             "tgt_text": {"refA": x["refs"]["refA"]["ref"].split("\n\n")} if len(x["refs"]) != 0 else {},
             "words": (
-                sum([len(line.split()) for line in x["src_text"]])
+                len(x["src_text"].split())
                 if x["src_lang"] not in {"zh_CN", "ko_KR", "ja_JP"} else
-                sum([len(line) for line in x["src_text"]]) // 2
+                len(x["src_text"]) // 2
             )
         }
         for x in data
@@ -141,18 +142,18 @@ for batch_name, data_local in data_agg.items():
     prev_lang = batch_name[:2]
 
     diversity = [
-        # statistics.mean([
-        #     docA != docB
-        #     for sysA, sysB in itertools.combinations(doc["tgt_text"].keys(), 2)
-        #     for docA, docB in zip(doc["tgt_text"][sysA], doc["tgt_text"][sysB])
-        # ])
-        -np.mean([
-            fastchrf.pairwise_chrf(
-                [[doc["tgt_text"][sys][i] for sys in doc["tgt_text"].keys()]],
-                [[doc["tgt_text"][sys][i] for sys in doc["tgt_text"].keys()]],
-            )
-            for i in range(len(list(doc["tgt_text"].values())[0]))
+        statistics.mean([
+            docA != docB
+            for sysA, sysB in itertools.combinations(doc["tgt_text"].keys(), 2)
+            for docA, docB in zip(doc["tgt_text"][sysA], doc["tgt_text"][sysB])
         ])
+        # -np.mean([
+        #     fastchrf.pairwise_chrf(
+        #         [[doc["tgt_text"][sys][i] for sys in doc["tgt_text"].keys()]],
+        #         [[doc["tgt_text"][sys][i] for sys in doc["tgt_text"].keys()]],
+        #     )
+        #     for i in range(len(list(doc["tgt_text"].values())[0]))
+        # ])
         for doc in data_local
     ]
     # sort from highest diversity
@@ -163,8 +164,8 @@ for batch_name, data_local in data_agg.items():
 
     data_waves = [[]]
     for doc in data_local:
-        # chunk into 50-hours waves
-        if sum([doc["words"]*len(doc["tgt_text"]) for doc in data_waves[-1]]) * 0.8 / 60 /60 >= 35:
+        # chunk into 15-hours waves (we have 4 domains so one wave is 60 hours ~= 1/3 of 200hrs)
+        if sum([doc["words"]*len(doc["tgt_text"]) for doc in data_waves[-1]]) * 0.8 / 60 /60 >= 15:
             data_waves.append([])
         data_waves[-1].append(doc)
     
@@ -192,7 +193,7 @@ for batch_name, data_local in data_agg.items():
         )
 
         # save selection
-        data_agg_new[(*batch_name, f"wave{wave_i+1}")] = data_local
+        data_agg_new[(*batch_name, f"wave{wave_i+1}")] = data_wave
 
 
 # %%
@@ -213,6 +214,7 @@ for batch_name, data_local in data_agg_new.items():
     ]
     R_SHUFFLE.shuffle(data_flat)
 
+
     task = []
     for doc in data_flat:
         # approx number of words manageable in one hour
@@ -227,6 +229,7 @@ for batch_name, data_local in data_agg_new.items():
     print(
         f"{batch_name[0]+"-"+batch_name[1]+" (" + batch_name[2] + "," + batch_name[3] + ")":>25}",
         f"{len(tasks_agg[batch_name]):>2} tasks",
+        f"{sum([doc["words"] for doc in data_flat])*0.8/60/60:.0f}h",
     )
     
     # TODO: add attention checks
@@ -304,7 +307,7 @@ for batch_name, tasks in tasks_agg.items():
                     "mqm": [],
                     "documentID": doc["doc_id"],
                     "sourceID": doc["doc_id"] + "_#_" + str(line_i),
-                    "targetID": doc["doc_id"] + "_#_" + str(line_i) + "_#_" + doc["system"],
+                    "targetID": doc["system"],
                     "sourceText": src_line,
                     "targetText": tgt_line,
                     "itemType": "TGT",
@@ -338,17 +341,18 @@ for batch_name, tasks in tasks_agg.items():
         "TASK_OPTIONS": "ESA;StaticContext"
     }
     campaign_no += 1
-    with open(f"appraise/{manifest['CAMPAIGN_NAME']}_manifest.json", "w") as f:
-        json.dump(manifest, f, indent=2, ensure_ascii=False)
-    with open(f"appraise/{manifest['CAMPAIGN_NAME']}_tasks.json", "w") as f:
-        json.dump(tasks_flat, f, indent=2, ensure_ascii=False)
+    with contextlib.chdir(pathlib.Path(__file__).parent.parent):    
+        with open(f"appraise/{manifest['CAMPAIGN_NAME']}_manifest.json", "w") as f:
+            json.dump(manifest, f, indent=2, ensure_ascii=False)
+        with open(f"appraise/{manifest['CAMPAIGN_NAME']}_tasks.json", "w") as f:
+            json.dump(tasks_flat, f, indent=2, ensure_ascii=False)
 
 
 # %%
 
 """
-for wave in 1 2 3 4 5; do
-    zip appraise/v1_wave${wave}.zip appraise/*wave${wave}*.json
+for wave in 1 2; do
+    zip appraise/v2_wave${wave}.zip appraise/*wave${wave}*.json
 done;
 """
 
@@ -401,4 +405,7 @@ python3 manage.py StartNewCampaign \
     /home/vilda/wmt25-general-mt/appraise/wmt25engcesIsocialIwave1_manifest.json \
     --batches-json /home/vilda/wmt25-general-mt/appraise/wmt25engcesIsocialIwave1_tasks.json \
     --csv-output /home/vilda/wmt25-general-mt/appraise_output/wmt25engcesIsocialIwave1.csv
+
+
+    
 """
