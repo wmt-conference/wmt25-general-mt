@@ -79,16 +79,6 @@
         "constrained": false,
         "description": "Team SH's submission consists of two standard LLMs based on cyberagent/DeepSeek-R1-Distill-Qwen-14B-Japanese: an initial translation model fine-tuned with LoRA \\citep{hu2022lora}, and an automatic post-editing model fine-tuned with LoRA and SimPO \\citep{meng2024simpo}. Both use MBR decoding \\citep{muller-sennrich-2021-understanding}.\r\n\r\n@inproceedings{\r\nmeng2024simpo,\r\ntitle={Sim{PO}: Simple Preference Optimization with a Reference-Free Reward},\r\nauthor={Yu Meng and Mengzhou Xia and Danqi Chen},\r\nbooktitle={The Thirty-eighth Annual Conference on Neural Information Processing Systems},\r\nyear={2024},\r\nurl={https://openreview.net/forum?id=3Tzcot1LKb}\r\n}\r\n\r\n@inproceedings{\r\nhu2022lora,\r\ntitle={Lo{RA}: Low-Rank Adaptation of Large Language Models},\r\nauthor={Edward J Hu and yelong shen and Phillip Wallis and Zeyuan Allen-Zhu and Yuanzhi Li and Shean Wang and Lu Wang and Weizhu Chen},\r\nbooktitle={International Conference on Learning Representations},\r\nyear={2022},\r\nurl={https://openreview.net/forum?id=nZeVKeeFYf9}\r\n}\r\n\r\n@inproceedings{muller-sennrich-2021-understanding,\r\n    title = \"Understanding the Properties of Minimum {B}ayes Risk Decoding in Neural Machine Translation\",\r\n    author = {M{\\\"u}ller, Mathias  and\r\n      Sennrich, Rico},\r\n    editor = \"Zong, Chengqing  and\r\n      Xia, Fei  and\r\n      Li, Wenjie  and\r\n      Navigli, Roberto\",\r\n    booktitle = \"Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers)\",\r\n    month = aug,\r\n    year = \"2021\",\r\n    address = \"Online\",\r\n    publisher = \"Association for Computational Linguistics\",\r\n    url = \"https://aclanthology.org/2021.acl-long.22/\",\r\n    doi = \"10.18653/v1/2021.acl-long.22\",\r\n    pages = \"259--272\",\r\n}"
     },
-    "hybrid": {
-        "filename": "wmt25genmt.multi-multi.hybrid.40",
-        "constrained": true,
-        "description": "submission"
-    },
-    "HYT": {
-        "filename": "wmt25genmt.multi-multi.res_wmt25.jsonl.43",
-        "constrained": false,
-        "description": ""
-    },
     "In2x": {
         "filename": "wmt25genmt.multi-multi.in2x.84",
         "constrained": false,
@@ -163,11 +153,6 @@
         "filename": "wmt25genmt.multi-multi.systran.74",
         "constrained": true,
         "description": "We present an English-to-Japanese translation system built upon the EuroLLM-9B\\cite{martins2025eurollm9btechnicalreport} model. The training process involves two main stages: continue pretraining (CPT) and supervised fine-tuning (SFT). After both stages, we further tuned the model using a development set to optimize performance. For training data, we employed both basic filtering techniques and high-quality filtering strategies to ensure data cleanness. Additionally, we classify both the training data and development data into 4 different domains and we train and finetune with domain specific prompts during system training. Finally, we applied Minimum Bayes Risk (MBR) decoding and paragraph-level reranking for post-processing to enhance translation quality.\r\n\r\n@misc{martins2025eurollm9btechnicalreport,\r\n      title={EuroLLM-9B: Technical Report}, \r\n      author={Pedro Henrique Martins and João Alves and Patrick Fernandes and Nuno M. Guerreiro and Ricardo Rei and Amin Farajian and Mateusz Klimaszewski and Duarte M. Alves and José Pombal and Nicolas Boizard and Manuel Faysse and Pierre Colombo and François Yvon and Barry Haddow and José G. C. de Souza and Alexandra Birch and André F. T. Martins},\r\n      year={2025},\r\n      eprint={2506.04079},\r\n      archivePrefix={arXiv},\r\n      primaryClass={cs.CL},\r\n      url={https://arxiv.org/abs/2506.04079}, \r\n}"
-    },
-    "TMTHY": {
-        "filename": "wmt25genmt.multi-multi.tmthy.35",
-        "constrained": true,
-        "description": "TBD"
     },
     "TranssionMT": {
         "filename": "wmt25genmt.multi-multi.transsionmt.76",
