@@ -1,0 +1,4306 @@
+{
+    "Kaze-MT": {
+        "ja-zh_CN": {
+            "ja": 8,
+            "zh": 326
+        }
+    },
+    "TowerPlus-9B": {
+        "cs-de_DE": {
+            "de": 457
+        },
+        "cs-uk_UA": {
+            "uk": 404,
+            "ru": 1
+        },
+        "en-ar_EG": {
+            "ar": 316,
+            "uk": 2,
+            "zh": 5,
+            "en": 4,
+            "fi": 1,
+            "ro": 1,
+            "arz": 1,
+            "ur": 1,
+            "mzn": 1
+        },
+        "en-bn_BD": {
+            "bn": 78,
+            "hi": 248,
+            "bh": 3,
+            "en": 1,
+            "zh": 1,
+            "uk": 1
+        },
+        "en-cs_CZ": {
+            "cs": 383,
+            "eo": 1
+        },
+        "en-de_DE": {
+            "de": 384
+        },
+        "en-el_GR": {
+            "el": 322,
+            "en": 2,
+            "uk": 1,
+            "fr": 5,
+            "tr": 1,
+            "ro": 1
+        },
+        "en-et_EE": {
+            "et": 220,
+            "fi": 108,
+            "pt": 1,
+            "sv": 1,
+            "en": 1,
+            "fr": 1
+        },
+        "en-fa_IR": {
+            "fa": 325,
+            "en": 2,
+            "ps": 1,
+            "ja": 1,
+            "es": 1,
+            "ug": 1,
+            "nah": 1
+        },
+        "en-hi_IN": {
+            "hi": 332
+        },
+        "en-id_ID": {
+            "id": 320,
+            "ru": 6,
+            "ms": 2,
+            "fi": 4
+        },
+        "en-is_IS": {
+            "is": 330,
+            "da": 1,
+            "pt": 1
+        },
+        "en-it_IT": {
+            "it": 331,
+            "en": 1
+        },
+        "en-ja_JP": {
+            "ja": 332
+        },
+        "en-kn_IN": {
+            "hi": 260,
+            "ru": 1,
+            "kn": 46,
+            "mr": 2,
+            "ko": 5,
+            "en": 16,
+            "ta": 1,
+            "de": 1
+        },
+        "en-ko_KR": {
+            "ko": 332
+        },
+        "en-lt_LT": {
+            "lt": 320,
+            "cs": 1,
+            "pl": 3,
+            "lv": 1,
+            "is": 1,
+            "en": 2,
+            "eo": 1,
+            "bs": 1,
+            "fi": 1,
+            "fr": 1
+        },
+        "en-mr_IN": {
+            "hi": 300,
+            "mr": 32
+        },
+        "en-ro_RO": {
+            "ro": 331,
+            "pl": 1
+        },
+        "en-ru_RU": {
+            "ru": 332
+        },
+        "en-sr_Cyrl_RS": {
+            "sr": 197,
+            "hr": 98,
+            "ru": 24,
+            "bs": 1,
+            "sh": 3,
+            "sl": 2,
+            "cs": 2,
+            "mk": 1,
+            "uk": 1,
+            "en": 1,
+            "eo": 1,
+            "ceb": 1
+        },
+        "en-sr_Latn_RS": {
+            "hr": 160,
+            "sr": 157,
+            "cs": 3,
+            "sh": 6,
+            "sl": 2,
+            "sk": 2,
+            "eo": 1,
+            "lt": 1
+        },
+        "en-sv_SE": {
+            "sv": 331,
+            "da": 1
+        },
+        "en-th_TH": {
+            "th": 292,
+            "hi": 11,
+            "ja": 2,
+            "ar": 1,
+            "en": 3,
+            "zh": 2,
+            "ko": 21
+        },
+        "en-tr_TR": {
+            "tr": 329,
+            "hi": 1,
+            "ru": 1,
+            "zh": 1
+        },
+        "en-uk_UA": {
+            "uk": 332
+        },
+        "en-vi_VN": {
+            "vi": 294,
+            "zh": 17,
+            "ro": 21
+        },
+        "en-zh_CN": {
+            "zh": 332
+        },
+        "ja-zh_CN": {
+            "ja": 5,
+            "zh": 329
+        }
+    },
+    "KIKIS": {
+        "en-ja_JP": {
+            "ja": 332
+        }
+    },
+    "ONLINE-G": {
+        "cs-de_DE": {
+            "de": 456,
+            "no": 1
+        },
+        "cs-uk_UA": {
+            "uk": 404,
+            "bg": 1
+        },
+        "en-ar_EG": {
+            "ar": 332
+        },
+        "en-bn_BD": {
+            "bn": 332
+        },
+        "en-cs_CZ": {
+            "cs": 383,
+            "cbk": 1
+        },
+        "en-de_DE": {
+            "de": 384
+        },
+        "en-el_GR": {
+            "el": 332
+        },
+        "en-et_EE": {
+            "et": 331,
+            "id": 1
+        },
+        "en-fa_IR": {
+            "fa": 331,
+            "ps": 1
+        },
+        "en-hi_IN": {
+            "hi": 331,
+            "mr": 1
+        },
+        "en-id_ID": {
+            "id": 330,
+            "ms": 2
+        },
+        "en-is_IS": {
+            "is": 331,
+            "pt": 1
+        },
+        "en-it_IT": {
+            "it": 331,
+            "en": 1
+        },
+        "en-ja_JP": {
+            "ja": 332
+        },
+        "en-kn_IN": {
+            "kn": 332
+        },
+        "en-ko_KR": {
+            "ko": 332
+        },
+        "en-lt_LT": {
+            "lt": 331,
+            "eo": 1
+        },
+        "en-mr_IN": {
+            "mr": 332
+        },
+        "en-ro_RO": {
+            "ro": 332
+        },
+        "en-ru_RU": {
+            "ru": 332
+        },
+        "en-sr_Cyrl_RS": {
+            "sr": 329,
+            "ru": 2,
+            "be": 1
+        },
+        "en-sr_Latn_RS": {
+            "sr": 329,
+            "ru": 2,
+            "be": 1
+        },
+        "en-sv_SE": {
+            "sv": 330,
+            "da": 1,
+            "hy": 1
+        },
+        "en-th_TH": {
+            "th": 332
+        },
+        "en-tr_TR": {
+            "tr": 331,
+            "id": 1
+        },
+        "en-uk_UA": {
+            "uk": 332
+        },
+        "en-vi_VN": {
+            "vi": 332
+        },
+        "en-zh_CN": {
+            "zh": 332
+        },
+        "ja-zh_CN": {
+            "ja": 2,
+            "zh": 329,
+            "en": 3
+        }
+    },
+    "EuroLLM-22B": {
+        "cs-de_DE": {
+            "cs": 14,
+            "de": 443
+        },
+        "cs-uk_UA": {
+            "uk": 405
+        },
+        "en-ar_EG": {
+            "ar": 331,
+            "ps": 1
+        },
+        "en-bn_BD": {
+            "bn": 325,
+            "hi": 6,
+            "bpy": 1
+        },
+        "en-cs_CZ": {
+            "cs": 383,
+            "id": 1
+        },
+        "en-de_DE": {
+            "de": 383,
+            "id": 1
+        },
+        "en-el_GR": {
+            "el": 332
+        },
+        "en-et_EE": {
+            "et": 330,
+            "fi": 1,
+            "id": 1
+        },
+        "en-fa_IR": {
+            "fa": 328,
+            "ar": 3,
+            "ps": 1
+        },
+        "en-hi_IN": {
+            "hi": 332
+        },
+        "en-id_ID": {
+            "id": 328,
+            "jv": 1,
+            "en": 2,
+            "ms": 1
+        },
+        "en-is_IS": {
+            "is": 323,
+            "ca": 1,
+            "no": 2,
+            "nn": 3,
+            "sv": 1,
+            "pt": 1,
+            "cs": 1
+        },
+        "en-it_IT": {
+            "it": 331,
+            "id": 1
+        },
+        "en-ja_JP": {
+            "ja": 332
+        },
+        "en-kn_IN": {
+            "kn": 238,
+            "mr": 7,
+            "hi": 72,
+            "en": 15
+        },
+        "en-ko_KR": {
+            "ko": 331,
+            "id": 1
+        },
+        "en-lt_LT": {
+            "lt": 330,
+            "pl": 1,
+            "eo": 1
+        },
+        "en-mr_IN": {
+            "en": 9,
+            "mr": 112,
+            "hi": 211
+        },
+        "en-ro_RO": {
+            "ro": 329,
+            "pl": 1,
+            "en": 1,
+            "id": 1
+        },
+        "en-ru_RU": {
+            "ru": 332
+        },
+        "en-sr_Cyrl_RS": {
+            "sr": 118,
+            "hr": 172,
+            "sh": 6,
+            "bg": 26,
+            "mk": 4,
+            "lv": 1,
+            "sl": 1,
+            "ru": 2,
+            "uk": 1,
+            "bs": 1
+        },
+        "en-sr_Latn_RS": {
+            "hr": 272,
+            "sr": 49,
+            "sh": 8,
+            "sl": 1,
+            "id": 1,
+            "bs": 1
+        },
+        "en-sv_SE": {
+            "sv": 331,
+            "da": 1
+        },
+        "en-th_TH": {
+            "th": 331,
+            "ar": 1
+        },
+        "en-tr_TR": {
+            "tr": 331,
+            "id": 1
+        },
+        "en-uk_UA": {
+            "uk": 331,
+            "ru": 1
+        },
+        "en-vi_VN": {
+            "vi": 327,
+            "en": 1,
+            "it": 1,
+            "ro": 2,
+            "id": 1
+        },
+        "en-zh_CN": {
+            "zh": 332
+        },
+        "ja-zh_CN": {
+            "ja": 10,
+            "zh": 324
+        }
+    },
+    "Algharb": {
+        "cs-de_DE": {
+            "de": 457
+        },
+        "cs-uk_UA": {
+            "uk": 404,
+            "ru": 1
+        },
+        "en-ar_EG": {
+            "ar": 332
+        },
+        "en-cs_CZ": {
+            "cs": 383,
+            "eo": 1
+        },
+        "en-et_EE": {
+            "et": 329,
+            "fi": 1,
+            "pt": 1,
+            "en": 1
+        },
+        "en-ja_JP": {
+            "ja": 332
+        },
+        "en-ko_KR": {
+            "ko": 332
+        },
+        "en-ru_RU": {
+            "ru": 331,
+            "mk": 1
+        },
+        "en-sr_Latn_RS": {
+            "sr": 312,
+            "sh": 8,
+            "hr": 10,
+            "sl": 1,
+            "hu": 1
+        },
+        "en-uk_UA": {
+            "uk": 331,
+            "ru": 1
+        },
+        "en-zh_CN": {
+            "zh": 332
+        },
+        "ja-zh_CN": {
+            "ja": 5,
+            "zh": 329
+        }
+    },
+    "TranssionMT": {
+        "cs-de_DE": {
+            "de": 457
+        },
+        "cs-uk_UA": {
+            "uk": 404,
+            "ru": 1
+        },
+        "en-ar_EG": {
+            "ar": 332
+        },
+        "en-cs_CZ": {
+            "cs": 383,
+            "id": 1
+        },
+        "en-et_EE": {
+            "et": 331,
+            "id": 1
+        },
+        "en-ru_RU": {
+            "ru": 329,
+            "lv": 2,
+            "af": 1
+        },
+        "en-sr_Latn_RS": {
+            "hr": 55,
+            "sr": 253,
+            "sh": 22,
+            "sl": 1,
+            "tr": 1
+        },
+        "en-uk_UA": {
+            "uk": 326,
+            "lt": 1,
+            "oc": 1,
+            "af": 1,
+            "fy": 1,
+            "zh": 1,
+            "lv": 1
+        }
+    },
+    "In2x": {
+        "en-ja_JP": {
+            "ja": 332
+        },
+        "ja-zh_CN": {
+            "ja": 5,
+            "zh": 329
+        }
+    },
+    "UvA-MT": {
+        "cs-de_DE": {
+            "de": 457
+        },
+        "cs-uk_UA": {
+            "uk": 404,
+            "ru": 1
+        },
+        "en-ar_EG": {
+            "ar": 332
+        },
+        "en-bn_BD": {
+            "bn": 332
+        },
+        "en-cs_CZ": {
+            "cs": 383,
+            "eo": 1
+        },
+        "en-de_DE": {
+            "de": 384
+        },
+        "en-el_GR": {
+            "el": 332
+        },
+        "en-et_EE": {
+            "et": 332
+        },
+        "en-fa_IR": {
+            "fa": 331,
+            "ps": 1
+        },
+        "en-hi_IN": {
+            "hi": 332
+        },
+        "en-id_ID": {
+            "id": 330,
+            "ms": 2
+        },
+        "en-is_IS": {
+            "is": 331,
+            "pt": 1
+        },
+        "en-it_IT": {
+            "it": 331,
+            "en": 1
+        },
+        "en-ja_JP": {
+            "ja": 332
+        },
+        "en-kn_IN": {
+            "kn": 330,
+            "af": 1,
+            "en": 1
+        },
+        "en-ko_KR": {
+            "ko": 332
+        },
+        "en-lt_LT": {
+            "lt": 331,
+            "eo": 1
+        },
+        "en-mr_IN": {
+            "mr": 332
+        },
+        "en-ro_RO": {
+            "ro": 332
+        },
+        "en-ru_RU": {
+            "ru": 332
+        },
+        "en-sr_Cyrl_RS": {
+            "sr": 297,
+            "hr": 22,
+            "sh": 10,
+            "bs": 1,
+            "sl": 1,
+            "eo": 1
+        },
+        "en-sr_Latn_RS": {
+            "sr": 295,
+            "hr": 22,
+            "sh": 12,
+            "bs": 1,
+            "sl": 1,
+            "eo": 1
+        },
+        "en-sv_SE": {
+            "sv": 330,
+            "no": 1,
+            "da": 1
+        },
+        "en-th_TH": {
+            "th": 332
+        },
+        "en-tr_TR": {
+            "tr": 332
+        },
+        "en-uk_UA": {
+            "uk": 331,
+            "fr": 1
+        },
+        "en-vi_VN": {
+            "vi": 332
+        },
+        "en-zh_CN": {
+            "zh": 332
+        },
+        "ja-zh_CN": {
+            "ja": 12,
+            "zh": 322
+        }
+    },
+    "Claude-4": {
+        "cs-de_DE": {
+            "de": 457
+        },
+        "cs-uk_UA": {
+            "uk": 403,
+            "ru": 2
+        },
+        "en-ar_EG": {
+            "ar": 331,
+            "arz": 1
+        },
+        "en-bn_BD": {
+            "bn": 332
+        },
+        "en-cs_CZ": {
+            "cs": 383,
+            "eo": 1
+        },
+        "en-de_DE": {
+            "de": 383,
+            "nds": 1
+        },
+        "en-el_GR": {
+            "el": 332
+        },
+        "en-et_EE": {
+            "et": 330,
+            "fi": 2
+        },
+        "en-fa_IR": {
+            "fa": 331,
+            "ps": 1
+        },
+        "en-hi_IN": {
+            "hi": 332
+        },
+        "en-id_ID": {
+            "id": 331,
+            "ms": 1
+        },
+        "en-is_IS": {
+            "is": 330,
+            "nn": 1,
+            "pt": 1
+        },
+        "en-it_IT": {
+            "it": 331,
+            "en": 1
+        },
+        "en-ja_JP": {
+            "ja": 332
+        },
+        "en-kn_IN": {
+            "kn": 332
+        },
+        "en-ko_KR": {
+            "ko": 332
+        },
+        "en-lt_LT": {
+            "lt": 331,
+            "eo": 1
+        },
+        "en-mr_IN": {
+            "mr": 332
+        },
+        "en-ro_RO": {
+            "ro": 332
+        },
+        "en-ru_RU": {
+            "ru": 331,
+            "de": 1
+        },
+        "en-sr_Cyrl_RS": {
+            "sr": 331,
+            "be": 1
+        },
+        "en-sr_Latn_RS": {
+            "sr": 301,
+            "sh": 12,
+            "hr": 17,
+            "sl": 1,
+            "eo": 1
+        },
+        "en-sv_SE": {
+            "sv": 331,
+            "da": 1
+        },
+        "en-th_TH": {
+            "th": 332
+        },
+        "en-tr_TR": {
+            "tr": 332
+        },
+        "en-uk_UA": {
+            "uk": 331,
+            "ru": 1
+        },
+        "en-vi_VN": {
+            "vi": 332
+        },
+        "en-zh_CN": {
+            "zh": 332
+        },
+        "ja-zh_CN": {
+            "ja": 3,
+            "zh": 331
+        }
+    },
+    "Laniqo": {
+        "cs-de_DE": {
+            "de": 452,
+            "cs": 5
+        },
+        "cs-uk_UA": {
+            "uk": 405
+        },
+        "en-cs_CZ": {
+            "cs": 384
+        },
+        "en-et_EE": {
+            "et": 332
+        },
+        "en-it_IT": {
+            "it": 332
+        },
+        "en-ja_JP": {
+            "ja": 332
+        },
+        "en-ko_KR": {
+            "ko": 332
+        },
+        "en-ru_RU": {
+            "ru": 332
+        },
+        "en-uk_UA": {
+            "uk": 332
+        },
+        "en-zh_CN": {
+            "zh": 332
+        },
+        "ja-zh_CN": {
+            "zh": 332,
+            "ja": 2
+        }
+    },
+    "CommandA": {
+        "cs-de_DE": {
+            "de": 457
+        },
+        "cs-uk_UA": {
+            "uk": 405
+        },
+        "en-ar_EG": {
+            "ar": 331,
+            "arz": 1
+        },
+        "en-bn_BD": {
+            "bn": 332
+        },
+        "en-cs_CZ": {
+            "cs": 383,
+            "id": 1
+        },
+        "en-de_DE": {
+            "de": 384
+        },
+        "en-el_GR": {
+            "el": 332
+        },
+        "en-et_EE": {
+            "et": 331,
+            "id": 1
+        },
+        "en-fa_IR": {
+            "fa": 331,
+            "ps": 1
+        },
+        "en-hi_IN": {
+            "hi": 332
+        },
+        "en-id_ID": {
+            "id": 330,
+            "ms": 2
+        },
+        "en-is_IS": {
+            "is": 330,
+            "no": 1,
+            "id": 1
+        },
+        "en-it_IT": {
+            "it": 331,
+            "id": 1
+        },
+        "en-ja_JP": {
+            "ja": 332
+        },
+        "en-kn_IN": {
+            "kn": 332
+        },
+        "en-ko_KR": {
+            "ko": 332
+        },
+        "en-lt_LT": {
+            "lt": 331,
+            "id": 1
+        },
+        "en-mr_IN": {
+            "mr": 330,
+            "gom": 1,
+            "hi": 1
+        },
+        "en-ro_RO": {
+            "ro": 330,
+            "pl": 1,
+            "id": 1
+        },
+        "en-ru_RU": {
+            "ru": 332
+        },
+        "en-sr_Cyrl_RS": {
+            "sr": 329,
+            "ru": 2,
+            "uk": 1
+        },
+        "en-sr_Latn_RS": {
+            "sr": 294,
+            "hr": 21,
+            "sh": 12,
+            "sl": 2,
+            "sk": 1,
+            "bs": 1,
+            "eo": 1
+        },
+        "en-sv_SE": {
+            "sv": 330,
+            "no": 1,
+            "id": 1
+        },
+        "en-th_TH": {
+            "th": 332
+        },
+        "en-tr_TR": {
+            "tr": 332
+        },
+        "en-uk_UA": {
+            "uk": 332
+        },
+        "en-vi_VN": {
+            "vi": 332
+        },
+        "en-zh_CN": {
+            "zh": 332
+        },
+        "ja-zh_CN": {
+            "ja": 7,
+            "zh": 327
+        }
+    },
+    "RuZh": {
+        "en-ru_RU": {
+            "ru": 332
+        },
+        "en-zh_CN": {
+            "zh": 332
+        }
+    },
+    "Erlendur": {
+        "en-is_IS": {
+            "is": 329,
+            "nn": 1,
+            "cs": 1,
+            "pt": 1
+        }
+    },
+    "CUNI-SFT": {
+        "cs-uk_UA": {
+            "uk": 404,
+            "ru": 1
+        },
+        "en-cs_CZ": {
+            "cs": 383,
+            "eo": 1
+        },
+        "en-sr_Cyrl_RS": {
+            "hr": 53,
+            "sr": 260,
+            "sh": 14,
+            "sl": 3,
+            "eo": 1,
+            "bs": 1
+        },
+        "en-sr_Latn_RS": {
+            "sr": 259,
+            "hr": 48,
+            "sh": 18,
+            "bs": 4,
+            "sl": 2,
+            "eo": 1
+        },
+        "en-uk_UA": {
+            "uk": 331,
+            "ru": 1
+        }
+    },
+    "IRB-MT": {
+        "cs-de_DE": {
+            "de": 456,
+            "cs": 1
+        },
+        "cs-uk_UA": {
+            "uk": 405
+        },
+        "en-ar_EG": {
+            "ar": 331,
+            "arz": 1
+        },
+        "en-bn_BD": {
+            "bn": 332
+        },
+        "en-cs_CZ": {
+            "cs": 383,
+            "eo": 1
+        },
+        "en-de_DE": {
+            "de": 383,
+            "nds": 1
+        },
+        "en-el_GR": {
+            "el": 332
+        },
+        "en-et_EE": {
+            "et": 330,
+            "tr": 1,
+            "sv": 1
+        },
+        "en-fa_IR": {
+            "fa": 331,
+            "ps": 1
+        },
+        "en-hi_IN": {
+            "hi": 332
+        },
+        "en-id_ID": {
+            "id": 331,
+            "ms": 1
+        },
+        "en-is_IS": {
+            "is": 329,
+            "da": 1,
+            "pt": 1,
+            "ceb": 1
+        },
+        "en-it_IT": {
+            "it": 331,
+            "id": 1
+        },
+        "en-ja_JP": {
+            "ja": 332
+        },
+        "en-kn_IN": {
+            "kn": 327,
+            "en": 1,
+            "te": 1,
+            "fr": 1,
+            "fa": 1,
+            "he": 1
+        },
+        "en-ko_KR": {
+            "ko": 332
+        },
+        "en-lt_LT": {
+            "lt": 331,
+            "eo": 1
+        },
+        "en-mr_IN": {
+            "mr": 332
+        },
+        "en-ro_RO": {
+            "ro": 332
+        },
+        "en-ru_RU": {
+            "ru": 331,
+            "bg": 1
+        },
+        "en-sr_Cyrl_RS": {
+            "sr": 327,
+            "ru": 1,
+            "hr": 1,
+            "sh": 2,
+            "be": 1
+        },
+        "en-sr_Latn_RS": {
+            "sr": 300,
+            "sh": 14,
+            "hr": 15,
+            "bs": 2,
+            "en": 1
+        },
+        "en-sv_SE": {
+            "sv": 331,
+            "fi": 1
+        },
+        "en-th_TH": {
+            "th": 332
+        },
+        "en-tr_TR": {
+            "tr": 332
+        },
+        "en-uk_UA": {
+            "uk": 332
+        },
+        "en-vi_VN": {
+            "vi": 332
+        },
+        "en-zh_CN": {
+            "zh": 332
+        },
+        "ja-zh_CN": {
+            "zh": 326,
+            "ja": 8
+        }
+    },
+    "SalamandraTA": {
+        "cs-de_DE": {
+            "de": 453,
+            "fi": 1,
+            "en": 3
+        },
+        "cs-uk_UA": {
+            "uk": 405
+        },
+        "en-ar_EG": {
+            "ar": 332
+        },
+        "en-cs_CZ": {
+            "cs": 383,
+            "pl": 1
+        },
+        "en-de_DE": {
+            "de": 384
+        },
+        "en-el_GR": {
+            "el": 332
+        },
+        "en-et_EE": {
+            "et": 331,
+            "es": 1
+        },
+        "en-is_IS": {
+            "is": 331,
+            "hu": 1
+        },
+        "en-it_IT": {
+            "it": 332
+        },
+        "en-ja_JP": {
+            "ja": 332
+        },
+        "en-ko_KR": {
+            "ko": 332
+        },
+        "en-lt_LT": {
+            "lt": 331,
+            "eo": 1
+        },
+        "en-ro_RO": {
+            "ro": 331,
+            "es": 1
+        },
+        "en-ru_RU": {
+            "ru": 331,
+            "be": 1
+        },
+        "en-sr_Cyrl_RS": {
+            "sr": 331,
+            "be": 1
+        },
+        "en-sr_Latn_RS": {
+            "sr": 303,
+            "hr": 13,
+            "sh": 15,
+            "sl": 1
+        },
+        "en-sv_SE": {
+            "sv": 331,
+            "da": 1
+        },
+        "en-uk_UA": {
+            "uk": 331,
+            "ru": 1
+        },
+        "en-zh_CN": {
+            "zh": 331,
+            "cs": 1
+        },
+        "ja-zh_CN": {
+            "zh": 330,
+            "en": 4
+        }
+    },
+    "GemTrans": {
+        "cs-de_DE": {
+            "de": 457
+        },
+        "cs-uk_UA": {
+            "uk": 404,
+            "ru": 1
+        },
+        "en-ar_EG": {
+            "ar": 332
+        },
+        "en-bn_BD": {
+            "bn": 331,
+            "zh": 1
+        },
+        "en-cs_CZ": {
+            "cs": 383,
+            "eo": 1
+        },
+        "en-de_DE": {
+            "de": 384
+        },
+        "en-el_GR": {
+            "el": 332
+        },
+        "en-et_EE": {
+            "et": 331,
+            "en": 1
+        },
+        "en-fa_IR": {
+            "fa": 331,
+            "ps": 1
+        },
+        "en-hi_IN": {
+            "hi": 332
+        },
+        "en-id_ID": {
+            "id": 331,
+            "ms": 1
+        },
+        "en-is_IS": {
+            "is": 331,
+            "pt": 1
+        },
+        "en-it_IT": {
+            "it": 331,
+            "en": 1
+        },
+        "en-ja_JP": {
+            "ja": 332
+        },
+        "en-kn_IN": {
+            "kn": 332
+        },
+        "en-ko_KR": {
+            "ko": 332
+        },
+        "en-lt_LT": {
+            "lt": 331,
+            "eo": 1
+        },
+        "en-mr_IN": {
+            "mr": 298,
+            "hi": 34
+        },
+        "en-ro_RO": {
+            "ro": 332
+        },
+        "en-ru_RU": {
+            "ru": 332
+        },
+        "en-sr_Cyrl_RS": {
+            "sr": 330,
+            "ru": 1,
+            "be": 1
+        },
+        "en-sr_Latn_RS": {
+            "sr": 298,
+            "hr": 22,
+            "sl": 3,
+            "sh": 8,
+            "eo": 1
+        },
+        "en-sv_SE": {
+            "sv": 331,
+            "da": 1
+        },
+        "en-th_TH": {
+            "th": 332
+        },
+        "en-tr_TR": {
+            "tr": 332
+        },
+        "en-uk_UA": {
+            "uk": 331,
+            "ru": 1
+        },
+        "en-vi_VN": {
+            "vi": 332
+        },
+        "en-zh_CN": {
+            "zh": 332
+        },
+        "ja-zh_CN": {
+            "zh": 331,
+            "ja": 3
+        }
+    },
+    "ONLINE-B": {
+        "cs-de_DE": {
+            "de": 456,
+            "da": 1
+        },
+        "cs-uk_UA": {
+            "uk": 403,
+            "ru": 2
+        },
+        "en-ar_EG": {
+            "ar": 332
+        },
+        "en-bn_BD": {
+            "bn": 332
+        },
+        "en-cs_CZ": {
+            "cs": 383,
+            "eo": 1
+        },
+        "en-de_DE": {
+            "de": 384
+        },
+        "en-el_GR": {
+            "el": 332
+        },
+        "en-et_EE": {
+            "et": 329,
+            "fi": 2,
+            "en": 1
+        },
+        "en-fa_IR": {
+            "fa": 331,
+            "ps": 1
+        },
+        "en-hi_IN": {
+            "hi": 332
+        },
+        "en-id_ID": {
+            "id": 331,
+            "ms": 1
+        },
+        "en-is_IS": {
+            "is": 330,
+            "nn": 1,
+            "pt": 1
+        },
+        "en-it_IT": {
+            "it": 331,
+            "id": 1
+        },
+        "en-ja_JP": {
+            "ja": 332
+        },
+        "en-kn_IN": {
+            "kn": 332
+        },
+        "en-ko_KR": {
+            "ko": 332
+        },
+        "en-lt_LT": {
+            "lt": 330,
+            "eo": 2
+        },
+        "en-mr_IN": {
+            "mr": 332
+        },
+        "en-ro_RO": {
+            "ro": 331,
+            "pl": 1
+        },
+        "en-ru_RU": {
+            "ru": 332
+        },
+        "en-sr_Cyrl_RS": {
+            "sr": 330,
+            "ru": 1,
+            "be": 1
+        },
+        "en-sr_Latn_RS": {
+            "sr": 330,
+            "ru": 1,
+            "be": 1
+        },
+        "en-sv_SE": {
+            "sv": 331,
+            "fi": 1
+        },
+        "en-th_TH": {
+            "th": 332
+        },
+        "en-tr_TR": {
+            "tr": 332
+        },
+        "en-uk_UA": {
+            "uk": 331,
+            "ru": 1
+        },
+        "en-vi_VN": {
+            "vi": 332
+        },
+        "en-zh_CN": {
+            "zh": 332
+        },
+        "ja-zh_CN": {
+            "ja": 3,
+            "zh": 329,
+            "en": 2
+        }
+    },
+    "Systran": {
+        "en-ja_JP": {
+            "ja": 332
+        }
+    },
+    "Mistral-Medium": {
+        "cs-de_DE": {
+            "de": 456,
+            "en": 1
+        },
+        "cs-uk_UA": {
+            "uk": 402,
+            "ru": 2,
+            "sh": 1
+        },
+        "en-ar_EG": {
+            "ar": 327,
+            "arz": 5
+        },
+        "en-bn_BD": {
+            "bn": 332
+        },
+        "en-cs_CZ": {
+            "cs": 383,
+            "eo": 1
+        },
+        "en-de_DE": {
+            "de": 384
+        },
+        "en-el_GR": {
+            "el": 332
+        },
+        "en-et_EE": {
+            "et": 330,
+            "tr": 1,
+            "en": 1
+        },
+        "en-fa_IR": {
+            "fa": 331,
+            "ps": 1
+        },
+        "en-hi_IN": {
+            "hi": 332
+        },
+        "en-id_ID": {
+            "id": 330,
+            "ms": 2
+        },
+        "en-is_IS": {
+            "is": 331,
+            "pt": 1
+        },
+        "en-it_IT": {
+            "it": 331,
+            "en": 1
+        },
+        "en-ja_JP": {
+            "ja": 332
+        },
+        "en-kn_IN": {
+            "kn": 329,
+            "zh": 3
+        },
+        "en-ko_KR": {
+            "ko": 332
+        },
+        "en-lt_LT": {
+            "lt": 330,
+            "pl": 1,
+            "eo": 1
+        },
+        "en-mr_IN": {
+            "mr": 331,
+            "hi": 1
+        },
+        "en-ro_RO": {
+            "ro": 330,
+            "pl": 1,
+            "id": 1
+        },
+        "en-sv_SE": {
+            "sv": 331,
+            "da": 1
+        },
+        "en-th_TH": {
+            "th": 332
+        },
+        "en-tr_TR": {
+            "tr": 332
+        },
+        "en-uk_UA": {
+            "uk": 332
+        },
+        "en-vi_VN": {
+            "vi": 332
+        },
+        "en-zh_CN": {
+            "zh": 332
+        },
+        "ja-zh_CN": {
+            "zh": 331,
+            "ja": 3
+        }
+    },
+    "CommandA-MT": {
+        "cs-de_DE": {
+            "de": 457
+        },
+        "cs-uk_UA": {
+            "uk": 405
+        },
+        "en-ar_EG": {
+            "ar": 332
+        },
+        "en-bn_BD": {
+            "bn": 332
+        },
+        "en-cs_CZ": {
+            "cs": 383,
+            "pl": 1
+        },
+        "en-de_DE": {
+            "de": 384
+        },
+        "en-el_GR": {
+            "el": 332
+        },
+        "en-et_EE": {
+            "et": 331,
+            "fi": 1
+        },
+        "en-fa_IR": {
+            "fa": 331,
+            "ps": 1
+        },
+        "en-hi_IN": {
+            "hi": 332
+        },
+        "en-id_ID": {
+            "id": 330,
+            "ms": 2
+        },
+        "en-is_IS": {
+            "is": 331,
+            "id": 1
+        },
+        "en-it_IT": {
+            "it": 331,
+            "id": 1
+        },
+        "en-ja_JP": {
+            "ja": 332
+        },
+        "en-kn_IN": {
+            "kn": 332
+        },
+        "en-ko_KR": {
+            "ko": 332
+        },
+        "en-lt_LT": {
+            "lt": 330,
+            "pl": 1,
+            "eo": 1
+        },
+        "en-mr_IN": {
+            "mr": 332
+        },
+        "en-ro_RO": {
+            "ro": 331,
+            "id": 1
+        },
+        "en-ru_RU": {
+            "ru": 332
+        },
+        "en-sr_Cyrl_RS": {
+            "sr": 331,
+            "be": 1
+        },
+        "en-sr_Latn_RS": {
+            "sr": 325,
+            "hr": 5,
+            "sh": 1,
+            "be": 1
+        },
+        "en-sv_SE": {
+            "sv": 331,
+            "da": 1
+        },
+        "en-th_TH": {
+            "th": 332
+        },
+        "en-tr_TR": {
+            "tr": 332
+        },
+        "en-uk_UA": {
+            "uk": 332
+        },
+        "en-vi_VN": {
+            "vi": 332
+        },
+        "en-zh_CN": {
+            "zh": 332
+        },
+        "ja-zh_CN": {
+            "zh": 334
+        }
+    },
+    "CUNI-Transformer": {
+        "cs-uk_UA": {
+            "uk": 404,
+            "ru": 1
+        }
+    },
+    "GPT-4.1": {
+        "cs-de_DE": {
+            "de": 457
+        },
+        "cs-uk_UA": {
+            "uk": 404,
+            "ru": 1
+        },
+        "en-ar_EG": {
+            "ar": 331,
+            "arz": 1
+        },
+        "en-bn_BD": {
+            "bn": 332
+        },
+        "en-cs_CZ": {
+            "cs": 383,
+            "eo": 1
+        },
+        "en-de_DE": {
+            "de": 383,
+            "nds": 1
+        },
+        "en-el_GR": {
+            "el": 332
+        },
+        "en-et_EE": {
+            "et": 331,
+            "fi": 1
+        },
+        "en-fa_IR": {
+            "fa": 331,
+            "ps": 1
+        },
+        "en-hi_IN": {
+            "hi": 332
+        },
+        "en-id_ID": {
+            "id": 332
+        },
+        "en-is_IS": {
+            "is": 330,
+            "nn": 1,
+            "pt": 1
+        },
+        "en-it_IT": {
+            "it": 331,
+            "id": 1
+        },
+        "en-ja_JP": {
+            "ja": 332
+        },
+        "en-kn_IN": {
+            "kn": 332
+        },
+        "en-ko_KR": {
+            "ko": 332
+        },
+        "en-lt_LT": {
+            "lt": 330,
+            "pl": 1,
+            "eo": 1
+        },
+        "en-mr_IN": {
+            "mr": 332
+        },
+        "en-ro_RO": {
+            "ro": 332
+        },
+        "en-ru_RU": {
+            "ru": 332
+        },
+        "en-sr_Cyrl_RS": {
+            "sr": 331,
+            "ru": 1
+        },
+        "en-sr_Latn_RS": {
+            "sr": 310,
+            "sh": 9,
+            "hr": 11,
+            "sl": 1,
+            "eo": 1
+        },
+        "en-sv_SE": {
+            "sv": 331,
+            "fi": 1
+        },
+        "en-th_TH": {
+            "th": 332
+        },
+        "en-tr_TR": {
+            "tr": 331,
+            "zh": 1
+        },
+        "en-uk_UA": {
+            "uk": 332
+        },
+        "en-vi_VN": {
+            "vi": 332
+        },
+        "en-zh_CN": {
+            "zh": 332
+        },
+        "ja-zh_CN": {
+            "ja": 7,
+            "zh": 327
+        }
+    },
+    "TowerPlus-72B": {
+        "cs-de_DE": {
+            "de": 456,
+            "cs": 1
+        },
+        "cs-uk_UA": {
+            "uk": 404,
+            "ru": 1
+        },
+        "en-ar_EG": {
+            "ar": 327,
+            "en": 1,
+            "zh": 2
+        },
+        "en-bn_BD": {
+            "bn": 331,
+            "ne": 1
+        },
+        "en-cs_CZ": {
+            "cs": 383,
+            "eo": 1
+        },
+        "en-de_DE": {
+            "de": 383,
+            "id": 1
+        },
+        "en-el_GR": {
+            "el": 332
+        },
+        "en-et_EE": {
+            "et": 332
+        },
+        "en-fa_IR": {
+            "fa": 330,
+            "ps": 1,
+            "sah": 1
+        },
+        "en-hi_IN": {
+            "hi": 332
+        },
+        "en-id_ID": {
+            "id": 332
+        },
+        "en-is_IS": {
+            "is": 330,
+            "no": 1,
+            "pt": 1
+        },
+        "en-it_IT": {
+            "it": 331,
+            "id": 1
+        },
+        "en-ja_JP": {
+            "ja": 332
+        },
+        "en-kn_IN": {
+            "kn": 289,
+            "hi": 14,
+            "te": 7,
+            "ta": 1,
+            "en": 21
+        },
+        "en-ko_KR": {
+            "ko": 332
+        },
+        "en-lt_LT": {
+            "lt": 331,
+            "eo": 1
+        },
+        "en-mr_IN": {
+            "mr": 313,
+            "hi": 19
+        },
+        "en-ro_RO": {
+            "ro": 331,
+            "pl": 1
+        },
+        "en-ru_RU": {
+            "ru": 332
+        },
+        "en-sr_Cyrl_RS": {
+            "sr": 329,
+            "ru": 2,
+            "be": 1
+        },
+        "en-sr_Latn_RS": {
+            "hr": 29,
+            "sr": 296,
+            "sh": 6,
+            "eo": 1
+        },
+        "en-sv_SE": {
+            "sv": 331,
+            "da": 1
+        },
+        "en-th_TH": {
+            "th": 332
+        },
+        "en-tr_TR": {
+            "tr": 332
+        },
+        "en-uk_UA": {
+            "uk": 332
+        },
+        "en-vi_VN": {
+            "vi": 311,
+            "zh": 21
+        },
+        "en-zh_CN": {
+            "zh": 332
+        },
+        "ja-zh_CN": {
+            "ja": 6,
+            "zh": 328
+        }
+    },
+    "ONLINE-W": {
+        "cs-de_DE": {
+            "de": 456,
+            "da": 1
+        },
+        "cs-uk_UA": {
+            "uk": 403,
+            "ru": 2
+        },
+        "en-ar_EG": {
+            "ar": 332
+        },
+        "en-cs_CZ": {
+            "cs": 383,
+            "eo": 1
+        },
+        "en-de_DE": {
+            "de": 383,
+            "nds": 1
+        },
+        "en-el_GR": {
+            "el": 332
+        },
+        "en-et_EE": {
+            "et": 331,
+            "id": 1
+        },
+        "en-id_ID": {
+            "id": 330,
+            "ms": 2
+        },
+        "en-it_IT": {
+            "it": 331,
+            "en": 1
+        },
+        "en-ja_JP": {
+            "ja": 332
+        },
+        "en-ko_KR": {
+            "ko": 332
+        },
+        "en-lt_LT": {
+            "lt": 331,
+            "eo": 1
+        },
+        "en-ro_RO": {
+            "ro": 331,
+            "id": 1
+        },
+        "en-ru_RU": {
+            "ru": 331,
+            "mk": 1
+        },
+        "en-sv_SE": {
+            "sv": 331,
+            "da": 1
+        },
+        "en-tr_TR": {
+            "tr": 332
+        },
+        "en-uk_UA": {
+            "uk": 331,
+            "ru": 1
+        },
+        "en-zh_CN": {
+            "zh": 331,
+            "ja": 1
+        },
+        "ja-zh_CN": {
+            "ja": 2,
+            "zh": 331,
+            "es": 1
+        }
+    },
+    "AMI": {
+        "en-is_IS": {
+            "is": 331,
+            "no": 1
+        }
+    },
+    "TranssionTranslate": {
+        "cs-de_DE": {
+            "de": 457
+        },
+        "cs-uk_UA": {
+            "uk": 403,
+            "ru": 2
+        },
+        "en-ar_EG": {
+            "ar": 332
+        },
+        "en-bn_BD": {
+            "bn": 332
+        },
+        "en-cs_CZ": {
+            "cs": 383,
+            "eo": 1
+        },
+        "en-de_DE": {
+            "de": 384
+        },
+        "en-el_GR": {
+            "el": 332
+        },
+        "en-et_EE": {
+            "et": 329,
+            "fi": 2,
+            "en": 1
+        },
+        "en-fa_IR": {
+            "fa": 331,
+            "ps": 1
+        },
+        "en-hi_IN": {
+            "hi": 332
+        },
+        "en-id_ID": {
+            "id": 332
+        },
+        "en-is_IS": {
+            "is": 330,
+            "nn": 1,
+            "pt": 1
+        },
+        "en-it_IT": {
+            "it": 331,
+            "id": 1
+        },
+        "en-ja_JP": {
+            "ja": 332
+        },
+        "en-kn_IN": {
+            "kn": 332
+        },
+        "en-ko_KR": {
+            "ko": 332
+        },
+        "en-lt_LT": {
+            "lt": 330,
+            "eo": 2
+        },
+        "en-mr_IN": {
+            "mr": 332
+        },
+        "en-ro_RO": {
+            "ro": 331,
+            "pl": 1
+        },
+        "en-ru_RU": {
+            "ru": 332
+        },
+        "en-sr_Cyrl_RS": {
+            "sr": 330,
+            "ru": 1,
+            "be": 1
+        },
+        "en-sr_Latn_RS": {
+            "sr": 297,
+            "hr": 18,
+            "sh": 14,
+            "sl": 2,
+            "eo": 1
+        },
+        "en-sv_SE": {
+            "sv": 331,
+            "fi": 1
+        },
+        "en-th_TH": {
+            "th": 332
+        },
+        "en-tr_TR": {
+            "tr": 332
+        },
+        "en-uk_UA": {
+            "uk": 331,
+            "ru": 1
+        },
+        "en-vi_VN": {
+            "vi": 332
+        },
+        "en-zh_CN": {
+            "zh": 332
+        },
+        "ja-zh_CN": {
+            "ja": 3,
+            "zh": 331
+        }
+    },
+    "SRPOL": {
+        "cs-de_DE": {
+            "de": 450,
+            "en": 6,
+            "sk": 1
+        },
+        "cs-uk_UA": {
+            "uk": 405
+        },
+        "en-ar_EG": {
+            "ar": 332
+        },
+        "en-cs_CZ": {
+            "cs": 384
+        },
+        "en-et_EE": {
+            "et": 331,
+            "fi": 1
+        },
+        "en-ja_JP": {
+            "ja": 332
+        },
+        "en-ru_RU": {
+            "ru": 332
+        },
+        "en-uk_UA": {
+            "uk": 331,
+            "ru": 1
+        },
+        "en-zh_CN": {
+            "zh": 331,
+            "en": 1
+        },
+        "ja-zh_CN": {
+            "ja": 24,
+            "zh": 308,
+            "pt": 1,
+            "en": 1
+        }
+    },
+    "NLLB": {
+        "cs-de_DE": {
+            "de": 457
+        },
+        "cs-uk_UA": {
+            "uk": 403,
+            "en": 2
+        },
+        "en-ar_EG": {
+            "ar": 331,
+            "pl": 1
+        },
+        "en-bn_BD": {
+            "bn": 332
+        },
+        "en-cs_CZ": {
+            "cs": 383,
+            "eo": 1
+        },
+        "en-de_DE": {
+            "de": 384
+        },
+        "en-el_GR": {
+            "el": 332
+        },
+        "en-et_EE": {
+            "et": 330,
+            "en": 1,
+            "fi": 1
+        },
+        "en-fa_IR": {
+            "fa": 331,
+            "mzn": 1
+        },
+        "en-hi_IN": {
+            "hi": 331,
+            "mr": 1
+        },
+        "en-id_ID": {
+            "id": 329,
+            "en": 2,
+            "ms": 1
+        },
+        "en-is_IS": {
+            "is": 329,
+            "no": 1,
+            "da": 1,
+            "en": 1
+        },
+        "en-it_IT": {
+            "it": 331,
+            "en": 1
+        },
+        "en-ja_JP": {
+            "ja": 332
+        },
+        "en-kn_IN": {
+            "kn": 332
+        },
+        "en-ko_KR": {
+            "en": 42,
+            "ko": 290
+        },
+        "en-lt_LT": {
+            "lt": 330,
+            "pt": 1,
+            "eo": 1
+        },
+        "en-mr_IN": {
+            "mr": 331,
+            "hi": 1
+        },
+        "en-ro_RO": {
+            "ro": 331,
+            "eo": 1
+        },
+        "en-ru_RU": {
+            "ru": 331,
+            "mn": 1
+        },
+        "en-sr_Cyrl_RS": {
+            "sr": 327,
+            "ru": 4,
+            "mn": 1
+        },
+        "en-sr_Latn_RS": {
+            "en": 311,
+            "de": 5,
+            "zh": 6,
+            "es": 7,
+            "ja": 1
+        },
+        "en-sv_SE": {
+            "sv": 332
+        },
+        "en-th_TH": {
+            "th": 332
+        },
+        "en-tr_TR": {
+            "tr": 332
+        },
+        "en-uk_UA": {
+            "uk": 332
+        },
+        "en-vi_VN": {
+            "vi": 332
+        },
+        "en-zh_CN": {
+            "zh": 332
+        },
+        "ja-zh_CN": {
+            "zh": 311,
+            "ko": 1,
+            "pl": 4,
+            "ja": 13,
+            "ky": 2,
+            "en": 1,
+            "ta": 1,
+            "de": 1
+        }
+    },
+    "EuroLLM-9B": {
+        "cs-de_DE": {
+            "cs": 75,
+            "de": 377,
+            "sk": 5
+        },
+        "cs-uk_UA": {
+            "uk": 396,
+            "cs": 8,
+            "sk": 1
+        },
+        "en-ar_EG": {
+            "ar": 318,
+            "en": 11,
+            "ur": 1,
+            "an": 1,
+            "arz": 1
+        },
+        "en-bn_BD": {
+            "bn": 181,
+            "as": 11,
+            "hi": 105,
+            "bh": 5,
+            "en": 28,
+            "bpy": 1,
+            "id": 1
+        },
+        "en-cs_CZ": {
+            "cs": 348,
+            "en": 35,
+            "eo": 1
+        },
+        "en-de_DE": {
+            "de": 370,
+            "en": 13,
+            "tr": 1
+        },
+        "en-el_GR": {
+            "el": 322,
+            "en": 10
+        },
+        "en-et_EE": {
+            "et": 265,
+            "fi": 1,
+            "en": 65,
+            "id": 1
+        },
+        "en-fa_IR": {
+            "fa": 315,
+            "en": 15,
+            "ps": 1,
+            "an": 1
+        },
+        "en-hi_IN": {
+            "hi": 294,
+            "en": 38
+        },
+        "en-id_ID": {
+            "id": 239,
+            "en": 88,
+            "ms": 2,
+            "sk": 1,
+            "min": 1,
+            "lb": 1
+        },
+        "en-is_IS": {
+            "is": 176,
+            "no": 63,
+            "nn": 37,
+            "sv": 4,
+            "da": 4,
+            "de": 6,
+            "en": 41,
+            "id": 1
+        },
+        "en-it_IT": {
+            "it": 319,
+            "en": 13
+        },
+        "en-ja_JP": {
+            "ja": 309,
+            "en": 23
+        },
+        "en-kn_IN": {
+            "kn": 225,
+            "mr": 12,
+            "hi": 82,
+            "en": 13
+        },
+        "en-ko_KR": {
+            "ko": 303,
+            "en": 24,
+            "ja": 5
+        },
+        "en-lt_LT": {
+            "lt": 290,
+            "en": 41,
+            "id": 1
+        },
+        "en-mr_IN": {
+            "mr": 33,
+            "hi": 281,
+            "en": 18
+        },
+        "en-ro_RO": {
+            "ro": 320,
+            "en": 11,
+            "pl": 1
+        },
+        "en-ru_RU": {
+            "ru": 310,
+            "en": 22
+        },
+        "en-sr_Cyrl_RS": {
+            "sr": 108,
+            "hr": 159,
+            "ru": 19,
+            "bg": 19,
+            "bs": 1,
+            "uk": 5,
+            "en": 15,
+            "mk": 5,
+            "id": 1
+        },
+        "en-sr_Latn_RS": {
+            "hr": 243,
+            "sr": 46,
+            "sl": 1,
+            "sh": 3,
+            "en": 38,
+            "eo": 1
+        },
+        "en-sv_SE": {
+            "sv": 320,
+            "en": 11,
+            "da": 1
+        },
+        "en-th_TH": {
+            "th": 314,
+            "en": 14,
+            "zh": 4
+        },
+        "en-tr_TR": {
+            "tr": 302,
+            "en": 30
+        },
+        "en-uk_UA": {
+            "uk": 302,
+            "en": 29,
+            "sr": 1
+        },
+        "en-vi_VN": {
+            "vi": 211,
+            "en": 112,
+            "ro": 7,
+            "id": 1,
+            "ca": 1
+        },
+        "en-zh_CN": {
+            "zh": 332
+        },
+        "ja-zh_CN": {
+            "ja": 40,
+            "zh": 294
+        }
+    },
+    "DeepSeek-V3": {
+        "cs-de_DE": {
+            "de": 457
+        },
+        "cs-uk_UA": {
+            "uk": 405
+        },
+        "en-ar_EG": {
+            "ar": 330,
+            "arz": 2
+        },
+        "en-bn_BD": {
+            "bn": 328,
+            "zh": 4
+        },
+        "en-cs_CZ": {
+            "cs": 383,
+            "eo": 1
+        },
+        "en-de_DE": {
+            "de": 383,
+            "nds": 1
+        },
+        "en-el_GR": {
+            "el": 332
+        },
+        "en-et_EE": {
+            "et": 327,
+            "pt": 1,
+            "en": 3,
+            "fr": 1
+        },
+        "en-fa_IR": {
+            "fa": 331,
+            "ps": 1
+        },
+        "en-hi_IN": {
+            "hi": 332
+        },
+        "en-id_ID": {
+            "id": 331,
+            "ms": 1
+        },
+        "en-is_IS": {
+            "is": 327,
+            "sh": 1,
+            "no": 2,
+            "nn": 1,
+            "pt": 1
+        },
+        "en-it_IT": {
+            "it": 331,
+            "en": 1
+        },
+        "en-ja_JP": {
+            "ja": 331,
+            "zh": 1
+        },
+        "en-kn_IN": {
+            "kn": 332
+        },
+        "en-ko_KR": {
+            "ko": 332
+        },
+        "en-lt_LT": {
+            "lt": 331,
+            "eo": 1
+        },
+        "en-mr_IN": {
+            "mr": 332
+        },
+        "en-ro_RO": {
+            "ro": 330,
+            "pl": 1,
+            "id": 1
+        },
+        "en-ru_RU": {
+            "ru": 332
+        },
+        "en-sr_Cyrl_RS": {
+            "sr": 329,
+            "ru": 1,
+            "bg": 1,
+            "be": 1
+        },
+        "en-sr_Latn_RS": {
+            "hr": 24,
+            "sr": 293,
+            "sh": 11,
+            "bs": 1,
+            "sl": 1,
+            "sk": 1,
+            "hu": 1
+        },
+        "en-sv_SE": {
+            "sv": 331,
+            "fi": 1
+        },
+        "en-th_TH": {
+            "th": 332
+        },
+        "en-tr_TR": {
+            "tr": 331,
+            "zh": 1
+        },
+        "en-uk_UA": {
+            "uk": 332
+        },
+        "en-vi_VN": {
+            "vi": 332
+        },
+        "en-zh_CN": {
+            "zh": 332
+        },
+        "ja-zh_CN": {
+            "zh": 330,
+            "ja": 4
+        }
+    },
+    "NTTSU": {
+        "en-ja_JP": {
+            "ja": 331,
+            "id": 1
+        },
+        "ja-zh_CN": {
+            "ja": 6,
+            "zh": 328
+        }
+    },
+    "CGFOKUS": {
+        "en-uk_UA": {
+            "uk": 331,
+            "ru": 1
+        }
+    },
+    "CUNI-DocTransformer": {
+        "en-cs_CZ": {
+            "cs": 383,
+            "eo": 1
+        }
+    },
+    "Shy": {
+        "cs-de_DE": {
+            "de": 457
+        },
+        "cs-uk_UA": {
+            "uk": 404,
+            "ru": 1
+        },
+        "en-ar_EG": {
+            "ar": 331,
+            "arz": 1
+        },
+        "en-bn_BD": {
+            "bn": 332
+        },
+        "en-cs_CZ": {
+            "cs": 383,
+            "eo": 1
+        },
+        "en-de_DE": {
+            "de": 383,
+            "eo": 1
+        },
+        "en-el_GR": {
+            "el": 332
+        },
+        "en-et_EE": {
+            "et": 332
+        },
+        "en-fa_IR": {
+            "fa": 331,
+            "ar": 1
+        },
+        "en-hi_IN": {
+            "hi": 331,
+            "el": 1
+        },
+        "en-id_ID": {
+            "id": 330,
+            "ms": 1,
+            "zh": 1
+        },
+        "en-is_IS": {
+            "is": 330,
+            "nn": 1,
+            "pt": 1
+        },
+        "en-it_IT": {
+            "it": 331,
+            "id": 1
+        },
+        "en-ja_JP": {
+            "ja": 332
+        },
+        "en-kn_IN": {
+            "kn": 332
+        },
+        "en-ko_KR": {
+            "ko": 332
+        },
+        "en-lt_LT": {
+            "lt": 331,
+            "eo": 1
+        },
+        "en-mr_IN": {
+            "mr": 332
+        },
+        "en-ro_RO": {
+            "ro": 331,
+            "id": 1
+        },
+        "en-ru_RU": {
+            "ru": 332
+        },
+        "en-sr_Cyrl_RS": {
+            "sr": 330,
+            "ru": 1,
+            "be": 1
+        },
+        "en-sr_Latn_RS": {
+            "sr": 303,
+            "sh": 12,
+            "hr": 14,
+            "sl": 2,
+            "eo": 1
+        },
+        "en-sv_SE": {
+            "sv": 331,
+            "id": 1
+        },
+        "en-th_TH": {
+            "th": 332
+        },
+        "en-tr_TR": {
+            "tr": 332
+        },
+        "en-uk_UA": {
+            "uk": 332
+        },
+        "en-vi_VN": {
+            "vi": 332
+        },
+        "en-zh_CN": {
+            "zh": 332
+        },
+        "ja-zh_CN": {
+            "ja": 4,
+            "zh": 330
+        }
+    },
+    "CommandR7B": {
+        "cs-de_DE": {
+            "de": 448,
+            "id": 1,
+            "en": 7,
+            "cs": 1
+        },
+        "cs-uk_UA": {
+            "uk": 374,
+            "zh": 3,
+            "cs": 23,
+            "sk": 1,
+            "en": 2,
+            "ru": 1,
+            "pt": 1
+        },
+        "en-ar_EG": {
+            "ar": 332
+        },
+        "en-bn_BD": {
+            "bn": 278,
+            "hi": 16,
+            "en": 35,
+            "uz": 1,
+            "bh": 1,
+            "ne": 1
+        },
+        "en-cs_CZ": {
+            "cs": 343,
+            "en": 39,
+            "sk": 1,
+            "eo": 1
+        },
+        "en-de_DE": {
+            "de": 382,
+            "sl": 1,
+            "en": 1
+        },
+        "en-el_GR": {
+            "el": 114,
+            "zh": 23,
+            "en": 118,
+            "de": 26,
+            "es": 1,
+            "pt": 43,
+            "ja": 1,
+            "ru": 5,
+            "id": 1
+        },
+        "en-et_EE": {
+            "et": 260,
+            "fi": 36,
+            "en": 33,
+            "hu": 1,
+            "tr": 1,
+            "cs": 1
+        },
+        "en-fa_IR": {
+            "fa": 307,
+            "en": 23,
+            "ps": 1,
+            "ar": 1
+        },
+        "en-hi_IN": {
+            "hi": 331,
+            "mr": 1
+        },
+        "en-id_ID": {
+            "id": 318,
+            "en": 13,
+            "ms": 1
+        },
+        "en-is_IS": {
+            "is": 229,
+            "en": 28,
+            "gom": 1,
+            "no": 41,
+            "de": 23,
+            "cs": 1,
+            "da": 7,
+            "id": 1,
+            "pl": 1
+        },
+        "en-it_IT": {
+            "it": 331,
+            "id": 1
+        },
+        "en-ja_JP": {
+            "ja": 330,
+            "en": 1,
+            "id": 1
+        },
+        "en-kn_IN": {
+            "kn": 275,
+            "pt": 1,
+            "en": 48,
+            "hi": 3,
+            "pl": 1,
+            "fi": 1,
+            "ta": 1,
+            "ml": 1,
+            "de": 1
+        },
+        "en-ko_KR": {
+            "ko": 330,
+            "en": 1,
+            "ja": 1
+        },
+        "en-lt_LT": {
+            "lt": 148,
+            "ru": 2,
+            "pl": 111,
+            "es": 1,
+            "en": 36,
+            "eo": 3,
+            "sr": 3,
+            "nl": 3,
+            "lv": 3,
+            "sl": 1,
+            "fi": 3,
+            "de": 2,
+            "fy": 1,
+            "ur": 1,
+            "pt": 3,
+            "vo": 1,
+            "fr": 10
+        },
+        "en-mr_IN": {
+            "mr": 218,
+            "hi": 96,
+            "es": 2,
+            "gom": 1,
+            "en": 12,
+            "id": 1,
+            "ne": 2
+        },
+        "en-ro_RO": {
+            "ro": 303,
+            "en": 26,
+            "pl": 1,
+            "id": 1,
+            "fr": 1
+        },
+        "en-ru_RU": {
+            "ru": 278,
+            "en": 44,
+            "zh": 3,
+            "es": 5,
+            "id": 1,
+            "ja": 1
+        },
+        "en-sr_Cyrl_RS": {
+            "bg": 31,
+            "hr": 90,
+            "ru": 43,
+            "sr": 130,
+            "zh": 1,
+            "mk": 1,
+            "bs": 2,
+            "sh": 13,
+            "en": 18,
+            "cs": 1,
+            "fr": 1,
+            "id": 1
+        },
+        "en-sr_Latn_RS": {
+            "hr": 102,
+            "sr": 157,
+            "ru": 2,
+            "bs": 3,
+            "sh": 16,
+            "bg": 12,
+            "fr": 3,
+            "en": 35,
+            "id": 1,
+            "de": 1
+        },
+        "en-sv_SE": {
+            "sv": 218,
+            "no": 79,
+            "da": 11,
+            "nn": 1,
+            "en": 1,
+            "id": 1,
+            "de": 21
+        },
+        "en-th_TH": {
+            "th": 331,
+            "en": 1
+        },
+        "en-tr_TR": {
+            "tr": 304,
+            "ja": 1,
+            "en": 27
+        },
+        "en-uk_UA": {
+            "uk": 299,
+            "ru": 2,
+            "zh": 3,
+            "en": 28
+        },
+        "en-vi_VN": {
+            "vi": 305,
+            "en": 16,
+            "pt": 9,
+            "id": 1,
+            "zh": 1
+        },
+        "en-zh_CN": {
+            "zh": 331,
+            "en": 1
+        },
+        "ja-zh_CN": {
+            "ja": 33,
+            "zh": 301
+        }
+    },
+    "SH": {
+        "en-ja_JP": {
+            "ja": 332
+        }
+    },
+    "Mistral-7B": {
+        "cs-de_DE": {
+            "de": 455,
+            "en": 1,
+            "cs": 1
+        },
+        "cs-uk_UA": {
+            "uk": 404,
+            "ru": 1
+        },
+        "en-ar_EG": {
+            "ar": 322,
+            "en": 10
+        },
+        "en-bn_BD": {
+            "bn": 302,
+            "en": 30
+        },
+        "en-cs_CZ": {
+            "cs": 384
+        },
+        "en-de_DE": {
+            "de": 383,
+            "en": 1
+        },
+        "en-el_GR": {
+            "el": 324,
+            "en": 8
+        },
+        "en-et_EE": {
+            "et": 311,
+            "en": 21
+        },
+        "en-fa_IR": {
+            "fa": 316,
+            "en": 16
+        },
+        "en-hi_IN": {
+            "hi": 304,
+            "en": 27,
+            "ur": 1
+        },
+        "en-id_ID": {
+            "id": 325,
+            "en": 6,
+            "su": 1
+        },
+        "en-is_IS": {
+            "is": 325,
+            "en": 5,
+            "pt": 1
+        },
+        "en-it_IT": {
+            "it": 330,
+            "en": 2
+        },
+        "en-ja_JP": {
+            "ja": 323,
+            "en": 8,
+            "es": 1
+        },
+        "en-kn_IN": {
+            "en": 137,
+            "kn": 195
+        },
+        "en-ko_KR": {
+            "ko": 328,
+            "en": 4
+        },
+        "en-lt_LT": {
+            "lt": 319,
+            "en": 13
+        },
+        "en-mr_IN": {
+            "hi": 228,
+            "mr": 77,
+            "en": 26,
+            "kn": 1
+        },
+        "en-ro_RO": {
+            "ro": 329,
+            "en": 2,
+            "eo": 1
+        },
+        "en-ru_RU": {
+            "ru": 332
+        },
+        "en-sr_Cyrl_RS": {
+            "sr": 327,
+            "hr": 1,
+            "en": 1,
+            "ru": 1,
+            "bg": 1,
+            "be": 1
+        },
+        "en-sr_Latn_RS": {
+            "hr": 133,
+            "sr": 166,
+            "en": 17,
+            "sh": 15,
+            "mk": 1
+        },
+        "en-sv_SE": {
+            "sv": 328,
+            "en": 2,
+            "no": 1,
+            "da": 1
+        },
+        "en-th_TH": {
+            "th": 328,
+            "en": 4
+        },
+        "en-tr_TR": {
+            "tr": 329,
+            "en": 3
+        },
+        "en-uk_UA": {
+            "uk": 331,
+            "ru": 1
+        },
+        "en-vi_VN": {
+            "vi": 331,
+            "en": 1
+        },
+        "en-zh_CN": {
+            "zh": 305,
+            "en": 27
+        },
+        "ja-zh_CN": {
+            "zh": 291,
+            "en": 30,
+            "ja": 13
+        }
+    },
+    "Qwen3-235B": {
+        "cs-de_DE": {
+            "de": 455,
+            "en": 1,
+            "cs": 1
+        },
+        "cs-uk_UA": {
+            "uk": 404,
+            "ru": 1
+        },
+        "en-ar_EG": {
+            "ar": 331,
+            "zh": 1
+        },
+        "en-bn_BD": {
+            "bn": 332
+        },
+        "en-cs_CZ": {
+            "cs": 383,
+            "hu": 1
+        },
+        "en-de_DE": {
+            "de": 383,
+            "id": 1
+        },
+        "en-el_GR": {
+            "el": 332
+        },
+        "en-et_EE": {
+            "et": 332
+        },
+        "en-fa_IR": {
+            "fa": 331,
+            "ps": 1
+        },
+        "en-hi_IN": {
+            "hi": 332
+        },
+        "en-id_ID": {
+            "id": 331,
+            "ms": 1
+        },
+        "en-is_IS": {
+            "is": 329,
+            "zh": 1,
+            "cs": 1,
+            "id": 1
+        },
+        "en-it_IT": {
+            "it": 331,
+            "en": 1
+        },
+        "en-ja_JP": {
+            "ja": 332
+        },
+        "en-kn_IN": {
+            "kn": 332
+        },
+        "en-ko_KR": {
+            "ko": 332
+        },
+        "en-lt_LT": {
+            "lt": 331,
+            "eo": 1
+        },
+        "en-mr_IN": {
+            "mr": 332
+        },
+        "en-ro_RO": {
+            "ro": 331,
+            "pl": 1
+        },
+        "en-ru_RU": {
+            "ru": 332
+        },
+        "en-sr_Cyrl_RS": {
+            "sr": 330,
+            "ru": 1,
+            "be": 1
+        },
+        "en-sr_Latn_RS": {
+            "sr": 307,
+            "sh": 13,
+            "hr": 9,
+            "sl": 2,
+            "eo": 1
+        },
+        "en-sv_SE": {
+            "sv": 330,
+            "nl": 1,
+            "id": 1
+        },
+        "en-th_TH": {
+            "th": 332
+        },
+        "en-tr_TR": {
+            "tr": 332
+        },
+        "en-uk_UA": {
+            "uk": 332
+        },
+        "en-vi_VN": {
+            "vi": 332
+        },
+        "en-zh_CN": {
+            "zh": 332
+        },
+        "ja-zh_CN": {
+            "ja": 7,
+            "zh": 327
+        }
+    },
+    "bb88": {
+        "en-ja_JP": {
+            "ja": 332
+        },
+        "ja-zh_CN": {
+            "ja": 5,
+            "zh": 329
+        }
+    },
+    "Yolu": {
+        "cs-de_DE": {
+            "de": 457
+        },
+        "cs-uk_UA": {
+            "uk": 403,
+            "sr": 1,
+            "ru": 1
+        },
+        "en-ar_EG": {
+            "ar": 332
+        },
+        "en-cs_CZ": {
+            "cs": 383,
+            "eo": 1
+        },
+        "en-et_EE": {
+            "et": 332
+        },
+        "en-ja_JP": {
+            "ja": 332
+        },
+        "en-ko_KR": {
+            "ko": 332
+        },
+        "en-ru_RU": {
+            "ru": 332
+        },
+        "en-sr_Latn_RS": {
+            "sr": 306,
+            "hr": 15,
+            "sh": 9,
+            "sl": 1,
+            "hu": 1
+        },
+        "en-uk_UA": {
+            "uk": 332
+        },
+        "en-zh_CN": {
+            "zh": 332
+        },
+        "ja-zh_CN": {
+            "ja": 7,
+            "zh": 327
+        }
+    },
+    "Wenyiil": {
+        "cs-de_DE": {
+            "de": 457
+        },
+        "cs-uk_UA": {
+            "uk": 403,
+            "ru": 2
+        },
+        "en-ar_EG": {
+            "ar": 332
+        },
+        "en-cs_CZ": {
+            "cs": 383,
+            "eo": 1
+        },
+        "en-et_EE": {
+            "et": 329,
+            "fi": 1,
+            "pt": 1,
+            "en": 1
+        },
+        "en-ja_JP": {
+            "ja": 332
+        },
+        "en-ko_KR": {
+            "ko": 332
+        },
+        "en-ru_RU": {
+            "ru": 331,
+            "mk": 1
+        },
+        "en-sr_Latn_RS": {
+            "sr": 310,
+            "sh": 9,
+            "hr": 11,
+            "sl": 1,
+            "hu": 1
+        },
+        "en-uk_UA": {
+            "uk": 331,
+            "ru": 1
+        },
+        "en-zh_CN": {
+            "zh": 332
+        },
+        "ja-zh_CN": {
+            "ja": 5,
+            "zh": 329
+        }
+    },
+    "Llama-4-Maverick": {
+        "cs-de_DE": {
+            "de": 457
+        },
+        "cs-uk_UA": {
+            "uk": 403,
+            "ru": 1,
+            "cs": 1
+        },
+        "en-ar_EG": {
+            "ar": 303,
+            "arz": 29
+        },
+        "en-bn_BD": {
+            "bn": 332
+        },
+        "en-cs_CZ": {
+            "cs": 383,
+            "eo": 1
+        },
+        "en-de_DE": {
+            "de": 384
+        },
+        "en-el_GR": {
+            "el": 332
+        },
+        "en-et_EE": {
+            "et": 332
+        },
+        "en-fa_IR": {
+            "fa": 331,
+            "ps": 1
+        },
+        "en-hi_IN": {
+            "hi": 332
+        },
+        "en-id_ID": {
+            "id": 330,
+            "ms": 2
+        },
+        "en-is_IS": {
+            "is": 331,
+            "pt": 1
+        },
+        "en-it_IT": {
+            "it": 331,
+            "id": 1
+        },
+        "en-ja_JP": {
+            "ja": 332
+        },
+        "en-kn_IN": {
+            "kn": 332
+        },
+        "en-ko_KR": {
+            "ko": 332
+        },
+        "en-lt_LT": {
+            "lt": 330,
+            "pl": 1,
+            "es": 1
+        },
+        "en-mr_IN": {
+            "mr": 332
+        },
+        "en-ro_RO": {
+            "ro": 332
+        },
+        "en-ru_RU": {
+            "ru": 332
+        },
+        "en-sr_Cyrl_RS": {
+            "sr": 331,
+            "be": 1
+        },
+        "en-sr_Latn_RS": {
+            "sr": 295,
+            "sh": 11,
+            "hr": 24,
+            "sl": 1,
+            "eo": 1
+        },
+        "en-sv_SE": {
+            "sv": 331,
+            "da": 1
+        },
+        "en-th_TH": {
+            "th": 332
+        },
+        "en-tr_TR": {
+            "tr": 332
+        },
+        "en-uk_UA": {
+            "uk": 331,
+            "ru": 1
+        },
+        "en-vi_VN": {
+            "vi": 332
+        },
+        "en-zh_CN": {
+            "zh": 332
+        },
+        "ja-zh_CN": {
+            "zh": 281,
+            "ja": 53
+        }
+    },
+    "DLUT_GTCOM": {
+        "cs-de_DE": {
+            "de": 457
+        },
+        "cs-uk_UA": {
+            "uk": 403,
+            "ru": 2
+        },
+        "en-ru_RU": {
+            "ru": 331,
+            "mk": 1
+        },
+        "en-sr_Cyrl_RS": {
+            "sr": 330,
+            "uk": 1,
+            "be": 1
+        },
+        "en-uk_UA": {
+            "uk": 331,
+            "ru": 1
+        }
+    },
+    "CUNI-MH-v2": {
+        "cs-de_DE": {
+            "de": 457
+        },
+        "en-cs_CZ": {
+            "cs": 383,
+            "eo": 1
+        }
+    },
+    "IR-MultiagentMT": {
+        "cs-de_DE": {
+            "de": 456,
+            "da": 1
+        },
+        "cs-uk_UA": {
+            "uk": 405
+        },
+        "en-ar_EG": {
+            "ar": 331,
+            "arz": 1
+        },
+        "en-bn_BD": {
+            "bn": 332
+        },
+        "en-cs_CZ": {
+            "cs": 383,
+            "eo": 1
+        },
+        "en-de_DE": {
+            "de": 384
+        },
+        "en-el_GR": {
+            "el": 332
+        },
+        "en-et_EE": {
+            "et": 331,
+            "fi": 1
+        },
+        "en-fa_IR": {
+            "fa": 331,
+            "ps": 1
+        },
+        "en-hi_IN": {
+            "hi": 332
+        },
+        "en-id_ID": {
+            "id": 331,
+            "ms": 1
+        },
+        "en-is_IS": {
+            "is": 331,
+            "pt": 1
+        },
+        "en-it_IT": {
+            "it": 331,
+            "id": 1
+        },
+        "en-ja_JP": {
+            "ja": 332
+        },
+        "en-kn_IN": {
+            "kn": 332
+        },
+        "en-ko_KR": {
+            "ko": 332
+        },
+        "en-lt_LT": {
+            "lt": 331,
+            "eo": 1
+        },
+        "en-mr_IN": {
+            "mr": 332
+        },
+        "en-ro_RO": {
+            "ro": 332
+        },
+        "en-ru_RU": {
+            "ru": 332
+        },
+        "en-sr_Cyrl_RS": {
+            "sr": 331,
+            "be": 1
+        },
+        "en-sr_Latn_RS": {
+            "sr": 289,
+            "hr": 21,
+            "sh": 19,
+            "bs": 2,
+            "sl": 1
+        },
+        "en-sv_SE": {
+            "sv": 331,
+            "et": 1
+        },
+        "en-th_TH": {
+            "th": 295,
+            "en": 29,
+            "zh": 8
+        },
+        "en-tr_TR": {
+            "tr": 332
+        },
+        "en-uk_UA": {
+            "uk": 332
+        },
+        "en-vi_VN": {
+            "vi": 332
+        },
+        "en-zh_CN": {
+            "zh": 332
+        },
+        "ja-zh_CN": {
+            "ja": 7,
+            "zh": 327
+        }
+    },
+    "AyaExpanse-8B": {
+        "cs-de_DE": {
+            "de": 457
+        },
+        "cs-uk_UA": {
+            "uk": 404,
+            "ru": 1
+        },
+        "en-ar_EG": {
+            "ar": 332
+        },
+        "en-bn_BD": {
+            "bn": 328,
+            "hi": 4
+        },
+        "en-cs_CZ": {
+            "cs": 383,
+            "eo": 1
+        },
+        "en-de_DE": {
+            "de": 383,
+            "nl": 1
+        },
+        "en-el_GR": {
+            "el": 332
+        },
+        "en-et_EE": {
+            "et": 331,
+            "fi": 1
+        },
+        "en-fa_IR": {
+            "fa": 331,
+            "ps": 1
+        },
+        "en-hi_IN": {
+            "hi": 332
+        },
+        "en-id_ID": {
+            "id": 331,
+            "ms": 1
+        },
+        "en-is_IS": {
+            "is": 331,
+            "cbk": 1
+        },
+        "en-it_IT": {
+            "it": 331,
+            "en": 1
+        },
+        "en-ja_JP": {
+            "ja": 332
+        },
+        "en-kn_IN": {
+            "kn": 327,
+            "hi": 2,
+            "te": 3
+        },
+        "en-ko_KR": {
+            "ko": 332
+        },
+        "en-lt_LT": {
+            "lt": 331,
+            "eo": 1
+        },
+        "en-mr_IN": {
+            "mr": 325,
+            "hi": 7
+        },
+        "en-ro_RO": {
+            "ro": 331,
+            "pl": 1
+        },
+        "en-ru_RU": {
+            "ru": 332
+        },
+        "en-sr_Cyrl_RS": {
+            "sr": 220,
+            "hr": 78,
+            "ru": 22,
+            "uk": 2,
+            "sh": 8,
+            "bg": 1,
+            "eo": 1
+        },
+        "en-sr_Latn_RS": {
+            "sr": 213,
+            "hr": 102,
+            "sh": 13,
+            "sl": 2,
+            "pl": 1,
+            "eo": 1
+        },
+        "en-sv_SE": {
+            "sv": 330,
+            "da": 2
+        },
+        "en-th_TH": {
+            "th": 332
+        },
+        "en-tr_TR": {
+            "tr": 332
+        },
+        "en-uk_UA": {
+            "uk": 332
+        },
+        "en-vi_VN": {
+            "vi": 332
+        },
+        "en-zh_CN": {
+            "zh": 332
+        },
+        "ja-zh_CN": {
+            "zh": 328,
+            "ja": 6
+        }
+    },
+    "KYUoM": {
+        "en-uk_UA": {
+            "en": 4,
+            "uk": 327,
+            "ru": 1
+        }
+    },
+    "MMMT": {
+        "cs-de_DE": {
+            "de": 457
+        },
+        "cs-uk_UA": {
+            "uk": 403,
+            "sr": 1,
+            "ru": 1
+        },
+        "en-ar_EG": {
+            "ar": 332
+        },
+        "en-cs_CZ": {
+            "cs": 383,
+            "eo": 1
+        },
+        "en-et_EE": {
+            "et": 332
+        },
+        "en-ja_JP": {
+            "ja": 332
+        },
+        "en-ko_KR": {
+            "ko": 332
+        },
+        "en-ru_RU": {
+            "ru": 332
+        },
+        "en-sr_Latn_RS": {
+            "sr": 306,
+            "hr": 15,
+            "sh": 9,
+            "sl": 1,
+            "hu": 1
+        },
+        "en-uk_UA": {
+            "uk": 332
+        },
+        "en-zh_CN": {
+            "zh": 332
+        },
+        "ja-zh_CN": {
+            "ja": 7,
+            "zh": 327
+        }
+    },
+    "Qwen2.5-7B": {
+        "cs-de_DE": {
+            "de": 453,
+            "zh": 2,
+            "sk": 1,
+            "cs": 1
+        },
+        "cs-uk_UA": {
+            "uk": 403,
+            "sk": 1,
+            "zh": 1
+        },
+        "en-ar_EG": {
+            "ar": 316,
+            "zh": 8,
+            "fa": 3,
+            "id": 1,
+            "arz": 3,
+            "ga": 1
+        },
+        "en-bn_BD": {
+            "bn": 332
+        },
+        "en-cs_CZ": {
+            "cs": 383,
+            "ms": 1
+        },
+        "en-de_DE": {
+            "de": 384
+        },
+        "en-el_GR": {
+            "el": 332
+        },
+        "en-et_EE": {
+            "et": 327,
+            "en": 1,
+            "id": 1,
+            "zh": 3
+        },
+        "en-fa_IR": {
+            "fa": 330,
+            "zh": 1,
+            "ps": 1
+        },
+        "en-hi_IN": {
+            "hi": 332
+        },
+        "en-id_ID": {
+            "id": 329,
+            "en": 2,
+            "ms": 1
+        },
+        "en-is_IS": {
+            "is": 329,
+            "da": 1,
+            "pt": 1,
+            "zh": 1
+        },
+        "en-it_IT": {
+            "it": 331,
+            "id": 1
+        },
+        "en-ja_JP": {
+            "ja": 332
+        },
+        "en-kn_IN": {
+            "kn": 297,
+            "te": 5,
+            "mr": 10,
+            "ml": 7,
+            "hi": 1,
+            "en": 1,
+            "ta": 2,
+            "zh": 4,
+            "cs": 1,
+            "gu": 1,
+            "tr": 2,
+            "lv": 1
+        },
+        "en-ko_KR": {
+            "ko": 317,
+            "zh": 14,
+            "en": 1
+        },
+        "en-lt_LT": {
+            "lt": 330,
+            "id": 1,
+            "zh": 1
+        },
+        "en-mr_IN": {
+            "mr": 331,
+            "hi": 1
+        },
+        "en-ro_RO": {
+            "ro": 331,
+            "id": 1
+        },
+        "en-ru_RU": {
+            "ru": 328,
+            "zh": 4
+        },
+        "en-sr_Cyrl_RS": {
+            "hr": 84,
+            "sr": 234,
+            "sh": 9,
+            "bs": 1,
+            "sl": 1,
+            "mk": 1,
+            "zh": 1,
+            "id": 1
+        },
+        "en-sr_Latn_RS": {
+            "hr": 118,
+            "sr": 196,
+            "bs": 3,
+            "sh": 11,
+            "sl": 2,
+            "en": 1,
+            "id": 1
+        },
+        "en-sv_SE": {
+            "sv": 330,
+            "da": 1,
+            "no": 1
+        },
+        "en-th_TH": {
+            "th": 326,
+            "zh": 6
+        },
+        "en-tr_TR": {
+            "tr": 331,
+            "id": 1
+        },
+        "en-uk_UA": {
+            "uk": 332
+        },
+        "en-vi_VN": {
+            "vi": 322,
+            "zh": 10
+        },
+        "en-zh_CN": {
+            "zh": 332
+        },
+        "ja-zh_CN": {
+            "ja": 7,
+            "zh": 327
+        }
+    },
+    "Gemma-3-27B": {
+        "cs-de_DE": {
+            "de": 457
+        },
+        "cs-uk_UA": {
+            "uk": 404,
+            "ru": 1
+        },
+        "en-ar_EG": {
+            "ar": 332
+        },
+        "en-bn_BD": {
+            "bn": 332
+        },
+        "en-cs_CZ": {
+            "cs": 383,
+            "eo": 1
+        },
+        "en-de_DE": {
+            "de": 383,
+            "en": 1
+        },
+        "en-el_GR": {
+            "en": 85,
+            "el": 247
+        },
+        "en-et_EE": {
+            "et": 330,
+            "fi": 1,
+            "en": 1
+        },
+        "en-fa_IR": {
+            "fa": 331,
+            "ps": 1
+        },
+        "en-hi_IN": {
+            "hi": 332
+        },
+        "en-id_ID": {
+            "id": 330,
+            "ms": 2
+        },
+        "en-is_IS": {
+            "is": 308,
+            "no": 1,
+            "cs": 1,
+            "pt": 1,
+            "en": 21
+        },
+        "en-it_IT": {
+            "it": 331,
+            "en": 1
+        },
+        "en-ja_JP": {
+            "ja": 332
+        },
+        "en-kn_IN": {
+            "kn": 331,
+            "te": 1
+        },
+        "en-ko_KR": {
+            "ko": 332
+        },
+        "en-lt_LT": {
+            "lt": 331,
+            "eo": 1
+        },
+        "en-mr_IN": {
+            "mr": 332
+        },
+        "en-ro_RO": {
+            "ro": 332
+        },
+        "en-ru_RU": {
+            "ru": 331,
+            "mk": 1
+        },
+        "en-sr_Cyrl_RS": {
+            "en": 42,
+            "sr": 287,
+            "ru": 1,
+            "be": 1,
+            "mk": 1
+        },
+        "en-sr_Latn_RS": {
+            "en": 42,
+            "sr": 260,
+            "sh": 11,
+            "hr": 17,
+            "sl": 1,
+            "eo": 1
+        },
+        "en-sv_SE": {
+            "sv": 331,
+            "da": 1
+        },
+        "en-th_TH": {
+            "th": 332
+        },
+        "en-tr_TR": {
+            "tr": 332
+        },
+        "en-uk_UA": {
+            "en": 42,
+            "uk": 290
+        },
+        "en-vi_VN": {
+            "vi": 332
+        },
+        "en-zh_CN": {
+            "zh": 332
+        },
+        "ja-zh_CN": {
+            "en": 1,
+            "zh": 323,
+            "ja": 10
+        }
+    },
+    "AyaExpanse-32B": {
+        "cs-de_DE": {
+            "de": 457
+        },
+        "cs-uk_UA": {
+            "uk": 404,
+            "ru": 1
+        },
+        "en-ar_EG": {
+            "ar": 332
+        },
+        "en-bn_BD": {
+            "bn": 332
+        },
+        "en-cs_CZ": {
+            "cs": 383,
+            "eo": 1
+        },
+        "en-de_DE": {
+            "de": 384
+        },
+        "en-el_GR": {
+            "el": 332
+        },
+        "en-et_EE": {
+            "et": 331,
+            "fi": 1
+        },
+        "en-fa_IR": {
+            "fa": 331,
+            "ps": 1
+        },
+        "en-hi_IN": {
+            "hi": 332
+        },
+        "en-id_ID": {
+            "id": 330,
+            "ms": 2
+        },
+        "en-is_IS": {
+            "is": 330,
+            "et": 1,
+            "pt": 1
+        },
+        "en-it_IT": {
+            "it": 331,
+            "en": 1
+        },
+        "en-ja_JP": {
+            "ja": 332
+        },
+        "en-kn_IN": {
+            "kn": 330,
+            "mr": 1,
+            "te": 1
+        },
+        "en-ko_KR": {
+            "ko": 332
+        },
+        "en-lt_LT": {
+            "lt": 330,
+            "eo": 2
+        },
+        "en-mr_IN": {
+            "mr": 330,
+            "hi": 2
+        },
+        "en-ro_RO": {
+            "ro": 332
+        },
+        "en-ru_RU": {
+            "ru": 332
+        },
+        "en-sr_Cyrl_RS": {
+            "sr": 326,
+            "ru": 3,
+            "mk": 2,
+            "be": 1
+        },
+        "en-sr_Latn_RS": {
+            "hr": 91,
+            "sr": 225,
+            "sh": 13,
+            "sl": 2,
+            "eo": 1
+        },
+        "en-sv_SE": {
+            "sv": 330,
+            "da": 2
+        },
+        "en-th_TH": {
+            "th": 332
+        },
+        "en-tr_TR": {
+            "tr": 332
+        },
+        "en-uk_UA": {
+            "uk": 332
+        },
+        "en-vi_VN": {
+            "vi": 332
+        },
+        "en-zh_CN": {
+            "zh": 332
+        },
+        "ja-zh_CN": {
+            "zh": 329,
+            "ja": 4,
+            "ko": 1
+        }
+    },
+    "ctpc_nlp": {
+        "en-cs_CZ": {
+            "cs": 382,
+            "en": 1,
+            "eo": 1
+        }
+    },
+    "CUNI-EdUKate-v1": {
+        "cs-uk_UA": {
+            "uk": 404,
+            "ru": 1
+        }
+    },
+    "Llama-3.1-8B": {
+        "cs-de_DE": {
+            "de": 454,
+            "cs": 3
+        },
+        "cs-uk_UA": {
+            "uk": 405
+        },
+        "en-ar_EG": {
+            "ar": 324,
+            "en": 4,
+            "arz": 3,
+            "es": 1
+        },
+        "en-bn_BD": {
+            "bn": 332
+        },
+        "en-cs_CZ": {
+            "cs": 383,
+            "id": 1
+        },
+        "en-de_DE": {
+            "de": 383,
+            "id": 1
+        },
+        "en-el_GR": {
+            "el": 332
+        },
+        "en-et_EE": {
+            "et": 330,
+            "it": 2
+        },
+        "en-fa_IR": {
+            "fa": 331,
+            "ps": 1
+        },
+        "en-hi_IN": {
+            "hi": 329,
+            "en": 3
+        },
+        "en-id_ID": {
+            "id": 331,
+            "ms": 1
+        },
+        "en-is_IS": {
+            "is": 330,
+            "pt": 1,
+            "ca": 1
+        },
+        "en-it_IT": {
+            "it": 331,
+            "id": 1
+        },
+        "en-ja_JP": {
+            "ja": 332
+        },
+        "en-kn_IN": {
+            "kn": 332
+        },
+        "en-ko_KR": {
+            "ko": 332
+        },
+        "en-lt_LT": {
+            "lt": 332
+        },
+        "en-mr_IN": {
+            "mr": 330,
+            "new": 1,
+            "en": 1
+        },
+        "en-ro_RO": {
+            "ro": 332
+        },
+        "en-ru_RU": {
+            "ru": 332
+        },
+        "en-sr_Cyrl_RS": {
+            "sr": 242,
+            "hr": 69,
+            "sh": 19,
+            "sl": 1,
+            "id": 1
+        },
+        "en-sr_Latn_RS": {
+            "hr": 86,
+            "sr": 225,
+            "sh": 18,
+            "sl": 2,
+            "id": 1
+        },
+        "en-sv_SE": {
+            "sv": 331,
+            "id": 1
+        },
+        "en-th_TH": {
+            "th": 331,
+            "sv": 1
+        },
+        "en-tr_TR": {
+            "tr": 332
+        },
+        "en-uk_UA": {
+            "uk": 332
+        },
+        "en-vi_VN": {
+            "vi": 331,
+            "ca": 1
+        },
+        "en-zh_CN": {
+            "zh": 332
+        },
+        "ja-zh_CN": {
+            "zh": 328,
+            "ja": 6
+        }
+    },
+    "Yandex": {
+        "en-ru_RU": {
+            "ru": 332
+        }
+    },
+    "COILD-BHO": {},
+    "Gemini-2.5-Pro": {
+        "cs-de_DE": {
+            "de": 457
+        },
+        "cs-uk_UA": {
+            "uk": 403,
+            "ru": 2
+        },
+        "en-ar_EG": {
+            "ar": 332
+        },
+        "en-bn_BD": {
+            "bn": 332
+        },
+        "en-cs_CZ": {
+            "cs": 384
+        },
+        "en-de_DE": {
+            "de": 383,
+            "nds": 1
+        },
+        "en-el_GR": {
+            "el": 332
+        },
+        "en-et_EE": {
+            "et": 331,
+            "fi": 1
+        },
+        "en-fa_IR": {
+            "fa": 331,
+            "ar": 1
+        },
+        "en-hi_IN": {
+            "hi": 332
+        },
+        "en-id_ID": {
+            "id": 330,
+            "ms": 2
+        },
+        "en-is_IS": {
+            "is": 331,
+            "de": 1
+        },
+        "en-it_IT": {
+            "it": 331,
+            "fr": 1
+        },
+        "en-ja_JP": {
+            "ja": 332
+        },
+        "en-kn_IN": {
+            "kn": 331,
+            "ko": 1
+        },
+        "en-ko_KR": {
+            "ko": 332
+        },
+        "en-lt_LT": {
+            "lt": 330,
+            "eo": 1,
+            "es": 1
+        },
+        "en-mr_IN": {
+            "mr": 332
+        },
+        "en-ro_RO": {
+            "ro": 330,
+            "pl": 1,
+            "cs": 1
+        },
+        "en-ru_RU": {
+            "ru": 332
+        },
+        "en-sr_Cyrl_RS": {
+            "sr": 331,
+            "ru": 1
+        },
+        "en-sr_Latn_RS": {
+            "sr": 313,
+            "sh": 9,
+            "hr": 7,
+            "sl": 1,
+            "cs": 1,
+            "hu": 1
+        },
+        "en-sv_SE": {
+            "sv": 331,
+            "fi": 1
+        },
+        "en-th_TH": {
+            "th": 332
+        },
+        "en-tr_TR": {
+            "tr": 331,
+            "pam": 1
+        },
+        "en-uk_UA": {
+            "uk": 332
+        },
+        "en-vi_VN": {
+            "vi": 332
+        },
+        "en-zh_CN": {
+            "zh": 332
+        },
+        "ja-zh_CN": {
+            "ja": 6,
+            "zh": 328
+        }
+    },
+    "Gemma-3-12B": {
+        "cs-de_DE": {
+            "de": 451,
+            "cs": 6
+        },
+        "cs-uk_UA": {
+            "uk": 405
+        },
+        "en-ar_EG": {
+            "ar": 329,
+            "en": 1,
+            "arz": 2
+        },
+        "en-bn_BD": {
+            "bn": 331,
+            "vi": 1
+        },
+        "en-cs_CZ": {
+            "cs": 382,
+            "nl": 1,
+            "eo": 1
+        },
+        "en-de_DE": {
+            "de": 383,
+            "nds": 1
+        },
+        "en-el_GR": {
+            "en": 42,
+            "el": 290
+        },
+        "en-et_EE": {
+            "et": 332
+        },
+        "en-fa_IR": {
+            "fa": 331,
+            "ps": 1
+        },
+        "en-hi_IN": {
+            "hi": 322,
+            "en": 10
+        },
+        "en-id_ID": {
+            "id": 331,
+            "ms": 1
+        },
+        "en-is_IS": {
+            "is": 329,
+            "no": 1,
+            "pt": 1,
+            "en": 1
+        },
+        "en-it_IT": {
+            "it": 331,
+            "en": 1
+        },
+        "en-ja_JP": {
+            "ja": 314,
+            "en": 18
+        },
+        "en-kn_IN": {
+            "en": 42,
+            "kn": 290
+        },
+        "en-ko_KR": {
+            "ko": 332
+        },
+        "en-lt_LT": {
+            "lt": 331,
+            "eo": 1
+        },
+        "en-mr_IN": {
+            "mr": 321,
+            "en": 11
+        },
+        "en-ro_RO": {
+            "ro": 332
+        },
+        "en-ru_RU": {
+            "ru": 332
+        },
+        "en-sr_Cyrl_RS": {
+            "sr": 327,
+            "sl": 1,
+            "ru": 1,
+            "hr": 2,
+            "eo": 1
+        },
+        "en-sr_Latn_RS": {
+            "sr": 297,
+            "hr": 17,
+            "sh": 9,
+            "bs": 2,
+            "sl": 1,
+            "en": 5,
+            "eo": 1
+        },
+        "en-sv_SE": {
+            "sv": 331,
+            "da": 1
+        },
+        "en-th_TH": {
+            "th": 311,
+            "en": 21
+        },
+        "en-tr_TR": {
+            "tr": 322,
+            "en": 10
+        },
+        "en-uk_UA": {
+            "en": 42,
+            "uk": 290
+        },
+        "en-vi_VN": {
+            "vi": 332
+        },
+        "en-zh_CN": {
+            "zh": 331,
+            "en": 1
+        },
+        "ja-zh_CN": {
+            "ja": 18,
+            "zh": 315,
+            "ko": 1
+        }
+    }
+}
