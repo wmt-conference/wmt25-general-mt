@@ -5,21 +5,13 @@ import pathlib
 import contextlib
 import collections
 
-def read_file_with_fallback(path: pathlib.Path) -> str:
-    encodings = ["utf-8", "utf-16", "cp1251"]
-    for enc in encodings:
-        try:
-            return path.read_text(encoding=enc)
-        except UnicodeDecodeError:
-            continue
-    raise UnicodeDecodeError(f"Cannot decode file: {path}")
-
 LANGS = {
     "en-cs_CZ", "cs-uk_UA", "cs-de_DE", "en-et_EE", "en-is_IS", "en-ja_JP", "en-ar_EG", "en-sr_Cyrl_RS",
-    "en-sr_Latn_RS",
-    "en-ru_RU", "en-uk_UA", "en-ko_KR", "en-bho_IN", "en-mas_KE", "en-zh_CN", "en-it_IT",
-    # en-de_DE is done by Google
+    "en-ru_RU", "en-uk_UA", "en-bho_IN", "en-mas_KE", "en-zh_CN", "en-it_IT",
+    # "en-sr_Latn_RS", # for Serbian we use Cyrillic only
+    # en-de_DE is not done this year
     # ja-zh_CN is done by Google
+    # en-ko_KR is done by Google
 }
 LANG_TO_3 = {
     "en": "eng",
@@ -40,6 +32,9 @@ LANG_TO_3 = {
 }
 
 with contextlib.chdir(pathlib.Path(__file__).parent.parent):
+    with open("data/systems_humeval.json", "r") as f:
+        systems_humeval = json.load(f)
+
     with open("data/wmt25-genmt.jsonl", "r") as f:
         data = [json.loads(x) for x in f.readlines()]
     # take only the information we need
@@ -111,8 +106,8 @@ for langs, data_local in data_agg.items():
     
     print(langs, len(systems))
 
-    # NOTE: mock system filtering
-    systems = sorted(systems)[:15]
+    # sorted to make random selection robust
+    systems = sorted(systems_humeval[f"{langs[0]}-{langs[1]}"])
     for doc in data_local:
         doc["tgt_text"] = {
             sys: doc["tgt_text"][sys]
@@ -294,11 +289,11 @@ for batch_name, tasks in tasks_agg.items():
                     ]
             if batch_name[2] == "dialogue":
                 doc["src_text"] = [
-                    src_line.replace("<i>", "").replace("</i>", "").replace("<br/>", "\n")
+                    src_line.replace("<br/>", "\n")
                     for src_line in doc["src_text"]
                 ]
                 doc["tgt_text"] = [
-                    tgt_line.replace("<i>", "").replace("</i>", "").replace("<br/>", "\n")
+                    tgt_line.replace("<br/>", "\n")
                     for tgt_line in doc["tgt_text"]
                 ]
 
@@ -407,5 +402,6 @@ python3 manage.py StartNewCampaign \
     --csv-output /home/vilda/wmt25-general-mt/appraise_output/wmt25engcesIsocialIwave1.csv
 
 
+maxm
     
 """
