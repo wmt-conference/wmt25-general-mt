@@ -7,7 +7,11 @@ import collections
 
 LANGS = {
     "en-cs_CZ", "cs-uk_UA", "cs-de_DE", "en-et_EE", "en-is_IS", "en-ja_JP", "en-ar_EG", "en-sr_Cyrl_RS",
-    "en-ru_RU", "en-uk_UA", "en-bho_IN", "en-mas_KE", "en-zh_CN", "en-it_IT",
+    "en-ru_RU", "en-uk_UA", "en-zh_CN", "en-it_IT",
+    # "en-bho_IN", "en-mas_KE": come later
+    # TODO: make sure that CAMPAIGN_NO here is correct
+
+    # not used
     # "en-sr_Latn_RS", # for Serbian we use Cyrillic only
     # en-de_DE is not done this year
     # ja-zh_CN is done by Google
@@ -91,7 +95,6 @@ with contextlib.chdir(pathlib.Path(__file__).parent.parent):
             )
 
 # %%
-# TODO: filter systems properly
 
 # treat each lang separatedly
 data_agg = collections.defaultdict(list)
@@ -137,18 +140,18 @@ for batch_name, data_local in data_agg.items():
     prev_lang = batch_name[:2]
 
     diversity = [
-        statistics.mean([
-            docA != docB
-            for sysA, sysB in itertools.combinations(doc["tgt_text"].keys(), 2)
-            for docA, docB in zip(doc["tgt_text"][sysA], doc["tgt_text"][sysB])
-        ])
-        # -np.mean([
-        #     fastchrf.pairwise_chrf(
-        #         [[doc["tgt_text"][sys][i] for sys in doc["tgt_text"].keys()]],
-        #         [[doc["tgt_text"][sys][i] for sys in doc["tgt_text"].keys()]],
-        #     )
-        #     for i in range(len(list(doc["tgt_text"].values())[0]))
+        # statistics.mean([
+        #     docA != docB
+        #     for sysA, sysB in itertools.combinations(doc["tgt_text"].keys(), 2)
+        #     for docA, docB in zip(doc["tgt_text"][sysA], doc["tgt_text"][sysB])
         # ])
+        -np.mean([
+            fastchrf.pairwise_chrf(
+                [[doc["tgt_text"][sys][i] for sys in doc["tgt_text"].keys()]],
+                [[doc["tgt_text"][sys][i] for sys in doc["tgt_text"].keys()]],
+            )
+            for i in range(len(list(doc["tgt_text"].values())[0]))
+        ])
         for doc in data_local
     ]
     # sort from highest diversity
@@ -157,10 +160,16 @@ for batch_name, data_local in data_agg.items():
         sorted(zip(data_local, diversity), key=lambda x: x[1], reverse=True)
     ]
 
+
+    # chunk into 20-hours waves (we have 4 domains so one wave is 80 hours ~= 1/2 of 200hrs)
+    if batch_name[2] == "literary":
+        # make sure literary (2 docs) is always two waves
+        THRESHOLD = 10
+    else:
+        THRESHOLD = 20
     data_waves = [[]]
     for doc in data_local:
-        # chunk into 15-hours waves (we have 4 domains so one wave is 60 hours ~= 1/3 of 200hrs)
-        if sum([doc["words"]*len(doc["tgt_text"]) for doc in data_waves[-1]]) * 0.8 / 60 /60 >= 15:
+        if sum([doc["words"]*len(doc["tgt_text"]) for doc in data_waves[-1]]) * 0.8 / 60 /60 >= THRESHOLD:
             data_waves.append([])
         data_waves[-1].append(doc)
     
@@ -237,106 +246,107 @@ import copy
 import shutil
 import os
 
-# clean up appraise directory
-shutil.rmtree("appraise", ignore_errors=True)
-os.makedirs("appraise", exist_ok=True)
+with contextlib.chdir(pathlib.Path(__file__).parent.parent):
+    # clean up appraise directory
+    shutil.rmtree("appraise", ignore_errors=True)
+    shutil.rmtree("appraise_output", ignore_errors=True)
+    os.makedirs("appraise", exist_ok=True)
 
-campaign_no = 1
-for batch_name, tasks in tasks_agg.items():
-    tasks_flat = []
-    
-    lang2 = batch_name[1].split("_")[0]
-    with open(f"/home/vilda/ErrorSpanAnnotations/data/tutorial/{lang2}-en.esa.json", "r") as f:
-        esa_tutorial = json.load(f)
+    campaign_no = 1000
+    for batch_name, tasks in tasks_agg.items():
+        tasks_flat = []
+        
+        lang2 = batch_name[1].split("_")[0]
+        with open(f"/home/vilda/ErrorSpanAnnotations/data/tutorial/{lang2}-en.esa.json", "r") as f:
+            esa_tutorial = json.load(f)
 
-    # turn to 3-letter codes
-    lang1 = LANG_TO_3[batch_name[0].split("_")[0]]
-    lang2 = LANG_TO_3[batch_name[1].split("_")[0]]
-    
+        # turn to 3-letter codes
+        lang1 = LANG_TO_3[batch_name[0].split("_")[0]]
+        lang2 = LANG_TO_3[batch_name[1].split("_")[0]]
+        
 
-    for task in tasks:
-        # load ESA tutorial at the beginning
-        task_flat = [
-            {
-                **line,
-                "isCompleteDocument": False,
-                # TODO: see if this works and doesn't get weirdly overwritten
-                "itemID": 0,
-            } 
-            for line in copy.deepcopy(esa_tutorial)
-        ]
-        item_id = 1
-        for doc in task:
-            # add video/screenshot
-            if batch_name[2] == "speech":
-                assert len(doc["src_text"]) == 1, "Speech documents should have only one segment"
-                # add video
-                if doc["video"] is not None:
-                    doc["src_text"][0] = f"""<video
-                        src="https://vilda.net/t/wmt25/{doc["video"]}"
-                        controls
-                        disablepictureinpicture
-                        preload="auto"
-                        controlslist="nodownload"
-                    ></video>"""
-            if batch_name[2] == "social":
-                # add screenshot
-                if doc["screenshot"] is not None:
-                    fname = doc["screenshot"].split("/")[-1]
+        for task in tasks:
+            # load ESA tutorial at the beginning
+            task_flat = [
+                {
+                    **line,
+                    "isCompleteDocument": False,
+                    # TODO: see if this works and doesn't get weirdly overwritten
+                    "itemID": 0,
+                } 
+                for line in copy.deepcopy(esa_tutorial)
+            ]
+            item_id = 1
+            for doc in task:
+                # add video/screenshot
+                if batch_name[2] == "speech":
+                    assert len(doc["src_text"]) == 1, "Speech documents should have only one segment"
+                    # add video
+                    if doc["video"] is not None:
+                        doc["src_text"][0] = f"""<video
+                            src="https://vilda.net/t/wmt25/{doc["video"]}"
+                            controls
+                            disablepictureinpicture
+                            preload="auto"
+                            controlslist="nodownload"
+                        ></video>"""
+                if batch_name[2] == "social":
+                    # add screenshot
+                    if doc["screenshot"] is not None:
+                        fname = doc["screenshot"].split("/")[-1]
+                        doc["src_text"] = [
+                            f"""<img src="https://vilda.net/t/wmt25/{doc["screenshot"]}/{fname}_{src_i+1}.png" alt="Screenshot" />"""
+                            for src_i, _ in enumerate(doc["src_text"])
+                        ]
+                if batch_name[2] == "dialogue":
                     doc["src_text"] = [
-                        f"""<img src="https://vilda.net/t/wmt25/{doc["screenshot"]}/{fname}_{src_i+1}.png" alt="Screenshot" />"""
-                        for src_i, _ in enumerate(doc["src_text"])
+                        src_line.replace("<br/>", "\n")
+                        for src_line in doc["src_text"]
                     ]
-            if batch_name[2] == "dialogue":
-                doc["src_text"] = [
-                    src_line.replace("<br/>", "\n")
-                    for src_line in doc["src_text"]
-                ]
-                doc["tgt_text"] = [
-                    tgt_line.replace("<br/>", "\n")
-                    for tgt_line in doc["tgt_text"]
-                ]
+                    doc["tgt_text"] = [
+                        tgt_line.replace("<br/>", "\n")
+                        for tgt_line in doc["tgt_text"]
+                    ]
 
-            for line_i, (src_line, tgt_line) in enumerate(zip(doc["src_text"], doc["tgt_text"])):
-                task_flat.append({
-                    "mqm": [],
-                    "documentID": doc["doc_id"],
-                    "sourceID": doc["doc_id"] + "_#_" + str(line_i),
-                    "targetID": doc["system"],
-                    "sourceText": src_line,
-                    "targetText": tgt_line,
-                    "itemType": "TGT",
-                    "isCompleteDocument": True,
-                    # fake item_id that's unique within each batch
-                    "itemID": item_id,
-                })
-                item_id += 1
-        tasks_flat.append({
-            "items": task_flat,
-            "task": {
-                "batchNo": len(tasks_flat) + 1,
-                "randomSeed": 0,
-                "requiredAnnotations": 1,
-                "sourceLanguage": lang1,
-                "targetLanguage": lang2,
-            },
-        })
-    
-    manifest = {
-        "CAMPAIGN_URL": "http://127.0.0.1:8000/dashboard/sso/",
-        "CAMPAIGN_NAME": f"wmt25{lang1}{lang2}I{batch_name[2]}I{batch_name[3]}",
-        "CAMPAIGN_KEY": f"wtm25{lang1}{lang2}I{batch_name[2]}I{batch_name[3]}",
-        "CAMPAIGN_NO": campaign_no,
-        "REDUNDANCY": 1,
-        "TASKS_TO_ANNOTATORS": [
-            [lang1, lang2, "uniform",  len(tasks_flat), len(tasks_flat)]
-        ],
+                for line_i, (src_line, tgt_line) in enumerate(zip(doc["src_text"], doc["tgt_text"])):
+                    task_flat.append({
+                        "mqm": [],
+                        "documentID": doc["doc_id"],
+                        "sourceID": doc["doc_id"] + "_#_" + str(line_i),
+                        "targetID": doc["system"],
+                        "sourceText": src_line,
+                        "targetText": tgt_line,
+                        "itemType": "TGT",
+                        "isCompleteDocument": True,
+                        # fake item_id that's unique within each batch
+                        "itemID": item_id,
+                    })
+                    item_id += 1
+            tasks_flat.append({
+                "items": task_flat,
+                "task": {
+                    "batchNo": len(tasks_flat) + 1,
+                    "randomSeed": 0,
+                    "requiredAnnotations": 1,
+                    "sourceLanguage": lang1,
+                    "targetLanguage": lang2,
+                },
+            })
+        
+        manifest = {
+            "CAMPAIGN_URL": "http://127.0.0.1:8000/dashboard/sso/",
+            "CAMPAIGN_NAME": f"wmt25{lang1}{lang2}I{batch_name[2]}I{batch_name[3]}",
+            "CAMPAIGN_KEY": f"wtm25{lang1}{lang2}I{batch_name[2]}I{batch_name[3]}",
+            "CAMPAIGN_NO": campaign_no,
+            "REDUNDANCY": 1,
+            "TASKS_TO_ANNOTATORS": [
+                [lang1, lang2, "uniform",  len(tasks_flat), len(tasks_flat)]
+            ],
 
-        "TASK_TYPE": "Document",
-        "TASK_OPTIONS": "ESA;StaticContext"
-    }
-    campaign_no += 1
-    with contextlib.chdir(pathlib.Path(__file__).parent.parent):    
+            "TASK_TYPE": "Document",
+            "TASK_OPTIONS": "ESA;StaticContext"
+        }
+        campaign_no += 1    
         with open(f"appraise/{manifest['CAMPAIGN_NAME']}_manifest.json", "w") as f:
             json.dump(manifest, f, indent=2, ensure_ascii=False)
         with open(f"appraise/{manifest['CAMPAIGN_NAME']}_tasks.json", "w") as f:
@@ -347,7 +357,7 @@ for batch_name, tasks in tasks_agg.items():
 
 """
 for wave in 1 2; do
-    zip appraise/v2_wave${wave}.zip appraise/*wave${wave}*.json
+    zip /home/vilda/Downloads/v3_wave${wave}.zip appraise/*wave${wave}*.json
 done;
 """
 
@@ -366,7 +376,8 @@ for f_manifest in /home/vilda/wmt25-general-mt/appraise/wmt25*InewsIwave1_manife
     python3 manage.py StartNewCampaign \
       ${f_manifest} \
     --batches-json ${f_tasks} \
-    --csv-output /home/vilda/wmt25-general-mt/appraise_output/${f_output}.csv;
+    --csv-output /home/vilda/wmt25-general-mt/appraise_output/${f_output}.csv \
+    --task-confirmation-tokens;
 done
 
 python3 manage.py runserver
@@ -384,7 +395,8 @@ python3 manage.py StartNewCampaign \
 python3 manage.py StartNewCampaign \
     /home/vilda/wmt25-general-mt/appraise/wmt25cesdeuIeduIwave1_manifest.json \
     --batches-json /home/vilda/wmt25-general-mt/appraise/wmt25cesdeuIeduIwave1_tasks.json \
-    --csv-output /home/vilda/wmt25-general-mt/appraise_output/wmt25cesdeuIeduIwave1.csv
+    --csv-output /home/vilda/wmt25-general-mt/appraise_output/wmt25cesdeuIeduIwave1.csv \
+    --task-confirmation-tokens;
 
 python3 manage.py StartNewCampaign \
     /home/vilda/wmt25-general-mt/appraise/wmt25cesdeuIsocialIwave1_manifest.json \
@@ -401,7 +413,9 @@ python3 manage.py StartNewCampaign \
     --batches-json /home/vilda/wmt25-general-mt/appraise/wmt25engcesIsocialIwave1_tasks.json \
     --csv-output /home/vilda/wmt25-general-mt/appraise_output/wmt25engcesIsocialIwave1.csv
 
+python3 manage.py StartNewCampaign \
+    /home/vilda/wmt25-general-mt/appraise/wmt25engaraIliteraryIwave1_manifest.json \
+    --batches-json /home/vilda/wmt25-general-mt/appraise/wmt25engaraIliteraryIwave1_tasks.json \
+    --csv-output /home/vilda/wmt25-general-mt/appraise_output/wmt25engaraIliteraryIwave1.csv
 
-maxm
-    
 """
