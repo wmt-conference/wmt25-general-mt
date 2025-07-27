@@ -236,7 +236,7 @@ for batch_name, data_local in data_agg_new.items():
         f"{sum([doc["words"] for doc in data_flat])*0.8/60/60:.0f}h",
     )
     
-    # TODO: add attention checks
+    # NOTE: no attention checks, otherwies we'd mix them in here
 
 # %%
 
@@ -251,6 +251,7 @@ with contextlib.chdir(pathlib.Path(__file__).parent.parent):
     shutil.rmtree("appraise", ignore_errors=True)
     shutil.rmtree("appraise_output", ignore_errors=True)
     os.makedirs("appraise", exist_ok=True)
+    os.makedirs("appraise_output", exist_ok=True)
 
     campaign_no = 1000
     for batch_name, tasks in tasks_agg.items():
@@ -271,7 +272,7 @@ with contextlib.chdir(pathlib.Path(__file__).parent.parent):
                 {
                     **line,
                     "isCompleteDocument": False,
-                    # TODO: see if this works and doesn't get weirdly overwritten
+                    # this works and doesn't get weirdly overwritten
                     "itemID": 0,
                 } 
                 for line in copy.deepcopy(esa_tutorial)
@@ -346,7 +347,7 @@ with contextlib.chdir(pathlib.Path(__file__).parent.parent):
             "TASK_TYPE": "Document",
             "TASK_OPTIONS": "ESA;StaticContext"
         }
-        campaign_no += 1    
+        campaign_no += 1
         with open(f"appraise/{manifest['CAMPAIGN_NAME']}_manifest.json", "w") as f:
             json.dump(manifest, f, indent=2, ensure_ascii=False)
         with open(f"appraise/{manifest['CAMPAIGN_NAME']}_tasks.json", "w") as f:
@@ -357,7 +358,7 @@ with contextlib.chdir(pathlib.Path(__file__).parent.parent):
 
 """
 for wave in 1 2; do
-    zip /home/vilda/Downloads/v3_wave${wave}.zip appraise/*wave${wave}*.json
+    zip /home/vilda/Downloads/v4_wave${wave}.zip appraise/*wave${wave}*.json
 done;
 """
 
@@ -391,31 +392,5 @@ python3 manage.py StartNewCampaign \
     /home/vilda/wmt25-general-mt/appraise/wmt25cesdeuInewsIwave1_manifest.json \
     --batches-json /home/vilda/wmt25-general-mt/appraise/wmt25cesdeuInewsIwave1_tasks.json \
     --csv-output /home/vilda/wmt25-general-mt/appraise_output/wmt25cesdeuInewsIwave1.csv
-
-python3 manage.py StartNewCampaign \
-    /home/vilda/wmt25-general-mt/appraise/wmt25cesdeuIeduIwave1_manifest.json \
-    --batches-json /home/vilda/wmt25-general-mt/appraise/wmt25cesdeuIeduIwave1_tasks.json \
-    --csv-output /home/vilda/wmt25-general-mt/appraise_output/wmt25cesdeuIeduIwave1.csv \
-    --task-confirmation-tokens;
-
-python3 manage.py StartNewCampaign \
-    /home/vilda/wmt25-general-mt/appraise/wmt25cesdeuIsocialIwave1_manifest.json \
-    --batches-json /home/vilda/wmt25-general-mt/appraise/wmt25cesdeuIsocialIwave1_tasks.json \
-    --csv-output /home/vilda/wmt25-general-mt/appraise_output/wmt25cesdeuIsocialIwave1.csv
-
-python3 manage.py StartNewCampaign \
-    /home/vilda/wmt25-general-mt/appraise/wmt25cesdeuIspeechIwave1_manifest.json \
-    --batches-json /home/vilda/wmt25-general-mt/appraise/wmt25cesdeuIspeechIwave1_tasks.json \
-    --csv-output /home/vilda/wmt25-general-mt/appraise_output/wmt25cesdeuIspeechIwave1.csv
-
-python3 manage.py StartNewCampaign \
-    /home/vilda/wmt25-general-mt/appraise/wmt25engcesIsocialIwave1_manifest.json \
-    --batches-json /home/vilda/wmt25-general-mt/appraise/wmt25engcesIsocialIwave1_tasks.json \
-    --csv-output /home/vilda/wmt25-general-mt/appraise_output/wmt25engcesIsocialIwave1.csv
-
-python3 manage.py StartNewCampaign \
-    /home/vilda/wmt25-general-mt/appraise/wmt25engaraIliteraryIwave1_manifest.json \
-    --batches-json /home/vilda/wmt25-general-mt/appraise/wmt25engaraIliteraryIwave1_tasks.json \
-    --csv-output /home/vilda/wmt25-general-mt/appraise_output/wmt25engaraIliteraryIwave1.csv
 
 """
