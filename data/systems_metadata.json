@@ -387,25 +387,6 @@
             "en-cs_CZ"
         ]
     },
-    "MMMT": {
-        "constrained": false,
-        "description": "MMMT submission is based on transformer",
-        "lps": [
-            "cs-de_DE",
-            "cs-uk_UA",
-            "en-ar_EG",
-            "en-bho_IN",
-            "en-cs_CZ",
-            "en-et_EE",
-            "en-ja_JP",
-            "en-ko_KR",
-            "en-ru_RU",
-            "en-sr_Latn_RS",
-            "en-uk_UA",
-            "en-zh_CN",
-            "ja-zh_CN"
-        ]
-    },
     "Shy": {
         "constrained": true,
         "description": "Shy submission is based on LLM. More is on the way",
