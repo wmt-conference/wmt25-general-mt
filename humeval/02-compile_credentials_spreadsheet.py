@@ -8,11 +8,11 @@ import collections
 import openpyxl.cell
 
 data_all = collections.defaultdict(list)
-for f_name in sorted(glob.glob("/home/vilda/Downloads/wmt25.wave1_v3.accounts/accounts/*.csv")):
+for f_name in sorted(glob.glob("/home/vilda/Downloads/wmt25.wave1_v4.accounts/accounts/*.csv")):
     langs, domain, wave = (
         f_name.split("/")[-1]
         .removeprefix("wmt25")
-        .removesuffix("v3")
+        .removesuffix("v4")
         .removesuffix(".csv")
         .split("I")
     )
