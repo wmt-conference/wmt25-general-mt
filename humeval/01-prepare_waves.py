@@ -7,15 +7,17 @@ import collections
 
 LANGS = {
     "en-cs_CZ", "cs-uk_UA", "cs-de_DE", "en-et_EE", "en-is_IS", "en-ja_JP", "en-ar_EG", "en-sr_Cyrl_RS",
-    "en-ru_RU", "en-uk_UA", "en-zh_CN", "en-it_IT",
-    # "en-bho_IN", "en-mas_KE": come later
+    "en-ru_RU", "en-uk_UA", "en-zh_CN", "en-bho_IN",
+    # "en-it_IT", # skipped for wave1v5, continuing with wave1v4
+
+    # "en-mas_KE": come later
     # TODO: make sure that CAMPAIGN_NO here is correct
 
     # not used
     # "en-sr_Latn_RS", # for Serbian we use Cyrillic only
-    # en-de_DE is not done this year
-    # ja-zh_CN is done by Google
-    # en-ko_KR is done by Google
+    # "en-de_DE" is not done this year
+    # "ja-zh_CN" is done by Google
+    # "en-ko_KR" is done by Google
 }
 LANG_TO_3 = {
     "en": "eng",
@@ -107,15 +109,17 @@ for langs, data_local in data_agg.items():
     for doc in data_local:
         assert set(doc["tgt_text"].keys()) == systems
     
-    print(langs, len(systems))
+    systems_before = systems
 
     # sorted to make random selection robust
-    systems = sorted(systems_humeval[f"{langs[0]}-{langs[1]}"])
+    systems = sorted(systems_humeval[f"{langs[0]}-{langs[1]}"]) + (["refA"] if "refA" in systems else [])
     for doc in data_local:
         doc["tgt_text"] = {
             sys: doc["tgt_text"][sys]
             for sys in systems
         }
+    
+    print(langs, len(systems_before), len(systems))
 
 # flatten again
 data = {doc["doc_id"] : doc for l in data_agg.values() for doc in l}
@@ -358,8 +362,9 @@ with contextlib.chdir(pathlib.Path(__file__).parent.parent):
 
 """
 for wave in 1 2; do
-    zip /home/vilda/Downloads/v4_wave${wave}.zip appraise/*wave${wave}*.json
+    zip /home/vilda/Downloads/v5_wave${wave}.zip appraise/*wave${wave}*.json
 done;
+
 """
 
 """
@@ -386,7 +391,8 @@ python3 manage.py runserver
 python3 manage.py StartNewCampaign \
     /home/vilda/wmt25-general-mt/appraise/wmt25cesdeuIdialogueIwave1_manifest.json \
     --batches-json /home/vilda/wmt25-general-mt/appraise/wmt25cesdeuIdialogueIwave1_tasks.json \
-    --csv-output /home/vilda/wmt25-general-mt/appraise_output/wmt25cesdeuIdialogueIwave1.csv
+    --csv-output /home/vilda/wmt25-general-mt/appraise_output/wmt25cesdeuIdialogueIwave1.csv \
+    --task-confirmation-tokens
 
 python3 manage.py StartNewCampaign \
     /home/vilda/wmt25-general-mt/appraise/wmt25cesdeuInewsIwave1_manifest.json \

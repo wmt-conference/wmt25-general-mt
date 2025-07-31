@@ -28,7 +28,19 @@ result = pd.concat(rows, ignore_index=True)
 data_out = {}
 
 for sheet, systems in result.groupby("sheet")["system"]:
-    data_out[sheet] = systems.dropna().tolist()
+    data_out[sheet] = sorted(systems.dropna().tolist())
 
 with open("../data/systems_humeval.json", "w") as f:
+    json.dump(data_out, f, indent=2)
+
+
+# %%
+# normalize previously-generated
+
+with open("../data/systems_humeval_old.json", "r") as f:
+    data_out = json.load(f)
+
+data_out = {k: sorted(v) for k, v in data_out.items()}
+
+with open("../data/systems_humeval_old.json", "w") as f:
     json.dump(data_out, f, indent=2)
