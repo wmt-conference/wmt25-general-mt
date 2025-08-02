@@ -3510,52 +3510,6 @@
             "ru": 1
         }
     },
-    "MMMT": {
-        "cs-de_DE": {
-            "de": 457
-        },
-        "cs-uk_UA": {
-            "uk": 403,
-            "sr": 1,
-            "ru": 1
-        },
-        "en-ar_EG": {
-            "ar": 332
-        },
-        "en-cs_CZ": {
-            "cs": 383,
-            "eo": 1
-        },
-        "en-et_EE": {
-            "et": 332
-        },
-        "en-ja_JP": {
-            "ja": 332
-        },
-        "en-ko_KR": {
-            "ko": 332
-        },
-        "en-ru_RU": {
-            "ru": 332
-        },
-        "en-sr_Latn_RS": {
-            "sr": 306,
-            "hr": 15,
-            "sh": 9,
-            "sl": 1,
-            "hu": 1
-        },
-        "en-uk_UA": {
-            "uk": 332
-        },
-        "en-zh_CN": {
-            "zh": 332
-        },
-        "ja-zh_CN": {
-            "ja": 7,
-            "zh": 327
-        }
-    },
     "Qwen2.5-7B": {
         "cs-de_DE": {
             "de": 453,
