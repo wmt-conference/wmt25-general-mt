@@ -1,3 +1,5 @@
 appraise
 appraise_output
 data/systems_humeval*.json
+data/wmt25-genmt-humeval.jsonl
+data/*.gz

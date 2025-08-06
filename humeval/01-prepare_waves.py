@@ -399,4 +399,10 @@ python3 manage.py StartNewCampaign \
     --batches-json /home/vilda/wmt25-general-mt/appraise/wmt25cesdeuInewsIwave1_tasks.json \
     --csv-output /home/vilda/wmt25-general-mt/appraise_output/wmt25cesdeuInewsIwave1.csv
 
+    
+python3 manage.py StartNewCampaign \
+    /home/vilda/wmt25-general-mt/appraise/wmt25engestIliteraryIwave2_manifest.json \
+    --batches-json /home/vilda/wmt25-general-mt/appraise/wmt25engestIliteraryIwave2_tasks.json \
+    --csv-output /home/vilda/wmt25-general-mt/appraise_output/wmt25engestIliteraryIwave2.csv
+    
 """
