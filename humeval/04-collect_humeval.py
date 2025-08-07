@@ -6,7 +6,7 @@ import glob
 import json
 
 data_csv = []
-for fname in glob.glob("/home/vilda/Downloads/wmt25.wave1_v5.scores.2025-08-04/scores/*.csv"):
+for fname in glob.glob("/home/vilda/Downloads/campaign_results/*.csv"):
     # we can drop the fname information as we can extract it from the document ids
     with open(fname, "r") as f:
         data_csv += list(csv.reader(f))
@@ -51,7 +51,7 @@ for system in systems:
 
 # Appraise treats <br> as a single character so make sure we do the same conversion so the error spans match
 data = {
-    k: x | {"tgt_text": {k: [b.replace("<br>", "\n").replace("</br>", "\n") for b in v] for k, v in x["tgt_text"].items() if k in systems or k == "refA"}}
+    k: x | {"tgt_text": {k: [b.replace("<br>", "\n").replace("</br>", "\n") for b in v] for k, v in x["tgt_text"].items()}}
     for k, x in data.items()
 }
 
@@ -69,16 +69,14 @@ data = {
 }
 
 # %%
-langs_all = set()
 
 # find translations and other metadata
 for line in data_csv:
-    account, sourceID, model, _, _, _, _, score, _, _, errors, time1, time2, _, _ = line
+    # ['engcesc401', 'cs-en-tutorial1', 'cs-en-tutorial1', 'TGT', 'eng', 'ces', '100', 'cs-en-tutorial1', 'False', '[]', '1754386211.242', '1754386211.242']
+    account, model, sourceID, _, _, _, score, _, _, errors, time1, time2 = line
     if "tutorial" in sourceID:
         continue
     langs, domain, docid, segid = sourceID.split("_#_")
-    langs_all.add(langs)
-    documentID = sourceID.rsplit("_#_", 1)[0]
     mqm = json.loads(errors)
     for x in mqm:
         x.pop("error_type")
@@ -87,5 +85,3 @@ for line in data_csv:
 # save
 with open("../data/wmt25-genmt-humeval.jsonl", "w") as f:
     f.writelines([json.dumps(x, ensure_ascii=False) + "\n" for x in data.values()])
-
-# tar -czf data/TEMPORARY_PRIVATE_Aug4_wmt25-genmt_humeval.jsonl.gz data/wmt25-genmt-humeval.jsonl
