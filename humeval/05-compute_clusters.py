@@ -15,6 +15,8 @@ langs_all = {
 # %%
 
 # paired t-test
+cluster_count = 0
+system_count = 0
 
 for langs in langs_all:
     data_local = [
@@ -49,7 +51,7 @@ for langs in langs_all:
         x for l in data_local for x in l["scores"].values()
         if not np.isnan(x["human"])
     ])
-    if annotated_count < 1000:
+    if annotated_count < 500:
         continue
     print(
         langs.split("_")[0],
@@ -59,17 +61,31 @@ for langs in langs_all:
     for sys, sys_v in systems:
         if (
             sys_v_prev is not None and
-            # paired t-test
-            scipy.stats.ttest_rel(
-                sys_v_prev, sys_v,
-                # makes sure that comparisons are on the same segments
-                nan_policy="omit",
-                alternative="greater"
-            )[1] < 0.05
+            (
+                # paired t-test on intersection
+                scipy.stats.ttest_rel(
+                    sys_v_prev, sys_v,
+                    nan_policy="omit",
+                    alternative="greater"
+                )[1] < 0.05
+                or
+                # unpaired t-test on all segments
+                # should be weaker than paired test but useful until we get all data
+                scipy.stats.ttest_ind(
+                    sys_v_prev, sys_v,
+                    nan_policy="omit",
+                    alternative="greater",
+                    equal_var=True,
+                )[1] < 0.05
+            )
         ):
+            cluster_count += 1
             print(" "*10, "-"*15)
         print(
             f"{sys:>20}: {statistics.mean([a for a in sys_v if not np.isnan(a)]):.1f}")
         sys_v_prev = sys_v
 
     print("\n")
+    system_count += len(systems)
+
+print(system_count/cluster_count)

@@ -4,9 +4,13 @@
 import csv
 import glob
 import json
+import itertools
 
 data_csv = []
-for fname in glob.glob("/home/vilda/Downloads/campaign_results/*.csv"):
+for fname in itertools.chain(
+    glob.glob("/home/vilda/Downloads/campaign_results_v4/*.csv"),
+    glob.glob("/home/vilda/Downloads/campaign_results_v5/*.csv")
+):
     # we can drop the fname information as we can extract it from the document ids
     with open(fname, "r") as f:
         data_csv += list(csv.reader(f))

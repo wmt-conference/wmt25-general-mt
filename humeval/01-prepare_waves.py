@@ -8,10 +8,8 @@ import collections
 LANGS = {
     "en-cs_CZ", "cs-uk_UA", "cs-de_DE", "en-et_EE", "en-is_IS", "en-ja_JP", "en-ar_EG", "en-sr_Cyrl_RS",
     "en-ru_RU", "en-uk_UA", "en-zh_CN", "en-bho_IN",
-    # "en-it_IT", # skipped for wave1v5, continuing with wave1v4
-
-    # "en-mas_KE": come later
-    # TODO: make sure that CAMPAIGN_NO here is correct
+    "en-mas_KE",
+    "en-it_IT", # skipped for wave1v5, continuing with wave1v4
 
     # not used
     # "en-sr_Latn_RS", # for Serbian we use Cyrillic only
@@ -187,7 +185,8 @@ for batch_name, data_local in data_agg.items():
         if len(data_waves) > 1:
             data_waves[-2].extend(data_waves.pop())
     
-    for wave_i, data_wave in enumerate(data_waves):
+    # take only the first "wave"
+    for wave_i, data_wave in enumerate(data_waves[:1]):
         cost = sum(
             doc["words"] * 0.8 * len(doc["tgt_text"])
             for doc in data_wave
@@ -206,7 +205,11 @@ for batch_name, data_local in data_agg.items():
 
 # %%
 import random
-R_SHUFFLE = random.Random(0)
+# 0: wave1. It unfortunately depends on the list of languages. For v4 we ran with (mas, ita). For v5 we ran without mas and ita. For v5 mas only we ran mas only.
+# 1: wave2(=duplicate of wave1). We ran all languages.
+
+# always run with all waves
+R_SHUFFLE = random.Random(1)
 
 tasks_agg = collections.defaultdict(list)
 
@@ -250,6 +253,7 @@ import copy
 import shutil
 import os
 
+waveName = "wave2v6"
 with contextlib.chdir(pathlib.Path(__file__).parent.parent):
     # clean up appraise directory
     shutil.rmtree("appraise", ignore_errors=True)
@@ -340,8 +344,8 @@ with contextlib.chdir(pathlib.Path(__file__).parent.parent):
         
         manifest = {
             "CAMPAIGN_URL": "http://127.0.0.1:8000/dashboard/sso/",
-            "CAMPAIGN_NAME": f"wmt25{lang1}{lang2}I{batch_name[2]}I{batch_name[3]}",
-            "CAMPAIGN_KEY": f"wtm25{lang1}{lang2}I{batch_name[2]}I{batch_name[3]}",
+            "CAMPAIGN_NAME": f"wmt25{lang1}{lang2}I{batch_name[2]}I{waveName}",
+            "CAMPAIGN_KEY": f"wtm25{lang1}{lang2}I{batch_name[2]}I{waveName}",
             "CAMPAIGN_NO": campaign_no,
             "REDUNDANCY": 1,
             "TASKS_TO_ANNOTATORS": [
@@ -361,10 +365,8 @@ with contextlib.chdir(pathlib.Path(__file__).parent.parent):
 # %%
 
 """
-for wave in 1 2; do
-    zip /home/vilda/Downloads/v5_wave${wave}.zip appraise/*wave${wave}*.json
-done;
-
+zip /home/vilda/Downloads/v6_wave2.zip appraise_v6/*Iwave2v6_*.json
+zip /home/vilda/Downloads/v5_wave1ma.zip appraise_v5ma/*Iwave1v5_*.json
 """
 
 """

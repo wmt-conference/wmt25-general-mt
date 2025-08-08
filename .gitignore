@@ -1,5 +1,6 @@
 appraise
-appraise_output
+appraise_*
 data/systems_humeval*.json
 data/wmt25-genmt-humeval.jsonl
 data/*.gz
+tmp/
