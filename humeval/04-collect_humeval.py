@@ -84,8 +84,14 @@ for line in data_csv:
     mqm = json.loads(errors)
     for x in mqm:
         x.pop("error_type")
-    data[sourceID]["scores"][model] = {"human": float(score), "errors": mqm}
+    data[sourceID]["scores"][model] = {"human": float(score), "errors": mqm, "annotator": account}
 
 # save
 with open("../data/wmt25-genmt-humeval.jsonl", "w") as f:
     f.writelines([json.dumps(x, ensure_ascii=False) + "\n" for x in data.values()])
+
+# %%
+
+"""
+tar -czf data/TMP_Aug11-wmt25-genmt-humeval.jsonl.gz data/TMP_Aug11-wmt25-genmt-humeval.jsonl
+"""
