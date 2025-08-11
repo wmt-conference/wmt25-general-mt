@@ -486,7 +486,7 @@
     "description": "Erlendur is a multilingual LLM-based translation system that uses a multi-stage pipeline with preparatory text analysis, dictionary lookup, and glossary integration, with a focus on English-to-Icelandic translation. The system's language-agnostic features address LLM limitations for lower-resource languages through hybrid prompting and post-processing with grammatical error correction.",
     "architecture": "hybrid LLM-approach",
     "base_model": "Claude 3.5 Sonnet",
-    "parameter_count": "175",
+    "parameter_count": "unk",
     "translation_granularity": "document (default in blindset)",
     "post_editing": "Automatic post editing (e.g. LLM)",
     "is_multimodal": "NO",
