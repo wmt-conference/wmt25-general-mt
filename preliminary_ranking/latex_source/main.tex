@@ -1,42 +1,23 @@
-% This must be in the first 5 lines to tell arXiv to use pdfLaTeX, which is strongly recommended.
 \pdfoutput=1
-% In particular, the hyperref package requires pdfLaTeX in order to break URLs across lines.
 
 \documentclass[11pt]{article}
 
-% Change "review" to "final" to generate the final (sometimes called camera-ready) version.
-% Change to "preprint" to generate a non-anonymous version with page numbers.
 \usepackage[final]{acl}
 
-% Standard package includes
 \usepackage{times}
 \usepackage{latexsym}
 
-% For proper rendering and hyphenation of words containing Latin characters (including in bib files)
 \usepackage[T1]{fontenc}
-% For Vietnamese characters
-% \usepackage[T5]{fontenc}
-% See https://www.latex-project.org/help/documentation/encguide.pdf for other character sets
 
 
-% This assumes your files are encoded as UTF8
 \usepackage[utf8]{inputenc}
 
-% This is not strictly necessary, and may be commented out,
-% but it will improve the layout of the manuscript,
-% and will typically save some space.
 \usepackage{microtype}
 
-% This is also not strictly necessary, and may be commented out.
-% However, it will improve the aesthetics of text in
-% the typewriter font.
 \usepackage{inconsolata}
 
-%Including images in your LaTeX document requires adding
-%additional package(s)
 \usepackage{graphicx}
 
-% added by VZ
 \usepackage{enumitem}
 \usepackage{geometry}
 
@@ -47,11 +28,7 @@
 \DeclarePairedDelimiter\Paren()   % auto-sizing with *-form
 
 
-% If the title and author information does not fit in the area allocated, uncomment the following
-%
 \setlength\titlebox{8cm}
-%
-% and set <dim> to something 5cm or larger.
 
 \usepackage{colortbl}
 \usepackage{pifont}
@@ -61,14 +38,12 @@
 
 
 
-% Define macros for row styles
 \newcommand{\opentrack}[1]{\rowcolor{gray!20} #1}
 \newcommand{\closedtrack}[1]{\rowcolor{gray!50} #1}
 \newcommand{\nonsupporting}[1]{#1 \S}
 \newcommand{\validated}{\colorbox{black}{\textcolor{white}{\ding{51}}}}
 
 
-% Vilém: macro for custom highlighting
 \newcommand{\hlc}[2][yellow]{{%
     \colorlet{foo}{#1}%
     \sethlcolor{foo}\hl{#2}}%
@@ -86,9 +61,6 @@
 \DeclareRobustCommand{\repl}[2]{%
 \textcolor{red}{XXX\sout{#1}}%
 \textcolor{blue}{\uline{#2}}}
-% use \repl{what to replace}{what to use instead} inline for edit suggestions
-% \repl{}{} emits also the string XXX so that the PDF can be searched for it
-% and no outstanding change is forgotten
 
 
 \usepackage{soul}
@@ -101,11 +73,13 @@
 \newcommand{\checkmark}{\textcolor{green!60!black}{\ding{51}}} % ✓
 \newcommand{\crossmark}{\textcolor{red}{\ding{55}}}          % ✗
 \newcommand{\unknown}{\textbf{?}}
+\usepackage{fontawesome5}
 
 \usepackage{amssymb} % gives \blacktriangle
 \newcommand{\official}{\(\blacktriangle\)\,}
 
 \newcolumntype{Y}{>{\raggedleft\arraybackslash}X}
+\newcommand{\auto}{\textsc{AutoRank}}
 
 
 
@@ -173,7 +147,6 @@
   Lisa Yankovskaya 
   \And 
   Vilém Zouhar
-% 
   \vspace{2cm}
 }
 
@@ -185,41 +158,83 @@
 
 \section*{Introduction}
 
-We present the \underline{\textbf{\textit{preliminary}}} ranking of the WMT25 General Machine Translation Shared Task, in which MT systems have been evaluated using automatic metrics. As this ranking is based on automatic evaluations, it may be biased in favor of systems that employ re-ranking techniques, such as Quality Estimation re-ranking or Minimum Bayes Risk decoding. The official WMT25 ranking will be based on human evaluation, which is more reliable and will supersede the automatic ranking.
+We present the \textbf{preliminary} rankings of machine translation (MT) systems submitted to the WMT25 General Machine Translation Shared Task,\footnote{\href{https://www2.statmt.org/wmt25/translation-task.html}{www2.statmt.org/wmt25/translation-task.html}} as determined by automatic evaluation metrics. Because these rankings are derived from automatic evaluation, they may exhibit a bias toward systems that employ re-ranking techniques, such as Quality Estimation or Minimum Bayes Risk decoding. The official WMT25 ranking will be based on human evaluation, which is more reliable and will supersede these results. The official WMT25 ranking will be based on human evaluation, which is more reliable and will supersede these results. The purpose of releasing these findings now is to assist task participants with their system description papers; \textit{not} to provide final findings.
 
-The purpose of this report is not to present the final findings of the General MT task, but rather to share preliminary results with task participants, which may be useful when preparing their system submission papers.
 
 \section*{Types of Systems}
 
 We distinguish two types of MT systems participating in the shared task:
 \begin{itemize}%[noitemsep,left=0mm]
-\item \textbf{Constrained systems} are those using only publicly available training data and models. The maximum size of their parameter counts is 20B and participants are required to release their weights under an open license. 
+\item \textbf{Constrained systems:} must use only publicly available training data and models, be limited to a maximum of 20B parameters, and have their model weights released under an open license.
 
-\item \textbf{Unconstrained systems} (marked with \hlc[gray!30]{gray}) are all the remaining systems, with no limitations on their training data, model sizes and no requirements to publish their model weights. Systems where the relevant information is not publicly known also fall into the unconstrained category.
+\item \textbf{Unconstrained systems:} (marked with \hlc[gray!30]{gray}) are all other systems. They have no restrictions on training data or model size, and there is no requirement to publish the model weights. This category also includes systems for which training information is not public.
+
 \end{itemize}
+
+\begin{table}[t]
+\centering
+\small
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{l r c}
+\toprule
+\textbf{Model} & \textbf{\# Params} & \textbf{Open?} \\
+\midrule
+\multicolumn{3}{l}{\textsc{\textbf{\color{purple} Constrained systems}}}\\
+AyaExpanse-8B        & 8B                 & \faCheck \\
+CommandR7B           & 7B                 & \faCheck \\
+EuroLLM-9B           & 9B                 & \faCheck \\
+Gemma-3-12B          & 12B                & \faCheck \\
+Llama-3.1-8B         & 8B                 & \faCheck \\
+Mistral-7B           & 7.3B               & \faCheck \\
+NLLB (NLLB-200)      & 3.3B               & \faCheck \\
+Qwen2.5-7B           & 7.6B               & \faCheck \\
+TowerPlus-9B         & 9B                 & \faCheck \\
+\midrule
+\multicolumn{3}{l}{\textsc{\textbf{\color{teal} Unconstrained systems}}}\\
+AyaExpanse-32B       & 32B                & \faCheck \\
+Claude-4             & ---                & \faTimes \\
+CommandA             & 111B               & \faCheck \\
+DeepSeek-V3          & 671B (37B act.)    & \faCheck \\
+EuroLLM-22B          & 22B (preview)      & \faCheck \\
+Gemma-3-27B          & 27B                & \faCheck \\
+Gemini-2.5-Pro       & ---                & \faTimes \\
+GPT-4.1              & ---                & \faTimes \\
+Llama-4-Maverick     & ---                & \faCheck \\
+Mistral-Medium       & ---                & \faTimes \\
+ONLINE-B             & ---                & \faTimes \\
+ONLINE-G             & ---                & \faTimes \\
+ONLINE-W             & ---                & \faTimes \\
+Qwen3-235B           & 235B (22B act.)    & \faCheck \\
+TowerPlus-72B        & 72B                & \faCheck \\
+\midrule
+\end{tabular}
+\caption{List of constrained and unconstrained systems with parameter count. Open-weight models were marked with a checkmark (\faCheck).}
+\label{tab:models}
+\end{table}
 
 
 \section*{Evaluated Systems}
 
-Details of all systems are going to be available in the upcoming WMT25 findings.
-In addition to participating systems, we also collect open-weight and proprietary LLMs together with three popular commercial MT systems. For each provider, we selected their largest/best performing model for each of the subtracks (when applicable).
+\paragraph{Models.} Our evaluation includes systems submitted by participants, as well as open-weight and proprietary models. We selected the largest or best-performing version of each model where applicable. All constrained and unconstrained systems are listed in \autoref{tab:models}. Full details for all systems will be available in the upcoming WMT25 finding paper.
 
-Constrained systems: 
-AyaExpanse-8B, CommandR7B, EuroLLM-9B, Gemma-3-12B, Llama-3.1-8B, Mistral-7B, NLLB, Qwen2.5-7B, TowerPlus-9B
 
-Unconstrained systems: AyaExpanse-32B, Claude-4, CommandA, DeepSeek-V3, EuroLLM-22B, Gemma-3-27B, Gemini-2.5-Pro, GPT-4.1, Llama-4-Maverick, Mistral-Medium, ONLINE-B, ONLINE-G, ONLINE-W, Qwen3-235B, TowerPlus-72B
 
-We used a zero shot instruction following approach, translating data on a document-level whenever possible, having a paragraph-level backup for failed translations. The instructions were provided in the blindset. This may hurt some of the systems trained for specific MT instructions such as TowerLLM or EuroLLM, we mark them with [M].
 
-We turned off the reasoning for Qwen3-235B, however, we didn't set the reasoning budget for Gemini-2.5-Pro which increased output tokens count 6.6 times making it the most expensive model in the evaluation.
 
-The code for collecting translations is available at \href{https://github.com/wmt-conference/wmt-collect-translations}{github.com/wmt-conference/wmt-collect-translations} and we marked all systems collected by us with \official{}.
 
-\section*{Evaluated Data}
+\paragraph{Prompts.} We prompt all language models using a zero-shot, instruction-following approach, with the specific instructions provided as part of the blind test set. Each model was first tasked with translating the entire document. If this initial attempt failed (e.g., due to producing an incorrect paragraph count or exceeding the token limit), we implemented a fallback strategy of translating the document paragraph by paragraph. This generic setup may disadvantage systems tuned for specific MT instructions, such as TowerLLM or EuroLLM; these are marked with~[M]. 
 
-We evaluated 32 language pairs: half of them will be evaluated by humans, while the other half belong to the multilingual subtrack and will rely solely on automatic ranking.
 
-Most language pairs are in the English-to-X direction and contain approximately 37k words. Each segment contains about 100 words, which typically corresponds to paragraphs, although sometimes natural paragraphs had to be further segmented to meet this constraint. The data are aggregated into documents. The test sets combine material from four domains:
+Additionally, we made two model-specific adjustments: (1) for \textbf{Qwen3-235B} reasoning capabilities were disabled, and (2) for \textbf{Gemini-2.5-Pro}, no reasoning budget was set, which resulted in a 6.6$\times$ increase in output tokens, making it the most expensive model to evaluate.
+
+
+The code for collecting translations is publicly available at \faGithub\ \href{https://github.com/wmt-conference/wmt-collect-translations}{github.com/wmt-conference/wmt-collect-translations} and we marked all systems collected by us with \official{}.
+
+\section*{Evaluation Data}
+
+\paragraph{Languages.} The evaluation covers 32 language pairs, with each test set containing approximately 37K words\footnote{As per whitespace split.} organized into documents. Half of these language pairs are designated for human evaluation, while the other half belong to a multilingual subtrack evaluated solely with automatic metrics. Most pairs are in the English-to-X direction with the exception of Czech-Ukrainian, Czech-German, and Japanese-Chinese.
+
+\paragraph{Domains.} The test sets combine material from four distinct domains, though language pairs with a non-English source may differ slightly in their domain distribution and dataset size. The domains include:
 \begin{itemize}
     \item \textbf{News commentary}
     \item \textbf{Social} (texts from social networks, collected with screenshots)
@@ -227,40 +242,42 @@ Most language pairs are in the English-to-X direction and contain approximately 
     \item \textbf{Literary} (two documents of roughly 5{,}000 words each)
 \end{itemize}
 
-Participants could use image and video modalities (when available) to improve their translations; however, their use was not required. Humans providing reference translations were offered these extra modalities, too.
-Language pairs with a non-English source have a similar distribution but differ slightly in domains and sizes.
+\paragraph{Data preprocessing.} Each document is divided into segments of approximately 100 words. These segments typically correspond to natural paragraphs; however, some paragraphs were split (or merged) to adhere to this length constraint. Sentence splitting was not performed on the source texts, so segments often contain multiple sentences. For the multimodal context, participants were allowed to (optionally) use accompanying image and video modalities when available, and human annotators who provided reference translations also had access to this context.
 
-We do not provide sentence splitting; consequently, many segments contain multiple sentences.
+All data for this task, including references, system outputs, automatic scores, and the LaTeX source of this document, are publicly available at our repository: \href{https://github.com/wmt-conference/wmt25-general-mt}{github.com/wmt-conference/wmt25-general-mt}.
 
-We release all data, including references, system outputs, automatic segment scores, or latex sources of this document at: \href{https://github.com/wmt-conference/wmt25-general-mt}{github.com/wmt-conference/wmt25-general-mt}.
+
+
+
 
 
 \section*{Automatic Ranking}
 \label{sec:automatic-ranking}
 
-We call the automatic ranking described in the rest of this section ``AutoRank''. % because AutoRank is later used without introduction
-Compared to last year, both the set of automatic metrics and the aggregation procedure changed slightly.
 
-\paragraph{Metrics used.}
-For each language pair (except where noted below), we combine three families of evaluation methods:
+This section details our automatic ranking method, which we refer to as \auto. 
+Both the set of automatic metrics and the aggregation procedure have been slightly updated since last year's shared task.
+
+\paragraph{Metrics.}
+For most language pairs,\footnote{See ``Low-resource exception'' below.} the \auto\ is a combination of three distinct families of evaluation methods:
 \begin{itemize}
-    \item \textbf{LLM-as-a-Judge (reference-less).} GEMBA-ESA \citep{kocmi-federmann-2023-large} with two independent judges: GPT-4.1 \citep{openai_gpt41_2025} and Command A \citep{cohere2025commandaenterprisereadylarge}, both used in a reference-less setting.
-    \item \textbf{Trained reference-based metrics.} Two reference-based supervised metrics explicitly trained to approximate human judgments of translation quality: MetricX-24-Hybrid-XL \citep{juraska-etal-2024-metricx} and XCOMET-XL \citep{guerreiro-etal-2024-xcomet}.
-    \item \textbf{Trained Quality Estimation (QE).} One QE metric trained to mimic human judgments without a reference: CometKiwi-XL \citep{rei-etal-2023-scaling}.
+    \item \textbf{LLM-as-a-Judge (reference-less).} We use GEMBA-ESA \citep{kocmi-federmann-2023-large} with two independent judges: GPT-4.1 \citep{openai_gpt41_2025} and Command A \citep{cohere2025commandaenterprisereadylarge}, both in a reference-less setting.
+    \item \textbf{Trained reference-based metrics.} Two supervised metrics trained to approximate human quality judgments with references: MetricX-24-Hybrid-XL \citep{juraska-etal-2024-metricx} and XCOMET-XL \citep{guerreiro-etal-2024-xcomet}.
+    \item \textbf{Trained Quality Estimation (QE).} The reference-less QE metric CometKiwi-XL \citep{rei-etal-2023-scaling}, which is also trained to mimic human judgments.
 \end{itemize}
-Including both reference-based and reference-less (or QE) methods balances complementary failure modes: reference-based metrics typically achieve higher correlation with human judgments when references are high-quality, whereas reference-less methods reduce susceptibility to reference bias when references are suboptimal \citep{freitag-etal-2023-results}. A known pitfall for multilingual QE is that it can be fooled by fluent output in the wrong target language; in contrast, the GEMBA-ESA prompt explicitly specify the target language, which should mitigate this issue.
 
-The use of LLM-as-a-judge metrics (GEMBA-ESA) is intended to mitigate biases by models employing re-ranking or similar techniques during training or inference. Nevertheless, some systems incorporated GEMBA directly as their reward model.
 
-For each metric and language pair, the system-level score of an MT system is computed as the average of the metric’s paragraph-level (segment-level) scores over all translations the system produced on the test set for that language pair. For language pairs without human references, we exclude CometKiwi-XL from the corresponding AutoRank computation, since MetricX-24-Hybrid-XL and XCOMET-XL are hybrid metrics and can be run in reference-less (QE) mode, thus already providing the QE signal from trained metrics for those pairs.
+
+This combination of reference-based and reference-less (or QE) methods is designed to balance their complementary failure modes. Reference-based metrics typically achieve a higher correlation with human judgments when high-quality references are available, while reference-less methods reduce susceptibility to reference bias when references are suboptimal \citep{freitag-etal-2023-results}. We also account for known issues with specific metrics. To mitigate a common QE pitfall, i.e., being fooled by fluent output in the wrong language, the GEMBA-ESA prompt explicitly specifies the target language. However, while GEMBA-ESA is intended to reduce bias toward systems that use re-ranking, we note that some participants incorporated it directly as a reward model.
+
+\paragraph{System-level scores.}
+The system-level score for each language pair is the average of its paragraph-level (segment-level) scores from each metric across the testset. We make one exception for language pairs without human references by excluding CometKiwi-XL from the \auto\ computation. This avoids redundancy, as the other hybrid metrics (MetricX-24-Hybrid-XL and XCOMET-XL) can also run in a reference-less (QE) mode to provide the necessary QE signal.
 
 \paragraph{Low-resource exception.}
-For the two most low-resource target languages, i.e., \textbf{Bhojpuri} and \textbf{Maasai}, we rely solely on \texttt{chrF++} \citep{popovic-2017-chrf} because it is not known whether the above metrics are reliable in these settings \citep{falcao-etal-2024-comet,singh-etal-2024-good,wang-etal-2024-evaluating,sindhujan-etal-2025-llms} and human references are available. We compute \texttt{chrF++} using \texttt{sacrebleu} \citep{post-2018-call}.
-% \footnote{\url{https://github.com/mjpost/sacrebleu}.} .
+For the two lowest-resource languages in the testset, i.e., \textbf{Bhojpuri} and \textbf{Maasai}, we rely solely on \texttt{chrF++} \citep{popovic-2017-chrf}, computed with \texttt{sacrebleu} \citep{post-2018-call}. This approach was chosen because the reliability of our main metrics is unestablished for these languages \citep{falcao-etal-2024-comet,singh-etal-2024-good,wang-etal-2024-evaluating,sindhujan-etal-2025-llms}, whereas high-quality human references required for \texttt{chrF++} were available.
 
-\paragraph{From system-level scores to AutoRank}
+\paragraph{From system-level scores to \auto.}
 To combine the metrics into a single score, we first normalize them using median-interpercentile scaling to address differences in scale and reduce the influence of low-performing outliers.
-% Ondrej added the detail about the normalization, because simple normalization actually \emph{inflates} the influence of outliers on the overall evaluation in this sense: a single very bad outlier ``shifts the scales'', taking the lowest accepted score but pushing all other systems into a high score range which can get extremely narrow.
 We then compute the average using equal weights. Finally, we linearly rescale the results to the range from 1 to $N$ systems. A detailed description is provided below:
 
 Let $S$ be the set of submitted systems for a given language pair, $|S|=N$, and let $M$ be the set of automatic metrics used for that language pair (for Bhojpuri and Maasai, $|M|=1$). For each metric $m\in M$ and system $s\in S$, we compute a system-level score $x^{(m)}_s$ as the average of that metric over all available test segments. To combine scores across metrics, we first map them to a common scale; however, classical min–max normalization is highly sensitive to outliers. To downweight extremes without discarding any system, we apply a \emph{median--inter\-percentile} scaling to each metric $m$:
@@ -276,22 +293,22 @@ Where $\varepsilon>0$ and $\Q{m}{p}$ denotes the $p$-th percentile of $\{x^{(m)}
     \bar{z}_s \;=\; \frac{1}{|M|}\sum_{m\in M} z^{(m)}_s .
     \label{eq:avgz}
 \end{equation}
-Averaging after robust scaling yields a single comparable score that preserves the magnitude of performance differences between systems (in standardized units) while preventing any single metric’s outliers from dominating. Finally, for readability and to follow the WMT convention from last year (lower is better in AutoRank, i.e., $1$ is best and $N$ worst), we apply a final linear mapping to the set $\{\bar{z}_s\}_{s\in S}$. Specifically, within $\{\bar{z}_s\}_{s\in S}$ the system with the highest average score is assigned $1$, the system with the lowest average score is assigned $N$, and all remaining systems are placed linearly between these two endpoints. This remapping is applied only once—after the cross-metric aggregation—so it preserves the ordering and relative spacing between systems while retaining the outlier mitigation provided by the robust scaling. We refer to the resulting value as AutoRank in the various tables.
+Averaging after robust scaling yields a single comparable score that preserves the magnitude of performance differences between systems (in standardized units) while preventing any single metric’s outliers from dominating. Finally, for readability and to follow the WMT convention from last year (lower is better in \auto, i.e., $1$ is best and $N$ worst), we apply a final linear mapping to the set $\{\bar{z}_s\}_{s\in S}$. Specifically, within $\{\bar{z}_s\}_{s\in S}$ the system with the highest average score is assigned $1$, the system with the lowest average score is assigned $N$, and all remaining systems are placed linearly between these two endpoints. This remapping is applied only once—after the cross-metric aggregation—so it preserves the ordering and relative spacing between systems while retaining the outlier mitigation provided by the robust scaling. We refer to the resulting value as \auto\ in the various tables.
 
 
 \section*{Human Evaluation}
 
-This year, we received 36 unique teams,\footnote{We received 43 different teams, however, 7 of them have withdrew or been disqualified} the highest number of participants ever. We are not able to evaluate them all with human annotators.
-Therefore, we select a subset of about 18 systems per language pair (some language pairs have this system count higher) which will be evaluated by humans with the Error Span Annotation protocol \citep{kocmi2024errorspanannotationbalanced}.
-For the remaining systems, AutoRank is going to be the official final ranking.
+This year's shared task saw a record number of participants, with submissions from 36 unique teams.\footnote{A total of 43 teams initially registered, but 7 later withdrew or were disqualified.} Due to budget constraints, we could not include all submissions in the human evaluation. Therefore, we selected a subset of systems for manual evaluation using the Error Span Annotation (ESA) protocol \citep{kocmi2024errorspanannotationbalanced}. This subset typically consists of 18 systems per language pair, although this number is higher for some. For any system not selected for human evaluation, the automatic metric ranking (\auto) serves as the official final result.
 
-When selecting systems for human evaluation, we prioritize constrained systems over unconstrained systems.
-Therefore, we select the systems for human evaluation based on the following two rules:
-
-\begin{enumerate}[noitemsep]
-\item We select top eight constrained systems ignoring unconstrained systems.
-\item Then, we take the top performing systems until we have total of 18 systems selected for human evaluation.
+The selection process for human evaluation prioritized \textbf{constrained} systems over \textbf{unconstrained} ones, following a two-step procedure:
+\begin{enumerate}
+    \item First, the top-8 performing \textbf{constrained} systems were selected, based on their automatic scores.
+    \item Second, the overall top-performing systems from the remaining pool (both constrained and unconstrained) were added until a total of 18 systems was reached.
 \end{enumerate}
+
+
+
+
 
 
 
@@ -299,9 +316,9 @@ Therefore, we select the systems for human evaluation based on the following two
 \section*{Limitations}
 
 
-A key limitation of our evaluation is that some models have been optimized for the very metrics we employ in AutoRank, either during training or at inference time \cite{freitag-etal-2022-high, finkelstein2024mbr}. This can result in artificially inflated scores that do not accurately reflect a model's true capabilities \cite{kovacs-etal-2024-mitigating}. To mitigate this issue, we aggregate the assessments from multiple learned metrics and LLM-as-a-judge approaches. However, even this strategy has shortcomings. First, scores from different learned metrics often exhibit high correlation among themselves. Second, LLM-as-a-judge approaches, including the Gemba-ESA we use, may also have been utilized to optimize machine translation models.
+A key limitation of our evaluation is that some models have been optimized for the very metrics we employ in \auto, either during training or at inference time \cite{freitag-etal-2022-high, finkelstein2024mbr}. This can lead to artificially inflated scores that do not accurately reflect a model's true capabilities \cite{kovacs-etal-2024-mitigating}. To mitigate this issue, we aggregate the assessments from multiple learned metrics and LLM-as-a-judge approaches. However, even this strategy has shortcomings. First, scores from different learned metrics often exhibit high correlation among themselves. Second, LLM-as-a-judge approaches, including Gemba-ESA, may themselves have been leveraged to optimize machine translation models.
 
-Another limitation is that we use automatic metrics to evaluate entire paragraphs, whereas their reliability is typically established at the sentence level. Additionally, learned metrics struggle when evaluating translation directions involving low-resource languages, such as English-to-Bhojpuri and English-to-Maasai. Therefore, we evaluate these language pairs using chrF++. However, chrF++ is a surface-level metric that, like BLEU, has been repeatedly shown to correlate poorly with human judgments \citep{kocmi-etal-2021-ship, freitag-etal-2022-results, freitag-etal-2023-results}.
+Another limitation is that we use automatic metrics to evaluate entire paragraphs, whereas their reliability is typically established at the sentence level. Additionally, learned metrics struggle with low-resource languages, such as English-to-Bhojpuri and English-to-Maasai. For these cases, we rely on \texttt{chrF++} instead. However, \texttt{chrF++} is a surface-level metric that, like BLEU, has repeatedly been shown to correlate poorly with human judgments \citep{kocmi-etal-2021-ship, freitag-etal-2022-results, freitag-etal-2023-results}.
 
 Furthermore, our automatic evaluation is conducted at the paragraph level, without incorporating document-level context. This may lead to inflated scores for systems that translate the dataset paragraph by paragraph, disregarding dependencies and coherence across paragraphs.
 
@@ -309,7 +326,7 @@ The LLM-as-a-judge approach also depends on the language performance of the unde
 
 Finally, using automatically generated speech recognition transcripts as source text in the speech domain introduces additional noise, as the evaluation metrics are unlikely to be robust to ASR errors. Consequently, systems that handle the speech domain well may receive lower scores if their outputs diverge from the ASR transcript, even when their translations are correct.
 
-Given these issues, along with the well-documented biases and limitations of automatic metrics \citep{karpinska-etal-2022-demetr, moghe2024machine}, human evaluation remains indispensable. Therefore, the results from human assessments will supersede the automatic rankings presented here.
+Given these challenges, along with the well-documented biases and limitations of automatic metrics \citep{karpinska-etal-2022-demetr, moghe2024machine}, human evaluation remains indispensable. Accordingly, results from human assessments will supersede the automatic rankings presented here.
 
 
 \section*{Acknowledgement}
@@ -317,17 +334,16 @@ This report would not have been possible without the partnership with Árni Magn
 Furthermore, we are grateful to Toshiaki Nakazawa.
 
 
-% \newgeometry{top=0cm,left=0cm,right=0cm,bottom=0cm}
-% added by VZ
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 
 
 \input{generated_report.tex}
-% \restoregeometry
 
 \clearpage
+\clearpage
+
 \bibliography{anthology.min.bib,custom}
 
 
@@ -337,16 +353,15 @@ Furthermore, we are grateful to Toshiaki Nakazawa.
 
 \section{Metrics correlations}
 
-To examine how the metrics used for AutoRank correlate with each other, we calculated the Pearson correlation between paragraph-level scores for all systems, resulting in a sample size of around 14k scores per each language pair.
+To examine how the metrics used for \auto correlate with each other, we calculated the Pearson correlation between paragraph-level scores for all systems, resulting in a sample size of around 14k scores per each language pair.
 
 The results show that GEMBA-ESA on CmdA and GPT-4.1 exhibit the highest correlations for almost all languages. In contrast, the weakest correlations are generally observed between xComet and both GEMBA-ESA variants.
 
-When examining results by language pair, Bhojpuri, Maasai, and Marathi show the lowest correlations. This is why we use chrF++ for the first two language pairs. Unfortunately, no reference translations are available for Marathi, so we must rely on QE metrics for its evaluation.
+When examining results by language pair, Bhojpuri, Maasai, and Marathi show the lowest correlations. This is why we use \texttt{chrF++} for the first two language pairs. Unfortunately, no reference translations are available for Marathi, so we must rely on QE metrics for its evaluation.
 
 \begin{table*}[h]
 \small
 \centering
-% Vilém: reduce column spacing to fit the page width
 \setlength{\tabcolsep}{4.9pt}
 \input{metrics_correlations}
 \end{table*}
