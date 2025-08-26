@@ -131,10 +131,16 @@ def does_cluster_end_here(i, ranks) -> bool:
     return all([b <= i for a, b in ranks_below]) and all([a > i for a, b in ranks_above])
 
 def system_name(s):
-    if s == "refA":
-        return "Human"
-    else:
-        return s.replace("_", r"\_")
+    return {
+        "CommandA-MT": "CommandA-WMT",
+        "Shy": "Shy-hunyuan-MT",
+        "TowerPlus-9B": "TowerPlus-9B[M]",
+        "TowerPlus-72B": "TowerPlus-72B[M]",
+        "EuroLLM-9B": "EuroLLM-9B[M]",
+        "EuroLLM-22B": "EuroLLM-22B-pre.[M]",
+        "RuZH": "RuZH-Eole",
+        "refA": "Human",
+    }.get(s, s).replace("_", r"\_")
     
 def human_color(x):
     if x < 50:
