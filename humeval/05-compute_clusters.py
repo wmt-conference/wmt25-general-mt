@@ -30,16 +30,25 @@ def safe_average(l):
 
 
 def get_significance(a: list[float], b: list[float]) -> bool:
-    return scipy.stats.permutation_test(
-        [[
+    return scipy.stats.wilcoxon(
+        [
             a-b
             for a, b in zip(a, b)
-            if not (np.isnan(a) and np.isnan(b))
-        ]],
-        statistic=np.mean,
-        n_resamples=1000,
-        permutation_type="samples",
+            if not (np.isnan(a) or np.isnan(b))
+        ],
+        alternative="greater",
     ).pvalue < 0.05
+    # return scipy.stats.permutation_test(
+    #     [[
+    #         a-b
+    #         for a, b in zip(a, b)
+    #         if not (np.isnan(a) or np.isnan(b))
+    #     ]],
+    #     statistic=np.mean,
+    #     n_resamples=1000,
+    #     permutation_type="samples",
+    #     alternative="greater",
+    # ).pvalue < 0.05
 
 
 with open("../generated/clusters.txt", "w") as f:
@@ -236,7 +245,7 @@ Rank & System & Human & AutoRank \\
                 autorank_str = ""
             else:
                 autorank_str = f"{systems_metadata[langs][sysA]['autorank']:.1f}"
-                autorank_str = (r"\phantom{0}" * (3-len(autorank_str))) + autorank_str
+                autorank_str = (r"\phantom{0}" * (4-len(autorank_str))) + autorank_str
             print(
                 (
                     r"\constrained "
