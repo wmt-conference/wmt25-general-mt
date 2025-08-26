@@ -1,10 +1,9 @@
 # %%
-
 import pandas as pd
 import json
 
 # Load workbook once
-xls = pd.ExcelFile("/home/vilda/Downloads/autorank_v2.xlsx")
+xls = pd.ExcelFile("../data/autorank_v2.xlsx")
 
 rows = []  # collect filtered rows from all sheets
 
@@ -16,20 +15,30 @@ for sheet in xls.sheet_names:
 
     # Keep only rows where will_humeval is True (robust to strings like "TRUE", 1, etc.)
     mask = df["will_humeval"].astype(str).str.lower().isin(["true", "1", "yes", "y"])
-    kept = df.loc[mask, [sys_col]].assign(sheet=sheet)
+
+    # Select relevant columns
+    kept = df.loc[mask, [sys_col, "is_constrained", "autorank"]].assign(sheet=sheet)
 
     # Normalize column names
-    kept.columns = ["system", "sheet"]
+    kept.columns = ["system", "is_contrained", "autorank", "sheet"]
     rows.append(kept)
 
-# Combine & print
+# Combine
 result = pd.concat(rows, ignore_index=True)
 
 data_out = {}
 
-for sheet, systems in result.groupby("sheet")["system"]:
-    data_out[sheet] = sorted(systems.dropna().tolist())
+for sheet, group in result.groupby("sheet"):
+    systems = group.dropna(subset=["system"])
+    data_out[sheet] = {
+        row["system"]: {
+            "constrained": row["is_contrained"],
+            "autorank": row["autorank"]
+        }
+        for _, row in systems.iterrows()
+    }
 
+# Save to JSON
 with open("../data/systems_humeval.json", "w") as f:
     json.dump(data_out, f, indent=2)
 

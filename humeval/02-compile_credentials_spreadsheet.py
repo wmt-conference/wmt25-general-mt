@@ -8,8 +8,9 @@ import openpyxl.cell
 
 data_all = collections.defaultdict(list)
 # for f_name in sorted(glob.glob("/home/vilda/Downloads/wmt25.wave1_v5.accounts/accounts/*.csv")):
-for f_name in sorted(glob.glob("/home/vilda/Downloads/wmt25.wave1_v5ma.accounts/accounts/*.csv")):
+# for f_name in sorted(glob.glob("/home/vilda/Downloads/wmt25.wave1_v5ma.accounts/accounts/*.csv")):
 # for f_name in sorted(glob.glob("/home/vilda/Downloads/wmt25.wave2_v6.accounts/accounts/*.csv")):
+for f_name in sorted(glob.glob("/home/vilda/Downloads/wmt25.ctrl_v7.accounts/accounts/*.csv")):
     langs, domain, wave = (
         f_name.split("/")[-1]
         .removeprefix("wmt25")
@@ -53,4 +54,4 @@ for langs, data_multi in data_all.items():
             ws.append([url, token, domain, wave])
 
 # wb.save("/home/vilda/Downloads/credentials_wave1v5.xlsx")
-wb.save("/home/vilda/Downloads/credentials_wave2v6.xlsx")
+wb.save("/home/vilda/Downloads/credentials_wave1v7.xlsx")

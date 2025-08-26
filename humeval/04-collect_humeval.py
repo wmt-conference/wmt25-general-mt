@@ -9,11 +9,18 @@ import itertools
 data_csv = []
 for fname in itertools.chain(
     glob.glob("/home/vilda/Downloads/campaign_results_v4/*.csv"),
-    glob.glob("/home/vilda/Downloads/campaign_results_v5/*.csv")
+    glob.glob("/home/vilda/Downloads/campaign_results_v5/*.csv"),
+    glob.glob("/home/vilda/Downloads/campaign_results_v6/*.csv"),
 ):
+    if "wave1" in fname:
+        wave_i = 1
+    elif "wave2" in fname:
+        wave_i = 2
+    else:
+        raise ValueError(f"Unknown wave in {fname}")
     # we can drop the fname information as we can extract it from the document ids
     with open(fname, "r") as f:
-        data_csv += list(csv.reader(f))
+        data_csv += [(wave_i, x) for x in csv.reader(f)]
 
 with open("../data/wmt25-genmt.jsonl", "r") as f:
     data = [json.loads(line) for line in f]
@@ -51,7 +58,6 @@ for system in systems:
                 continue
             data[doc["doc_id"]]["tgt_text"][system] = doc["hypothesis"].split("\n\n")
 
-# %%
 
 # Appraise treats <br> as a single character so make sure we do the same conversion so the error spans match
 data = {
@@ -66,7 +72,7 @@ data = {
         "scores": {},
         "src_text": src,
         "tgt_text": {sys: sys_v[i] for sys, sys_v in v["tgt_text"].items()},
-        "doc_id": v["doc_id"],
+        "doc_id": v["doc_id"] + f"_#_{i}",
     } 
     for k, v in data.items()
     for i, src in enumerate(v["src_text"])
@@ -75,8 +81,7 @@ data = {
 # %%
 
 # find translations and other metadata
-for line in data_csv:
-    # ['engcesc401', 'cs-en-tutorial1', 'cs-en-tutorial1', 'TGT', 'eng', 'ces', '100', 'cs-en-tutorial1', 'False', '[]', '1754386211.242', '1754386211.242']
+for wave_i, line in data_csv:
     account, model, sourceID, _, _, _, score, _, _, errors, time1, time2 = line
     if "tutorial" in sourceID:
         continue
@@ -84,7 +89,8 @@ for line in data_csv:
     mqm = json.loads(errors)
     for x in mqm:
         x.pop("error_type")
-    data[sourceID]["scores"][model] = {"human": float(score), "errors": mqm, "annotator": account}
+    # add to the scores
+    data[sourceID]["scores"][model] = data[sourceID]["scores"].get(model, {}) | {f"human{wave_i}": float(score), f"errors{wave_i}": mqm, f"annotator{wave_i}": account}
 
 # save
 with open("../data/wmt25-genmt-humeval.jsonl", "w") as f:
@@ -93,5 +99,6 @@ with open("../data/wmt25-genmt-humeval.jsonl", "w") as f:
 # %%
 
 """
-tar -czf data/TMP_Aug11-wmt25-genmt-humeval.jsonl.gz data/TMP_Aug11-wmt25-genmt-humeval.jsonl
+cp data/wmt25-genmt-humeval.jsonl data/TMP_Aug18-wmt25-genmt-humeval.jsonl
+tar -czf data/TMP_Aug18-wmt25-genmt-humeval.jsonl.gz data/TMP_Aug18-wmt25-genmt-humeval.jsonl
 """

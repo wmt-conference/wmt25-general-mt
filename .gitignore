@@ -3,4 +3,6 @@ appraise_*
 data/systems_humeval*.json
 data/*-humeval.jsonl
 data/*.gz
+data/autorank_v2.xlsx
 tmp/
+generated/
