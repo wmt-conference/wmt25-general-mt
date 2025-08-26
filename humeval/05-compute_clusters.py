@@ -185,7 +185,7 @@ with open("../generated/generated_human_ranking.tex", "w") as f:
         LANG_TO_LONG[lang2],
         r"}",
 r"""
-\begin{tabular}{C{8mm}L{30mm}C{9mm}C{10mm}}
+\begin{tabular}{C{8mm}L{27mm}C{9mm}C{10mm}}
 Rank & System & Human & AutoRank \\
 \midrule""",
         sep="",
@@ -246,13 +246,16 @@ Rank & System & Human & AutoRank \\
             else:
                 autorank_str = f"{systems_metadata[langs][sysA]['autorank']:.1f}"
                 autorank_str = (r"\phantom{0}" * (4-len(autorank_str))) + autorank_str
+            rank_start = (r"\phantom{0}" * (2-len(str(rank_start)))) + str(rank_start)
+            rank_end = str(rank_end) + (r"\phantom{0}" * (2-len(str(rank_end))))
+            
             print(
+                f"{rank_start}-{rank_end}",
                 (
                     r"\constrained "
                     if sysA == "refA" or systems_metadata[langs][sysA]["constrained"] else
                     r"\unconstrained "
                 ) +
-                f"{rank_start}-{rank_end}",
                 system_name(sysA),
                 r"\cellcolor{" + human_color(sysA_mean) + r"} " + mean_str,
                 r"\cellcolor{white} " + autorank_str,
