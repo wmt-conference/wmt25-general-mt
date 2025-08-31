@@ -99,6 +99,6 @@ with open("../data/wmt25-genmt-humeval.jsonl", "w") as f:
 # %%
 
 """
-cp data/wmt25-genmt-humeval.jsonl data/TMP_Aug18-wmt25-genmt-humeval.jsonl
-tar -czf data/TMP_Aug18-wmt25-genmt-humeval.jsonl.gz data/TMP_Aug18-wmt25-genmt-humeval.jsonl
+cp data/wmt25-genmt-humeval.jsonl data/TMP_Aug28-wmt25-genmt-humeval.jsonl
+tar -czf data/TMP_Aug28-wmt25-genmt-humeval.jsonl.gz data/TMP_Aug28-wmt25-genmt-humeval.jsonl
 """

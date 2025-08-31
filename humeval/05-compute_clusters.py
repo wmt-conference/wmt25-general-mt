@@ -16,20 +16,13 @@ langs_all = {
     for x in data
 }
 
-# %%
-
-# paired t-test
-cluster_count = 0
-system_count = 0
-
-
-def safe_average(l):
-    return np.average([
-        x for x in l if not np.isnan(x)
-    ])
-
-
 def get_significance(a: list[float], b: list[float]) -> bool:
+    assert len(b) % 2 == 0
+    # wave1, wave2, wave1, wave2
+    a = a + a
+    # wave1, wave2, wave2, wave1
+    b = b + b[len(b)//2:] + b[:len(b)//2]
+    assert len(a) == len(b)
     return scipy.stats.wilcoxon(
         [
             a-b
@@ -37,18 +30,7 @@ def get_significance(a: list[float], b: list[float]) -> bool:
             if not (np.isnan(a) or np.isnan(b))
         ],
         alternative="greater",
-    ).pvalue < 0.05
-    # return scipy.stats.permutation_test(
-    #     [[
-    #         a-b
-    #         for a, b in zip(a, b)
-    #         if not (np.isnan(a) or np.isnan(b))
-    #     ]],
-    #     statistic=np.mean,
-    #     n_resamples=1000,
-    #     permutation_type="samples",
-    #     alternative="greater",
-    # ).pvalue < 0.05
+    ).pvalue < 0.05/2
 
 
 with open("../generated/clusters.txt", "w") as f:
@@ -106,7 +88,6 @@ with open("../generated/clusters.txt", "w") as f:
                 sys_v_prev is not None and
                 get_significance(sys_v_prev, sys_v)
             ):
-                cluster_count += 1
                 print(" "*10, "-"*15, file=f)
             print(
                 f"{sys:>20}:",
@@ -116,9 +97,7 @@ with open("../generated/clusters.txt", "w") as f:
             sys_v_prev = sys_v
 
         print("\n", file=f)
-        system_count += len(systems)
 
-print(f"{system_count/cluster_count:.2f} models per cluster")
 
 # %%
 
@@ -139,10 +118,12 @@ def system_name(s):
         "EuroLLM-9B": "EuroLLM-9B[M]",
         "EuroLLM-22B": "EuroLLM-22B-pre.[M]",
         "RuZH": "RuZH-Eole",
-        "refA": "Human",
+        "refA": r"Human $\bullet$",
     }.get(s, s).replace("_", r"\_")
     
 def human_color(x):
+    if np.isnan(x):
+        return "white"
     if x < 50:
         return "SeaGreen3!0!Firebrick3!50"
     else:
@@ -167,12 +148,13 @@ LANG_TO_LONG = {
     "en": "English",
 }
 
-with open("../generated/generated_human_ranking.tex", "w") as f:
+with open("../generated/generated_human_ranking_ext.tex", "w") as f:
     for langs in tqdm.tqdm(langs_all):
         data_local = [
             x for x in data
             if x["doc_id"].startswith(langs + "_#_")
         ]
+        domains = sorted({x["doc_id"].split("_#_")[1] for x in data_local})
 
         # take all systems
         systems = {sys for x in data_local for sys in x["scores"].keys()}
@@ -189,10 +171,10 @@ with open("../generated/generated_human_ranking.tex", "w") as f:
         LANG_TO_LONG[lang1],
         r"$\rightarrow$",
         LANG_TO_LONG[lang2],
-        r"}",
+        r"} \\",
 r"""
-\begin{tabular}{C{8mm}L{27mm}C{9mm}C{10mm}}
-Rank & System & Human & AutoRank \\
+\begin{tabular}{C{8mm}L{29mm}C{9mm}C{10mm}""" + "".join(["C{8mm}" for _ in domains]) + r"""}
+Rank & System & Human & AutoRank & """ + " & ".join(domains) + r""" \\
 \midrule""",
         sep="",
         file=f)
@@ -204,18 +186,16 @@ Rank & System & Human & AutoRank \\
                 # default to NaN but consider everything
                 # flatten out human scores and treat them as two separate segments
                 v["scores"].get(sys, {}).get(f"human{wave_i}", np.nan)
-                for v in data_local
                 for wave_i in [1, 2]
-
-                # # average out scores
-                # safe_average([
-                #     v["scores"].get(sys, {}).get(f"human{wave_i}", np.nan)
-                #     for wave_i in [1, 2]
-                # ])
-                # for v in data_local
+                for v in data_local
             ]
             for sys in systems
         }
+        domain_names = [
+            v["doc_id"].split("_#_")[1]
+            for _wave_i in [1, 2]
+            for v in data_local
+        ]
         # sort systems
         systems = sorted(
             systems.items(),
@@ -240,10 +220,14 @@ Rank & System & Human & AutoRank \\
             systems_info.append((
                 sysA,
                 np.mean([a for a in sysA_v if not np.isnan(a)]),
+                {
+                    domain: np.mean([x for x, d in zip(sysA_v, domain_names) if d == domain and not np.isnan(x)])
+                    for domain in domains
+                },
                 (rank_start, rank_end),
             ))
         
-        for sys_i, (sysA, sysA_mean, (rank_start, rank_end)) in enumerate(systems_info):
+        for sys_i, (sysA, sysA_mean, sysA_domains, (rank_start, rank_end)) in enumerate(systems_info):
             mean_str = f"{sysA_mean:.1f}"
             mean_str = (r"\phantom{0}" * (4-len(mean_str))) + mean_str   
 
@@ -258,26 +242,50 @@ Rank & System & Human & AutoRank \\
             print(
                 f"{rank_start}-{rank_end}",
                 (
-                    r"\constrained "
+                    r"{"
                     if sysA == "refA" or systems_metadata[langs][sysA]["constrained"] else
-                    r"\unconstrained "
+                    r"\hlc[gray!20]{"
                 ) +
-                system_name(sysA),
+                system_name(sysA) + "}",
                 r"\cellcolor{" + human_color(sysA_mean) + r"} " + mean_str,
                 r"\cellcolor{white} " + autorank_str,
+                *[
+                    r"\cellcolor{" + human_color(sysA_domains[domain]) + r"} " + f"{sysA_domains[domain]:.1f}"
+                    for domain in domains
+                ],
                 sep=" & ",
                 end="\\\\\n",
                 file=f,
             )
-            if sys_i+1 != len(systems_info) and does_cluster_end_here(sys_i+1, [x[2] for x in systems_info]):
+            if sys_i+1 != len(systems_info) and does_cluster_end_here(sys_i+1, [x[3] for x in systems_info]):
                 print(r"\cmidrule{1-3}", file=f)
         
         print(
-r"""\bottomrule
-\end{tabular}
-\end{table}
-""",
+            r"\bottomrule",
+            r"\end{tabular}",
+            # make sure each table has the same height
+            # r"\vspace{" + f"{(20-len(systems))*1.8:.1f}" + r"em}",
+            r"\end{table}",
+            sep="\n",
             file=f,
         )
 
         print("\n"*2, file=f)
+
+
+
+# go through the extended version and just clip the specific lines
+
+with open("../generated/generated_human_ranking_ext.tex", "r") as f:
+    text_ext = f.read().split("\n")
+
+with open("../generated/generated_human_ranking.tex", "w") as f:
+    text_base = ""
+    for line in text_ext:
+        if line.startswith(r"\begin{tabular}{C{8mm}L{29mm}C{9mm}C{10mm}"):
+            line = r"\begin{tabular}{C{8mm}L{29mm}C{9mm}C{10mm}}"
+        elif line.count("&") >= 2:
+            line = "&".join(line.split("&")[:4]) + r" \\"
+        
+        text_base += line + "\n"
+    f.write(text_base)
