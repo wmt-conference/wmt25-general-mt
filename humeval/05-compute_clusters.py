@@ -102,6 +102,8 @@ with open("../generated/clusters.txt", "w") as f:
 # %%
 
 with open("../data/systems_humeval.json", "r") as f:
+    systems_metadata_humeval = json.load(f)
+with open("../data/systems_metadata_updated3.json", "r") as f:
     systems_metadata = json.load(f)
 
 def does_cluster_end_here(i, ranks) -> bool:
@@ -109,7 +111,7 @@ def does_cluster_end_here(i, ranks) -> bool:
     ranks_above = ranks[i:]
     return all([b <= i for a, b in ranks_below]) and all([a > i for a, b in ranks_above])
 
-def system_name(s):
+def system_name(sys):
     return {
         "CommandA-MT": "CommandA-WMT",
         "Shy": "Shy-hunyuan-MT",
@@ -118,8 +120,14 @@ def system_name(s):
         "EuroLLM-9B": "EuroLLM-9B[M]",
         "EuroLLM-22B": "EuroLLM-22B-pre.[M]",
         "RuZH": "RuZH-Eole",
-        "refA": r"Human $\bullet$",
-    }.get(s, s).replace("_", r"\_")
+        "refA": r"\textbf{Human}",
+    }.get(sys, sys).replace("_", r"\_")
+
+def system_unsupported(sys, langs):
+    if sys != "refA" and systems_metadata[sys]["supported_lps"][langs] != "supported":
+        return r"\unsupported "
+    else:
+        return " "
     
 def human_color(x):
     if np.isnan(x):
@@ -173,7 +181,7 @@ with open("../generated/generated_human_ranking_ext.tex", "w") as f:
         LANG_TO_LONG[lang2],
         r"} \\",
 r"""
-\begin{tabular}{C{8mm}L{29mm}C{9mm}C{10mm}""" + "".join(["C{8mm}" for _ in domains]) + r"""}
+\begin{tabular}{C{8mm}L{31mm}C{9mm}C{10mm}""" + "".join(["C{8mm}" for _ in domains]) + r"""}
 Rank & System & Human & AutoRank & """ + " & ".join(domains) + r""" \\
 \midrule""",
         sep="",
@@ -234,7 +242,7 @@ Rank & System & Human & AutoRank & """ + " & ".join(domains) + r""" \\
             if sysA == "refA":
                 autorank_str = ""
             else:
-                autorank_str = f"{systems_metadata[langs][sysA]['autorank']:.1f}"
+                autorank_str = f"{systems_metadata_humeval[langs][sysA]['autorank']:.1f}"
                 autorank_str = (r"\phantom{0}" * (4-len(autorank_str))) + autorank_str
             rank_start = (r"\phantom{0}" * (2-len(str(rank_start)))) + str(rank_start)
             rank_end = str(rank_end) + (r"\phantom{0}" * (2-len(str(rank_end))))
@@ -243,10 +251,10 @@ Rank & System & Human & AutoRank & """ + " & ".join(domains) + r""" \\
                 f"{rank_start}-{rank_end}",
                 (
                     r"{"
-                    if sysA == "refA" or systems_metadata[langs][sysA]["constrained"] else
+                    if sysA == "refA" or systems_metadata_humeval[langs][sysA]["constrained"] else
                     r"\hlc[gray!20]{"
                 ) +
-                system_name(sysA) + "}",
+                system_name(sysA) + "}" + system_unsupported(sysA, langs),
                 r"\cellcolor{" + human_color(sysA_mean) + r"} " + mean_str,
                 r"\cellcolor{white} " + autorank_str,
                 *[
@@ -282,8 +290,8 @@ with open("../generated/generated_human_ranking_ext.tex", "r") as f:
 with open("../generated/generated_human_ranking.tex", "w") as f:
     text_base = ""
     for line in text_ext:
-        if line.startswith(r"\begin{tabular}{C{8mm}L{29mm}C{9mm}C{10mm}"):
-            line = r"\begin{tabular}{C{8mm}L{29mm}C{9mm}C{10mm}}"
+        if line.startswith(r"\begin{tabular}{C{8mm}L{31mm}C{9mm}C{10mm}"):
+            line = r"\begin{tabular}{C{8mm}L{31mm}C{9mm}C{10mm}}"
         elif line.count("&") >= 2:
             line = "&".join(line.split("&")[:4]) + r" \\"
         
