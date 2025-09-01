@@ -4,7 +4,6 @@
 import csv
 import glob
 import json
-import itertools
 
 data_csv = []
 for fname in glob.glob("/home/vilda/Downloads/campaign_results_v7/*.csv"):
@@ -67,10 +66,8 @@ data = {
     for i, src in enumerate(v["src_text"])
 }
 
-# %%
-
 # find translations and other metadata
-for wave_i, line in data_csv:
+for line in data_csv:
     account, model, sourceID, _, _, _, score, _, _, errors, time1, time2 = line
     if "tutorial" in sourceID:
         continue
@@ -79,15 +76,10 @@ for wave_i, line in data_csv:
     for x in mqm:
         x.pop("error_type")
     # add to the scores
-    data[sourceID]["scores"][model] = data[sourceID]["scores"].get(model, {}) | {f"human{wave_i}": float(score), f"errors{wave_i}": mqm, f"annotator{wave_i}": account}
+    # TODO: change account to annotator ID
+    data[sourceID]["scores"][model] = data[sourceID]["scores"].get(model, []) + [{f"human": float(score), f"errors": mqm, f"annotator": account}]
 
 # save
-with open("../data/wmt25-genmt-humeval.jsonl", "w") as f:
+with open("../data/wmt25-genmt-humeval_control.jsonl", "w") as f:
     f.writelines([json.dumps(x, ensure_ascii=False) + "\n" for x in data.values()])
 
-# %%
-
-"""
-cp data/wmt25-genmt-humeval.jsonl data/TMP_Aug28-wmt25-genmt-humeval.jsonl
-tar -czf data/TMP_Aug28-wmt25-genmt-humeval.jsonl.gz data/TMP_Aug28-wmt25-genmt-humeval.jsonl
-"""

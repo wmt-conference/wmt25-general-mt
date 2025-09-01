@@ -90,6 +90,7 @@ for wave_i, line in data_csv:
     for x in mqm:
         x.pop("error_type")
     # add to the scores
+    # TODO: change account to annotator ID
     data[sourceID]["scores"][model] = data[sourceID]["scores"].get(model, {}) | {f"human{wave_i}": float(score), f"errors{wave_i}": mqm, f"annotator{wave_i}": account}
 
 # save
