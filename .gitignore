@@ -1,6 +1,6 @@
 appraise
 appraise_*
-data/systems_humeval*.json
+data/systems_humeval_wave*.json
 data/*-humeval.jsonl
 data/*-humeval_control.jsonl
 data/*.gz

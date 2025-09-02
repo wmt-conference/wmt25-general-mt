@@ -18,6 +18,11 @@ for fname in itertools.chain(
         wave_i = 2
     else:
         raise ValueError(f"Unknown wave in {fname}")
+
+    # only allow eng-ita from v4 (ask Zouhar for an explanation)
+    if "_v4/" in fname and "engita" not in fname:
+        continue
+
     # we can drop the fname information as we can extract it from the document ids
     with open(fname, "r") as f:
         data_csv += [(wave_i, x) for x in csv.reader(f)]

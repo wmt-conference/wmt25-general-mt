@@ -1,0 +1,1202 @@
+{
+  "cs-de_DE": {
+    "Shy": {
+      "constrained": true,
+      "autorank": 1.0
+    },
+    "CommandA-MT": {
+      "constrained": false,
+      "autorank": 2.07
+    },
+    "GPT-4.1": {
+      "constrained": false,
+      "autorank": 2.39
+    },
+    "Gemini-2.5-Pro": {
+      "constrained": false,
+      "autorank": 2.54
+    },
+    "DeepSeek-V3": {
+      "constrained": false,
+      "autorank": 3.53
+    },
+    "Mistral-Medium": {
+      "constrained": false,
+      "autorank": 4.17
+    },
+    "CommandA": {
+      "constrained": false,
+      "autorank": 4.79
+    },
+    "Claude-4": {
+      "constrained": false,
+      "autorank": 4.84
+    },
+    "GemTrans": {
+      "constrained": false,
+      "autorank": 6.27
+    },
+    "UvA-MT": {
+      "constrained": false,
+      "autorank": 6.95
+    },
+    "Gemma-3-27B": {
+      "constrained": false,
+      "autorank": 7.25
+    },
+    "Yolu": {
+      "constrained": true,
+      "autorank": 9.26
+    },
+    "Laniqo": {
+      "constrained": true,
+      "autorank": 10.3
+    },
+    "TowerPlus-9B": {
+      "constrained": true,
+      "autorank": 10.33
+    },
+    "Wenyiil": {
+      "constrained": true,
+      "autorank": 10.94
+    },
+    "SRPOL": {
+      "constrained": true,
+      "autorank": 11.03
+    },
+    "Gemma-3-12B": {
+      "constrained": true,
+      "autorank": 11.51
+    },
+    "IRB-MT": {
+      "constrained": true,
+      "autorank": 12.41
+    },
+    "Algharb": {
+      "constrained": true,
+      "autorank": 13.24
+    },
+    "CUNI-MH-v2": {
+      "constrained": true,
+      "autorank": 14.16
+    }
+  },
+  "cs-uk_UA": {
+    "Shy": {
+      "constrained": true,
+      "autorank": 1.0
+    },
+    "Gemini-2.5-Pro": {
+      "constrained": false,
+      "autorank": 1.05
+    },
+    "CommandA-MT": {
+      "constrained": false,
+      "autorank": 1.3
+    },
+    "GPT-4.1": {
+      "constrained": false,
+      "autorank": 1.33
+    },
+    "DeepSeek-V3": {
+      "constrained": false,
+      "autorank": 3.25
+    },
+    "Claude-4": {
+      "constrained": false,
+      "autorank": 3.72
+    },
+    "Mistral-Medium": {
+      "constrained": false,
+      "autorank": 4.2
+    },
+    "GemTrans": {
+      "constrained": false,
+      "autorank": 4.39
+    },
+    "CommandA": {
+      "constrained": false,
+      "autorank": 4.59
+    },
+    "Gemma-3-27B": {
+      "constrained": false,
+      "autorank": 5.05
+    },
+    "UvA-MT": {
+      "constrained": false,
+      "autorank": 5.08
+    },
+    "Wenyiil": {
+      "constrained": true,
+      "autorank": 5.44
+    },
+    "Yolu": {
+      "constrained": true,
+      "autorank": 6.01
+    },
+    "Algharb": {
+      "constrained": true,
+      "autorank": 7.22
+    },
+    "Laniqo": {
+      "constrained": true,
+      "autorank": 7.66
+    },
+    "SRPOL": {
+      "constrained": true,
+      "autorank": 7.77
+    },
+    "TowerPlus-9B": {
+      "constrained": true,
+      "autorank": 7.87
+    },
+    "IRB-MT": {
+      "constrained": true,
+      "autorank": 9.13
+    }
+  },
+  "en-ar_EG": {
+    "Shy": {
+      "constrained": true,
+      "autorank": 1.0
+    },
+    "Wenyiil": {
+      "constrained": true,
+      "autorank": 2.5
+    },
+    "Algharb": {
+      "constrained": true,
+      "autorank": 2.67
+    },
+    "GemTrans": {
+      "constrained": false,
+      "autorank": 3.5
+    },
+    "CommandA-MT": {
+      "constrained": false,
+      "autorank": 4.07
+    },
+    "UvA-MT": {
+      "constrained": false,
+      "autorank": 4.23
+    },
+    "Yolu": {
+      "constrained": true,
+      "autorank": 5.48
+    },
+    "Gemini-2.5-Pro": {
+      "constrained": false,
+      "autorank": 5.76
+    },
+    "ONLINE-B": {
+      "constrained": false,
+      "autorank": 6.54
+    },
+    "GPT-4.1": {
+      "constrained": false,
+      "autorank": 6.65
+    },
+    "DeepSeek-V3": {
+      "constrained": false,
+      "autorank": 7.02
+    },
+    "Mistral-Medium": {
+      "constrained": false,
+      "autorank": 7.69
+    },
+    "Claude-4": {
+      "constrained": false,
+      "autorank": 7.82
+    },
+    "SRPOL": {
+      "constrained": true,
+      "autorank": 8.12
+    },
+    "CommandA": {
+      "constrained": false,
+      "autorank": 8.55
+    },
+    "AyaExpanse-8B": {
+      "constrained": true,
+      "autorank": 9.95
+    },
+    "IRB-MT": {
+      "constrained": true,
+      "autorank": 11.09
+    },
+    "CommandR7B": {
+      "constrained": true,
+      "autorank": 11.61
+    }
+  },
+  "en-bho_IN": {
+    "Gemini-2.5-Pro": {
+      "constrained": false,
+      "autorank": 1.0
+    },
+    "Wenyiil": {
+      "constrained": true,
+      "autorank": 2.53
+    },
+    "Algharb": {
+      "constrained": true,
+      "autorank": 2.83
+    },
+    "ONLINE-B": {
+      "constrained": false,
+      "autorank": 4.14
+    },
+    "TranssionTranslate": {
+      "constrained": false,
+      "autorank": 4.35
+    },
+    "Claude-4": {
+      "constrained": false,
+      "autorank": 4.51
+    },
+    "DeepSeek-V3": {
+      "constrained": false,
+      "autorank": 5.12
+    },
+    "GPT-4.1": {
+      "constrained": false,
+      "autorank": 5.49
+    },
+    "Yolu": {
+      "constrained": true,
+      "autorank": 5.65
+    },
+    "TranssionMT": {
+      "constrained": false,
+      "autorank": 6.15
+    },
+    "Llama-4-Maverick": {
+      "constrained": false,
+      "autorank": 6.5
+    },
+    "CommandA": {
+      "constrained": false,
+      "autorank": 6.51
+    },
+    "NLLB": {
+      "constrained": true,
+      "autorank": 6.64
+    },
+    "Gemma-3-27B": {
+      "constrained": false,
+      "autorank": 8.27
+    },
+    "COILD-BHO": {
+      "constrained": true,
+      "autorank": 8.86
+    },
+    "IRB-MT": {
+      "constrained": true,
+      "autorank": 11.43
+    },
+    "Shy": {
+      "constrained": true,
+      "autorank": 11.5
+    },
+    "SalamandraTA": {
+      "constrained": true,
+      "autorank": 12.07
+    }
+  },
+  "en-cs_CZ": {
+    "Shy": {
+      "constrained": true,
+      "autorank": 1.0
+    },
+    "Gemini-2.5-Pro": {
+      "constrained": false,
+      "autorank": 3.43
+    },
+    "CommandA-MT": {
+      "constrained": false,
+      "autorank": 3.59
+    },
+    "GPT-4.1": {
+      "constrained": false,
+      "autorank": 3.97
+    },
+    "Wenyiil": {
+      "constrained": true,
+      "autorank": 4.46
+    },
+    "DeepSeek-V3": {
+      "constrained": false,
+      "autorank": 5.1
+    },
+    "GemTrans": {
+      "constrained": false,
+      "autorank": 5.13
+    },
+    "Yolu": {
+      "constrained": true,
+      "autorank": 6.35
+    },
+    "Algharb": {
+      "constrained": true,
+      "autorank": 6.36
+    },
+    "UvA-MT": {
+      "constrained": false,
+      "autorank": 6.52
+    },
+    "Mistral-Medium": {
+      "constrained": false,
+      "autorank": 7.1
+    },
+    "SRPOL": {
+      "constrained": true,
+      "autorank": 8.71
+    },
+    "Laniqo": {
+      "constrained": true,
+      "autorank": 8.75
+    },
+    "CommandA": {
+      "constrained": false,
+      "autorank": 8.77
+    },
+    "Claude-4": {
+      "constrained": false,
+      "autorank": 8.99
+    },
+    "Gemma-3-27B": {
+      "constrained": false,
+      "autorank": 9.17
+    },
+    "SalamandraTA": {
+      "constrained": true,
+      "autorank": 10.52
+    },
+    "TowerPlus-9B": {
+      "constrained": true,
+      "autorank": 11.61
+    },
+    "CUNI-MH-v2": {
+      "constrained": true,
+      "autorank": 12.12
+    }
+  },
+  "en-et_EE": {
+    "Shy": {
+      "constrained": true,
+      "autorank": 1.0
+    },
+    "Gemini-2.5-Pro": {
+      "constrained": false,
+      "autorank": 2.51
+    },
+    "Wenyiil": {
+      "constrained": true,
+      "autorank": 2.61
+    },
+    "GPT-4.1": {
+      "constrained": false,
+      "autorank": 3.05
+    },
+    "Yolu": {
+      "constrained": true,
+      "autorank": 3.76
+    },
+    "Algharb": {
+      "constrained": true,
+      "autorank": 3.91
+    },
+    "GemTrans": {
+      "constrained": false,
+      "autorank": 5.06
+    },
+    "Laniqo": {
+      "constrained": true,
+      "autorank": 5.25
+    },
+    "SRPOL": {
+      "constrained": true,
+      "autorank": 5.65
+    },
+    "UvA-MT": {
+      "constrained": false,
+      "autorank": 5.93
+    },
+    "ONLINE-B": {
+      "constrained": false,
+      "autorank": 5.98
+    },
+    "CommandA-MT": {
+      "constrained": false,
+      "autorank": 6.07
+    },
+    "SalamandraTA": {
+      "constrained": true,
+      "autorank": 6.29
+    },
+    "Claude-4": {
+      "constrained": false,
+      "autorank": 6.5
+    },
+    "TranssionTranslate": {
+      "constrained": false,
+      "autorank": 7.33
+    },
+    "Gemma-3-27B": {
+      "constrained": false,
+      "autorank": 7.59
+    },
+    "EuroLLM-22B": {
+      "constrained": false,
+      "autorank": 8.08
+    },
+    "IRB-MT": {
+      "constrained": true,
+      "autorank": 11.41
+    }
+  },
+  "en-is_IS": {
+    "Shy": {
+      "constrained": true,
+      "autorank": 1.0
+    },
+    "Gemini-2.5-Pro": {
+      "constrained": false,
+      "autorank": 1.84
+    },
+    "GPT-4.1": {
+      "constrained": false,
+      "autorank": 1.95
+    },
+    "Erlendur": {
+      "constrained": false,
+      "autorank": 2.21
+    },
+    "TowerPlus-9B": {
+      "constrained": true,
+      "autorank": 3.9
+    },
+    "ONLINE-B": {
+      "constrained": false,
+      "autorank": 4.38
+    },
+    "Claude-4": {
+      "constrained": false,
+      "autorank": 5.22
+    },
+    "TowerPlus-72B": {
+      "constrained": false,
+      "autorank": 5.65
+    },
+    "TranssionTranslate": {
+      "constrained": false,
+      "autorank": 5.84
+    },
+    "UvA-MT": {
+      "constrained": false,
+      "autorank": 6.75
+    },
+    "CommandA-MT": {
+      "constrained": false,
+      "autorank": 6.81
+    },
+    "GemTrans": {
+      "constrained": false,
+      "autorank": 6.97
+    },
+    "AMI": {
+      "constrained": true,
+      "autorank": 7.4
+    },
+    "SalamandraTA": {
+      "constrained": true,
+      "autorank": 8.57
+    },
+    "IRB-MT": {
+      "constrained": true,
+      "autorank": 11.89
+    },
+    "Gemma-3-12B": {
+      "constrained": true,
+      "autorank": 13.83
+    },
+    "NLLB": {
+      "constrained": true,
+      "autorank": 15.24
+    },
+    "Llama-3.1-8B": {
+      "constrained": true,
+      "autorank": 24.85
+    }
+  },
+  "en-it_IT": {
+    "Shy": {
+      "constrained": true,
+      "autorank": 1.0
+    },
+    "CommandA-MT": {
+      "constrained": false,
+      "autorank": 2.61
+    },
+    "Gemini-2.5-Pro": {
+      "constrained": false,
+      "autorank": 4.43
+    },
+    "GPT-4.1": {
+      "constrained": false,
+      "autorank": 4.53
+    },
+    "GemTrans": {
+      "constrained": false,
+      "autorank": 5.16
+    },
+    "UvA-MT": {
+      "constrained": false,
+      "autorank": 5.28
+    },
+    "DeepSeek-V3": {
+      "constrained": false,
+      "autorank": 6.14
+    },
+    "Mistral-Medium": {
+      "constrained": false,
+      "autorank": 7.07
+    },
+    "Qwen3-235B": {
+      "constrained": false,
+      "autorank": 7.18
+    },
+    "Laniqo": {
+      "constrained": true,
+      "autorank": 7.56
+    },
+    "Claude-4": {
+      "constrained": false,
+      "autorank": 8.37
+    },
+    "CommandA": {
+      "constrained": false,
+      "autorank": 8.45
+    },
+    "IRB-MT": {
+      "constrained": true,
+      "autorank": 10.21
+    },
+    "SalamandraTA": {
+      "constrained": true,
+      "autorank": 10.27
+    },
+    "TowerPlus-9B": {
+      "constrained": true,
+      "autorank": 11.28
+    },
+    "AyaExpanse-8B": {
+      "constrained": true,
+      "autorank": 14.87
+    },
+    "EuroLLM-9B": {
+      "constrained": true,
+      "autorank": 15.22
+    },
+    "Gemma-3-12B": {
+      "constrained": true,
+      "autorank": 15.52
+    }
+  },
+  "en-ja_JP": {
+    "Shy": {
+      "constrained": true,
+      "autorank": 1.0
+    },
+    "In2x": {
+      "constrained": false,
+      "autorank": 2.32
+    },
+    "Gemini-2.5-Pro": {
+      "constrained": false,
+      "autorank": 2.45
+    },
+    "GPT-4.1": {
+      "constrained": false,
+      "autorank": 2.93
+    },
+    "Wenyiil": {
+      "constrained": true,
+      "autorank": 2.96
+    },
+    "KIKIS": {
+      "constrained": true,
+      "autorank": 3.18
+    },
+    "Algharb": {
+      "constrained": true,
+      "autorank": 3.29
+    },
+    "CommandA-MT": {
+      "constrained": false,
+      "autorank": 3.72
+    },
+    "DeepSeek-V3": {
+      "constrained": false,
+      "autorank": 4.74
+    },
+    "Mistral-Medium": {
+      "constrained": false,
+      "autorank": 5.5
+    },
+    "GemTrans": {
+      "constrained": false,
+      "autorank": 5.57
+    },
+    "Claude-4": {
+      "constrained": false,
+      "autorank": 5.83
+    },
+    "Yolu": {
+      "constrained": true,
+      "autorank": 6.08
+    },
+    "ONLINE-B": {
+      "constrained": false,
+      "autorank": 6.27
+    },
+    "UvA-MT": {
+      "constrained": false,
+      "autorank": 6.54
+    },
+    "Systran": {
+      "constrained": true,
+      "autorank": 7.47
+    },
+    "NTTSU": {
+      "constrained": true,
+      "autorank": 8.12
+    },
+    "Laniqo": {
+      "constrained": true,
+      "autorank": 9.53
+    }
+  },
+  "en-ko_KR": {
+    "Shy": {
+      "constrained": true,
+      "autorank": 1.0
+    },
+    "Gemini-2.5-Pro": {
+      "constrained": false,
+      "autorank": 2.52
+    },
+    "CommandA-MT": {
+      "constrained": false,
+      "autorank": 2.85
+    },
+    "GPT-4.1": {
+      "constrained": false,
+      "autorank": 2.88
+    },
+    "Wenyiil": {
+      "constrained": true,
+      "autorank": 2.96
+    },
+    "Algharb": {
+      "constrained": true,
+      "autorank": 3.09
+    },
+    "UvA-MT": {
+      "constrained": false,
+      "autorank": 4.31
+    },
+    "Claude-4": {
+      "constrained": false,
+      "autorank": 4.38
+    },
+    "GemTrans": {
+      "constrained": false,
+      "autorank": 4.97
+    },
+    "DeepSeek-V3": {
+      "constrained": false,
+      "autorank": 5.08
+    },
+    "CommandA": {
+      "constrained": false,
+      "autorank": 5.96
+    },
+    "Mistral-Medium": {
+      "constrained": false,
+      "autorank": 6.13
+    },
+    "Qwen3-235B": {
+      "constrained": false,
+      "autorank": 6.49
+    },
+    "Yolu": {
+      "constrained": true,
+      "autorank": 6.99
+    },
+    "ONLINE-B": {
+      "constrained": false,
+      "autorank": 8.05
+    },
+    "IRB-MT": {
+      "constrained": true,
+      "autorank": 8.62
+    },
+    "Laniqo": {
+      "constrained": true,
+      "autorank": 9.16
+    },
+    "Gemma-3-12B": {
+      "constrained": true,
+      "autorank": 9.23
+    },
+    "TowerPlus-9B": {
+      "constrained": true,
+      "autorank": 10.05
+    }
+  },
+  "en-mas_KE": {
+    "Shy": {
+      "constrained": true,
+      "autorank": 1.0
+    },
+    "Claude-4": {
+      "constrained": false,
+      "autorank": 2.56
+    },
+    "Qwen3-235B": {
+      "constrained": false,
+      "autorank": 3.05
+    },
+    "Llama-4-Maverick": {
+      "constrained": false,
+      "autorank": 3.22
+    },
+    "CommandR7B": {
+      "constrained": true,
+      "autorank": 4.33
+    },
+    "TowerPlus-9B": {
+      "constrained": true,
+      "autorank": 5.35
+    },
+    "TranssionMT": {
+      "constrained": false,
+      "autorank": 5.93
+    },
+    "Gemini-2.5-Pro": {
+      "constrained": false,
+      "autorank": 6.09
+    },
+    "DeepSeek-V3": {
+      "constrained": false,
+      "autorank": 6.16
+    },
+    "CommandA-MT": {
+      "constrained": false,
+      "autorank": 6.38
+    },
+    "AyaExpanse-32B": {
+      "constrained": false,
+      "autorank": 7.12
+    },
+    "CommandA": {
+      "constrained": false,
+      "autorank": 7.9
+    },
+    "Llama-3.1-8B": {
+      "constrained": true,
+      "autorank": 8.06
+    },
+    "EuroLLM-9B": {
+      "constrained": true,
+      "autorank": 8.19
+    },
+    "EuroLLM-22B": {
+      "constrained": false,
+      "autorank": 8.22
+    },
+    "AyaExpanse-8B": {
+      "constrained": true,
+      "autorank": 8.25
+    },
+    "Qwen2.5-7B": {
+      "constrained": true,
+      "autorank": 8.59
+    },
+    "Gemma-3-12B": {
+      "constrained": true,
+      "autorank": 8.83
+    }
+  },
+  "en-ru_RU": {
+    "Shy": {
+      "constrained": true,
+      "autorank": 1.0
+    },
+    "CommandA-MT": {
+      "constrained": false,
+      "autorank": 4.21
+    },
+    "Gemini-2.5-Pro": {
+      "constrained": false,
+      "autorank": 4.4
+    },
+    "Yandex": {
+      "constrained": false,
+      "autorank": 4.45
+    },
+    "UvA-MT": {
+      "constrained": false,
+      "autorank": 4.51
+    },
+    "Wenyiil": {
+      "constrained": true,
+      "autorank": 4.77
+    },
+    "GemTrans": {
+      "constrained": false,
+      "autorank": 5.14
+    },
+    "Algharb": {
+      "constrained": true,
+      "autorank": 5.16
+    },
+    "GPT-4.1": {
+      "constrained": false,
+      "autorank": 5.38
+    },
+    "DeepSeek-V3": {
+      "constrained": false,
+      "autorank": 5.68
+    },
+    "Yolu": {
+      "constrained": true,
+      "autorank": 6.94
+    },
+    "Claude-4": {
+      "constrained": false,
+      "autorank": 8.65
+    },
+    "Laniqo": {
+      "constrained": true,
+      "autorank": 8.81
+    },
+    "Qwen3-235B": {
+      "constrained": false,
+      "autorank": 8.84
+    },
+    "Gemma-3-27B": {
+      "constrained": false,
+      "autorank": 8.86
+    },
+    "RuZh": {
+      "constrained": true,
+      "autorank": 9.64
+    },
+    "IRB-MT": {
+      "constrained": true,
+      "autorank": 10.1
+    },
+    "SRPOL": {
+      "constrained": true,
+      "autorank": 10.59
+    }
+  },
+  "en-sr_Cyrl_RS": {
+    "Shy": {
+      "constrained": true,
+      "autorank": 1.0
+    },
+    "Gemini-2.5-Pro": {
+      "constrained": false,
+      "autorank": 3.02
+    },
+    "GPT-4.1": {
+      "constrained": false,
+      "autorank": 3.42
+    },
+    "GemTrans": {
+      "constrained": false,
+      "autorank": 4.59
+    },
+    "UvA-MT": {
+      "constrained": false,
+      "autorank": 5.83
+    },
+    "ONLINE-B": {
+      "constrained": false,
+      "autorank": 6.07
+    },
+    "Claude-4": {
+      "constrained": false,
+      "autorank": 6.77
+    },
+    "CommandA-MT": {
+      "constrained": false,
+      "autorank": 6.97
+    },
+    "TranssionTranslate": {
+      "constrained": false,
+      "autorank": 8.0
+    },
+    "DeepSeek-V3": {
+      "constrained": false,
+      "autorank": 8.61
+    },
+    "SalamandraTA": {
+      "constrained": true,
+      "autorank": 8.82
+    },
+    "DLUT_GTCOM": {
+      "constrained": false,
+      "autorank": 9.29
+    },
+    "IRB-MT": {
+      "constrained": true,
+      "autorank": 9.92
+    },
+    "Gemma-3-12B": {
+      "constrained": true,
+      "autorank": 12.09
+    },
+    "CUNI-SFT": {
+      "constrained": true,
+      "autorank": 13.48
+    },
+    "Llama-3.1-8B": {
+      "constrained": true,
+      "autorank": 19.43
+    },
+    "NLLB": {
+      "constrained": true,
+      "autorank": 19.79
+    },
+    "EuroLLM-9B": {
+      "constrained": true,
+      "autorank": 22.34
+    }
+  },
+  "en-uk_UA": {
+    "Shy": {
+      "constrained": true,
+      "autorank": 1.0
+    },
+    "Gemini-2.5-Pro": {
+      "constrained": false,
+      "autorank": 3.3
+    },
+    "Wenyiil": {
+      "constrained": true,
+      "autorank": 3.46
+    },
+    "GPT-4.1": {
+      "constrained": false,
+      "autorank": 3.51
+    },
+    "CommandA-MT": {
+      "constrained": false,
+      "autorank": 3.85
+    },
+    "Algharb": {
+      "constrained": true,
+      "autorank": 4.17
+    },
+    "UvA-MT": {
+      "constrained": false,
+      "autorank": 4.43
+    },
+    "GemTrans": {
+      "constrained": false,
+      "autorank": 4.56
+    },
+    "DeepSeek-V3": {
+      "constrained": false,
+      "autorank": 5.02
+    },
+    "Yolu": {
+      "constrained": true,
+      "autorank": 6.0
+    },
+    "Mistral-Medium": {
+      "constrained": false,
+      "autorank": 6.01
+    },
+    "Claude-4": {
+      "constrained": false,
+      "autorank": 7.04
+    },
+    "CommandA": {
+      "constrained": false,
+      "autorank": 7.44
+    },
+    "Laniqo": {
+      "constrained": true,
+      "autorank": 7.68
+    },
+    "IRB-MT": {
+      "constrained": true,
+      "autorank": 8.2
+    },
+    "SRPOL": {
+      "constrained": true,
+      "autorank": 8.39
+    },
+    "TowerPlus-9B": {
+      "constrained": true,
+      "autorank": 8.78
+    },
+    "Llama-4-Maverick": {
+      "constrained": false,
+      "autorank": 8.81
+    }
+  },
+  "en-zh_CN": {
+    "Shy": {
+      "constrained": true,
+      "autorank": 1.0
+    },
+    "Wenyiil": {
+      "constrained": true,
+      "autorank": 4.01
+    },
+    "Gemini-2.5-Pro": {
+      "constrained": false,
+      "autorank": 4.04
+    },
+    "Algharb": {
+      "constrained": true,
+      "autorank": 4.18
+    },
+    "GPT-4.1": {
+      "constrained": false,
+      "autorank": 4.65
+    },
+    "Qwen3-235B": {
+      "constrained": false,
+      "autorank": 4.88
+    },
+    "Yolu": {
+      "constrained": true,
+      "autorank": 4.88
+    },
+    "GemTrans": {
+      "constrained": false,
+      "autorank": 4.95
+    },
+    "Mistral-Medium": {
+      "constrained": false,
+      "autorank": 4.98
+    },
+    "CommandA-MT": {
+      "constrained": false,
+      "autorank": 5.73
+    },
+    "UvA-MT": {
+      "constrained": false,
+      "autorank": 6.4
+    },
+    "Claude-4": {
+      "constrained": false,
+      "autorank": 7.17
+    },
+    "DeepSeek-V3": {
+      "constrained": false,
+      "autorank": 7.28
+    },
+    "Llama-4-Maverick": {
+      "constrained": false,
+      "autorank": 8.13
+    },
+    "Laniqo": {
+      "constrained": true,
+      "autorank": 9.26
+    },
+    "IRB-MT": {
+      "constrained": true,
+      "autorank": 9.51
+    },
+    "SRPOL": {
+      "constrained": true,
+      "autorank": 10.52
+    },
+    "RuZh": {
+      "constrained": true,
+      "autorank": 10.59
+    }
+  },
+  "ja-zh_CN": {
+    "Shy": {
+      "constrained": true,
+      "autorank": 1.0
+    },
+    "In2x": {
+      "constrained": false,
+      "autorank": 3.03
+    },
+    "Gemini-2.5-Pro": {
+      "constrained": false,
+      "autorank": 3.28
+    },
+    "Kaze-MT": {
+      "constrained": false,
+      "autorank": 3.88
+    },
+    "Algharb": {
+      "constrained": true,
+      "autorank": 4.32
+    },
+    "GPT-4.1": {
+      "constrained": false,
+      "autorank": 4.55
+    },
+    "Wenyiil": {
+      "constrained": true,
+      "autorank": 4.55
+    },
+    "CommandA-MT": {
+      "constrained": false,
+      "autorank": 5.22
+    },
+    "NTTSU": {
+      "constrained": true,
+      "autorank": 5.91
+    },
+    "Claude-4": {
+      "constrained": false,
+      "autorank": 6.4
+    },
+    "DeepSeek-V3": {
+      "constrained": false,
+      "autorank": 6.47
+    },
+    "Mistral-Medium": {
+      "constrained": false,
+      "autorank": 6.58
+    },
+    "GemTrans": {
+      "constrained": false,
+      "autorank": 6.61
+    },
+    "Yolu": {
+      "constrained": true,
+      "autorank": 7.07
+    },
+    "Qwen3-235B": {
+      "constrained": false,
+      "autorank": 7.63
+    },
+    "Laniqo": {
+      "constrained": true,
+      "autorank": 11.3
+    },
+    "TowerPlus-9B": {
+      "constrained": true,
+      "autorank": 11.5
+    },
+    "IRB-MT": {
+      "constrained": true,
+      "autorank": 12.38
+    }
+  }
+}
