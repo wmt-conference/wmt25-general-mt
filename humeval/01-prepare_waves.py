@@ -4,6 +4,7 @@ import json
 import pathlib
 import contextlib
 import collections
+import utils
 
 LANGS = {
     "en-cs_CZ", "cs-uk_UA", "cs-de_DE", "en-et_EE", "en-is_IS", "en-ja_JP", "en-ar_EG", "en-sr_Cyrl_RS",
@@ -16,23 +17,6 @@ LANGS = {
     # "en-de_DE" is not done this year
     # "ja-zh_CN" is done by Google
     # "en-ko_KR" is done by Google
-}
-LANG_TO_3 = {
-    "en": "eng",
-    "cs": "ces",
-    "uk": "ukr",
-    "de": "deu",
-    "et": "est",
-    "is": "isl",
-    "ja": "jpn",
-    "zh": "zho",
-    "ar": "ara",
-    "sr": "srp",
-    "ru": "rus",
-    "ko": "kor",
-    "bho": "bho",
-    "mas": "mas",
-    "it": "ita",
 }
 
 with contextlib.chdir(pathlib.Path(__file__).parent.parent):
@@ -270,8 +254,8 @@ with contextlib.chdir(pathlib.Path(__file__).parent.parent):
             esa_tutorial = json.load(f)
 
         # turn to 3-letter codes
-        lang1 = LANG_TO_3[batch_name[0].split("_")[0]]
-        lang2 = LANG_TO_3[batch_name[1].split("_")[0]]
+        lang1 = utils.LANG_TO_3[batch_name[0].split("_")[0]]
+        lang2 = utils.LANG_TO_3[batch_name[1].split("_")[0]]
         
 
         for task in tasks:

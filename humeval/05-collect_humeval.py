@@ -83,7 +83,49 @@ data = {
     for i, src in enumerate(v["src_text"])
 }
 
-# %%
+
+# load and parse annotator mapping
+import openpyxl
+import collections
+import utils
+import re
+
+R_ACCOUNT = re.compile(r"https://appraise-wmt\.azurewebsites\.net/dashboard/sso/([^/]+)/[^/]+/")
+
+wb = openpyxl.load_workbook("/home/vilda/Downloads/credentials_wave1v5_wave2v6.xlsx", data_only=True, read_only=True)
+account_to_annotator = collections.defaultdict(dict)
+for langs in {x["doc_id"].split("_#_", 1)[0].split("_", 1)[0] for x in data.values()}:
+    lang1, lang2 = langs.split("-")
+    langs_3 = utils.LANG_TO_3.get(lang1, "") + "-" + utils.LANG_TO_3.get(lang2, "")
+    if not langs_3 in wb:
+        continue
+    ws = wb[langs_3]
+    for row in ws.iter_rows(min_row=2, values_only=True):
+        if len(row) < 5:
+            continue
+        url = row[0]
+        user = row[4]
+        if user is None or url is None or not url.startswith("https://"):
+            continue
+        if isinstance(user, float):
+            user = f"annotator{user}"
+        if user == "":
+            user = "unknown"
+        account = R_ACCOUNT.match(url).group(1)
+        account_to_annotator[langs][account] = user
+
+    # uniform pseudoname format
+    account_to_annotator_lang = account_to_annotator[langs]
+    users = sorted(set(account_to_annotator_lang.values()))
+    user_to_normalized = {u: f"{langs}_#_annotator{i+1}" for i, u in enumerate(users) if u != "unknown"}
+    account_to_annotator[langs] = {
+        k: user_to_normalized[v] for k, v in account_to_annotator_lang.items()
+        if v != "unknown"
+    }
+account_to_annotator = dict(account_to_annotator)
+with open("../data/account_to_annotator.json", "w") as f:
+    json.dump(account_to_annotator, f, ensure_ascii=False, indent=2)
+
 
 # find translations and other metadata
 for wave_i, line in data_csv:
@@ -91,12 +133,20 @@ for wave_i, line in data_csv:
     if "tutorial" in sourceID:
         continue
     langs, domain, docid, segid = sourceID.split("_#_")
+    langs_simple = langs.split("_", 1)[0]
     mqm = json.loads(errors)
     for x in mqm:
         x.pop("error_type")
     # add to the scores
-    # TODO: change account to annotator ID
-    data[sourceID]["scores"][model] = data[sourceID]["scores"].get(model, {}) | {f"human{wave_i}": float(score), f"errors{wave_i}": mqm, f"annotator{wave_i}": account}
+    data[sourceID]["scores"][model] = (
+        data[sourceID]["scores"].get(model, {})
+        | {
+            f"human{wave_i}": float(score),
+            f"errors{wave_i}": mqm,
+            f"annotator{wave_i}": account_to_annotator[langs_simple].get(account, "unknown"),
+            f"times{wave_i}": [min(float(time1), float(time2)), max(float(time1), float(time2))],
+        }
+    )
 
 # save
 with open("../data/wmt25-genmt-humeval.jsonl", "w") as f:

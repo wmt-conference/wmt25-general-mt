@@ -1,0 +1,35 @@
+LANG_TO_LONG = {
+    "it": "Italian",
+    "ja": "Japanese",
+    "sr": "Serbian (Cyrilic)",
+    "uk": "Ukrainian",
+    "ar": "Arabic (Egyptian)",
+    "et": "Estonian",
+    "mas": "Masai",
+    "cs": "Czech",
+    "de": "German",
+    "zh": "Chinese",
+    "ru": "Russian",
+    "is": "Icelandic",
+    "bho": "Bhojpuri",
+    "en": "English",
+}
+
+
+LANG_TO_3 = {
+    "en": "eng",
+    "cs": "ces",
+    "uk": "ukr",
+    "de": "deu",
+    "et": "est",
+    "is": "isl",
+    "ja": "jpn",
+    "zh": "zho",
+    "ar": "ara",
+    "sr": "srp",
+    "ru": "rus",
+    "ko": "kor",
+    "bho": "bho",
+    "mas": "mas",
+    "it": "ita",
+}

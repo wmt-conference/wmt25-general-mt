@@ -32,8 +32,11 @@ Each line corresponds to one source segment. Each line is a dictionary with the 
         },
         ...                        # there can be 0 or more errors for each annotation
       ],
+      "times1": [...],             # array with two values: first and last interaction with the segment
       "human2": 95,                # score from the second round of annotations
       "annotator2": "pseudoname",  # pseudo-anonymized annotator ID valid within the whole WMT25 annotations
+      "errors2": [...],
+      "times2": [...],
     },
     "sysB": {
         ...
@@ -342,7 +345,7 @@ As an example, see:
 ```
 
 All annotators also annotated the same few segments for each of the languages, which helps in establishing their reliability.
-The annotation format is slightly different, namely scores map to systems which map to lists instead of dictinonaries.
+The annotation format is slightly different, namely scores map to systems which map to lists instead of dictionaries.
 The lists are in the following format:
 ```python
 [
@@ -351,14 +354,16 @@ The lists are in the following format:
         "annotator": "pseudoname", # pseudoanonymized, compatible with all other annotations
         "errors": [                # list of errors as above
             ...
-        ]
+        ],
+        "times": [...]
     },
     {
         "human": 80,               # final translation score by another annotator
         "annotator": "pseudoname", # pseudoanonymized, compatible with all other annotations
         "errors": [                # list of errors as above
             ...
-        ]
+        ],
+        "times": [...]
     },
 ]
 ```

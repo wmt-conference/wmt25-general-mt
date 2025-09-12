@@ -6,6 +6,7 @@ import numpy as np
 import json
 import os
 import tqdm
+import utils
 
 os.makedirs("../generated/", exist_ok=True)
 with open("../data/wmt25-genmt-humeval.jsonl", "r") as f:
@@ -58,11 +59,16 @@ def system_name(sys):
         "refA": r"\textbf{Human}",
     }.get(sys, sys).replace("_", r"\_")
 
+
 def system_unsupported(sys, langs):
-    if sys != "refA" and systems_metadata[sys]["supported_lps"][langs] != "supported":
-        return r"\unsupported "
-    else:
+    if sys == "refA":
         return " "
+    elif systems_metadata[sys]["supported_lps"][langs] == "supported":
+        return " "
+    elif systems_metadata[sys]["supported_lps"][langs] == "unknown":
+        return r"\unsupportedmaybe "
+    else:
+        return r"\unsupported "
     
 def human_color(x):
     if np.isnan(x):
@@ -74,22 +80,7 @@ def human_color(x):
         x = min(50, x*1.2)
         return f"SeaGreen3!{x*2:.0f}!Firebrick3!50"
 
-LANG_TO_LONG = {
-    "it": "Italian",
-    "ja": "Japanese",
-    "sr": "Serbian (Cyrilic)",
-    "uk": "Ukrainian",
-    "ar": "Arabic (Egyptian)",
-    "et": "Estonian",
-    "mas": "Masai",
-    "cs": "Czech",
-    "de": "German",
-    "zh": "Chinese",
-    "ru": "Russian",
-    "is": "Icelandic",
-    "bho": "Bhojpuri",
-    "en": "English",
-}
+
 
 with open("../generated/generated_human_ranking_ext.tex", "w") as f:
     for langs in tqdm.tqdm(langs_all):
@@ -111,9 +102,9 @@ with open("../generated/generated_human_ranking_ext.tex", "w") as f:
 \centering
 \small
 \textbf{""",
-        LANG_TO_LONG[lang1],
+        utils.LANG_TO_LONG[lang1],
         r"$\rightarrow$",
-        LANG_TO_LONG[lang2],
+        utils.LANG_TO_LONG[lang2],
         r"} \\",
 r"""
 \begin{tabular}{C{8mm}L{31mm}C{9mm}C{10mm}""" + "".join(["C{8mm}" for _ in domains]) + r"""}
@@ -185,9 +176,9 @@ Rank & System & Human & AutoRank & """ + " & ".join(domains) + r""" \\
             print(
                 f"{rank_start}-{rank_end}",
                 (
-                    r"{"
+                    r"\constrained{"
                     if sysA == "refA" or systems_metadata_humeval[langs][sysA]["constrained"] else
-                    r"\hlc[gray!20]{"
+                    r"\unconstrained{"
                 ) +
                 system_name(sysA) + "}" + system_unsupported(sysA, langs),
                 r"\cellcolor{" + human_color(sysA_mean) + r"} " + mean_str,

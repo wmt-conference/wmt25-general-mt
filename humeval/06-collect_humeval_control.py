@@ -66,18 +66,34 @@ data = {
     for i, src in enumerate(v["src_text"])
 }
 
+
+with open("../data/account_to_annotator.json", "r") as f:
+    account_to_annotator = json.load(f)
+
 # find translations and other metadata
 for line in data_csv:
     account, model, sourceID, _, _, _, score, _, _, errors, time1, time2 = line
     if "tutorial" in sourceID:
         continue
     langs, domain, docid, segid = sourceID.split("_#_")
+    langs_simple = langs.split("_", 1)[0]
     mqm = json.loads(errors)
     for x in mqm:
         x.pop("error_type")
     # add to the scores
-    # TODO: change account to annotator ID
-    data[sourceID]["scores"][model] = data[sourceID]["scores"].get(model, []) + [{f"human": float(score), f"errors": mqm, f"annotator": account}]
+    data[sourceID]["scores"][model] = (
+        data[sourceID]["scores"].get(model, [])
+        + [{
+            f"human": float(score),
+            f"errors": mqm,
+            f"annotator": account_to_annotator[langs_simple].get(account, "unknown"),
+            f"times": [min(time1, time2), max(time1, time2)],
+        }]
+    )
+
+data = {
+    k: v for k, v in data.items() if v["scores"] != {}
+}
 
 # save
 with open("../data/wmt25-genmt-humeval_control.jsonl", "w") as f:

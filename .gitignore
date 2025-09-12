@@ -4,6 +4,8 @@ data/systems_humeval_wave*.json
 data/*-humeval.jsonl
 data/*-humeval_control.jsonl
 data/*.gz
+data/account_to_annotator.json
 data/autorank_v2.xlsx
 tmp/
 generated/
+__pycache__
