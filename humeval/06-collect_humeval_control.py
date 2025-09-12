@@ -99,3 +99,9 @@ data = {
 with open("../data/wmt25-genmt-humeval_control.jsonl", "w") as f:
     f.writelines([json.dumps(x, ensure_ascii=False) + "\n" for x in data.values()])
 
+# %%
+
+"""
+cp data/wmt25-genmt-humeval.jsonl data/TMP_Sep08-wmt25-genmt-humeval.jsonl
+tar -czf data/TMP_Sep08-wmt25-genmt-humeval.jsonl.gz data/TMP_Sep08-wmt25-genmt-humeval.jsonl
+"""
