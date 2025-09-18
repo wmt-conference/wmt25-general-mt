@@ -1840,7 +1840,7 @@
     "description": "",
     "architecture": "enc-dec",
     "base_model": "NLLB",
-    "parameter_count": "0.7",
+    "parameter_count": "3.3",
     "translation_granularity": "paragraph, document (default in blindset)",
     "post_editing": "",
     "is_multimodal": "NO",
