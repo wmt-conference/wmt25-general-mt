@@ -22,6 +22,10 @@ LANGS = {
 with contextlib.chdir(pathlib.Path(__file__).parent.parent):
     with open("data/systems_humeval.json", "r") as f:
         systems_humeval = json.load(f)
+        systems_humeval = {
+            lang: {sys: d for sys, d in vals.items() if d["will_humeval"]}
+            for lang, vals in systems_humeval.items()
+        }
 
     with open("data/wmt25-genmt.jsonl", "r") as f:
         data = [json.loads(x) for x in f.readlines()]

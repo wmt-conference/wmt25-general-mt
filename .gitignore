@@ -6,6 +6,7 @@ data/*-humeval_control.jsonl
 data/*.gz
 data/account_to_annotator.json
 data/autorank_v2.xlsx
+data/systems_humeval_not.json
 tmp/
 generated/
 __pycache__

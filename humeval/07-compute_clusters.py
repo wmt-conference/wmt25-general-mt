@@ -39,6 +39,15 @@ def get_significance(a: list[float], b: list[float]) -> bool:
 
 with open("../data/systems_humeval.json", "r") as f:
     systems_metadata_humeval = json.load(f)
+    systems_metadata_humeval_not = {
+        lang: {sys: d for sys, d in vals.items() if not d["will_humeval"]}
+        for lang, vals in systems_metadata_humeval.items()
+    }
+    systems_metadata_humeval = {
+        lang: {sys: d for sys, d in vals.items() if d["will_humeval"]}
+        for lang, vals in systems_metadata_humeval.items()
+    }
+
 with open("../data/systems_metadata_updated3.json", "r") as f:
     systems_metadata = json.load(f)
 
@@ -194,11 +203,19 @@ Rank & System & Human & AutoRank & """ + " & ".join(domains) + r""" \\
             if sys_i+1 != len(systems_info) and does_cluster_end_here(sys_i+1, [x[3] for x in systems_info]):
                 print(r"\cmidrule{1-3}", file=f)
         
+        print(r"\cmidrule{1-3}", file=f)
+        print(
+            r"\textcolor{black!60}{" + f"{sys_i+2}-{sys_i+2+len(systems_metadata_humeval_not[langs])}" + r"}",
+            r"\multicolumn{2}{l}{\textcolor{black!50}{\constrained{" + f"{len(systems_metadata_humeval_not[langs])} systems not human-evaluated" + r"}}}",
+            r"\textcolor{black!50}{...}",
+            sep=" & ",
+            end="\\\\\n",
+            file=f,
+        )
+
         print(
             r"\bottomrule",
-            r"\end{tabular}",
-            # make sure each table has the same height
-            # r"\vspace{" + f"{(20-len(systems))*1.8:.1f}" + r"em}",
+            r"\end{tabular}\vspace{-2mm}",
             r"\end{table}",
             sep="\n",
             file=f,
@@ -207,6 +224,11 @@ Rank & System & Human & AutoRank & """ + " & ".join(domains) + r""" \\
         print("\n"*2, file=f)
 
 
+
+# % manual intervention for alignment
+# \begin{table}
+# \vspace{7.7cm}
+# \end{table}
 
 # go through the extended version and just clip the specific lines
 
@@ -218,8 +240,13 @@ with open("../generated/generated_human_ranking.tex", "w") as f:
     for line in text_ext:
         if line.startswith(r"\begin{tabular}{C{8mm}L{31mm}C{9mm}C{10mm}"):
             line = r"\begin{tabular}{C{8mm}L{31mm}C{9mm}C{10mm}}"
+            text_base += line + "\n"
+        elif line.startswith(r"\textcolor{"):
+            text_base += line + "\n"
         elif line.count("&") >= 2:
             line = "&".join(line.split("&")[:4]) + r" \\"
+            text_base += line + "\n"
+        else:
+            text_base += line + "\n"
         
-        text_base += line + "\n"
     f.write(text_base)

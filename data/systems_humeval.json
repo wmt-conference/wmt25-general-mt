@@ -2,1201 +2,3028 @@
   "cs-de_DE": {
     "Shy": {
       "constrained": true,
-      "autorank": 1.0
+      "autorank": 1.0,
+      "will_humeval": true
     },
     "CommandA-MT": {
       "constrained": false,
-      "autorank": 2.07
+      "autorank": 2.07,
+      "will_humeval": true
     },
     "GPT-4.1": {
       "constrained": false,
-      "autorank": 2.39
+      "autorank": 2.39,
+      "will_humeval": true
     },
     "Gemini-2.5-Pro": {
       "constrained": false,
-      "autorank": 2.54
+      "autorank": 2.54,
+      "will_humeval": true
     },
     "DeepSeek-V3": {
       "constrained": false,
-      "autorank": 3.53
+      "autorank": 3.53,
+      "will_humeval": true
     },
     "Mistral-Medium": {
       "constrained": false,
-      "autorank": 4.17
+      "autorank": 4.17,
+      "will_humeval": true
     },
     "CommandA": {
       "constrained": false,
-      "autorank": 4.79
+      "autorank": 4.79,
+      "will_humeval": true
     },
     "Claude-4": {
       "constrained": false,
-      "autorank": 4.84
+      "autorank": 4.84,
+      "will_humeval": true
     },
     "GemTrans": {
       "constrained": false,
-      "autorank": 6.27
+      "autorank": 6.27,
+      "will_humeval": true
     },
     "UvA-MT": {
       "constrained": false,
-      "autorank": 6.95
+      "autorank": 6.95,
+      "will_humeval": true
     },
     "Gemma-3-27B": {
       "constrained": false,
-      "autorank": 7.25
+      "autorank": 7.25,
+      "will_humeval": true
     },
     "Yolu": {
       "constrained": true,
-      "autorank": 9.26
+      "autorank": 9.26,
+      "will_humeval": true
     },
     "Laniqo": {
       "constrained": true,
-      "autorank": 10.3
+      "autorank": 10.3,
+      "will_humeval": true
     },
     "TowerPlus-9B": {
       "constrained": true,
-      "autorank": 10.33
+      "autorank": 10.33,
+      "will_humeval": true
     },
     "Wenyiil": {
       "constrained": true,
-      "autorank": 10.94
+      "autorank": 10.94,
+      "will_humeval": true
     },
     "SRPOL": {
       "constrained": true,
-      "autorank": 11.03
+      "autorank": 11.03,
+      "will_humeval": true
     },
     "Gemma-3-12B": {
       "constrained": true,
-      "autorank": 11.51
+      "autorank": 11.51,
+      "will_humeval": true
     },
     "IRB-MT": {
       "constrained": true,
-      "autorank": 12.41
+      "autorank": 12.41,
+      "will_humeval": true
     },
     "Algharb": {
       "constrained": true,
-      "autorank": 13.24
+      "autorank": 13.24,
+      "will_humeval": true
     },
     "CUNI-MH-v2": {
       "constrained": true,
-      "autorank": 14.16
+      "autorank": 14.16,
+      "will_humeval": true
+    },
+    "Llama-4-Maverick": {
+      "constrained": false,
+      "autorank": 7.61,
+      "will_humeval": false
+    },
+    "AyaExpanse-32B": {
+      "constrained": false,
+      "autorank": 8.18,
+      "will_humeval": false
+    },
+    "TowerPlus-72B": {
+      "constrained": false,
+      "autorank": 9.51,
+      "will_humeval": false
+    },
+    "Qwen3-235B": {
+      "constrained": false,
+      "autorank": 9.56,
+      "will_humeval": false
+    },
+    "EuroLLM-22B": {
+      "constrained": false,
+      "autorank": 11.21,
+      "will_humeval": false
+    },
+    "ONLINE-B": {
+      "constrained": false,
+      "autorank": 11.93,
+      "will_humeval": false
+    },
+    "IR-MultiagentMT": {
+      "constrained": false,
+      "autorank": 13.33,
+      "will_humeval": false
+    },
+    "SalamandraTA": {
+      "constrained": true,
+      "autorank": 15.66,
+      "will_humeval": false
+    },
+    "AyaExpanse-8B": {
+      "constrained": true,
+      "autorank": 15.79,
+      "will_humeval": false
+    },
+    "TranssionTranslate": {
+      "constrained": false,
+      "autorank": 16.98,
+      "will_humeval": false
+    },
+    "ONLINE-W": {
+      "constrained": false,
+      "autorank": 17.09,
+      "will_humeval": false
+    },
+    "DLUT_GTCOM": {
+      "constrained": false,
+      "autorank": 17.8,
+      "will_humeval": false
+    },
+    "CommandR7B": {
+      "constrained": true,
+      "autorank": 18.28,
+      "will_humeval": false
+    },
+    "EuroLLM-9B": {
+      "constrained": true,
+      "autorank": 22.88,
+      "will_humeval": false
+    },
+    "Llama-3.1-8B": {
+      "constrained": true,
+      "autorank": 25.96,
+      "will_humeval": false
+    },
+    "ONLINE-G": {
+      "constrained": false,
+      "autorank": 32.85,
+      "will_humeval": false
+    },
+    "Qwen2.5-7B": {
+      "constrained": true,
+      "autorank": 32.9,
+      "will_humeval": false
+    },
+    "NLLB": {
+      "constrained": true,
+      "autorank": 34.21,
+      "will_humeval": false
+    },
+    "Mistral-7B": {
+      "constrained": true,
+      "autorank": 37.22,
+      "will_humeval": false
+    },
+    "TranssionMT": {
+      "constrained": false,
+      "autorank": 41.0,
+      "will_humeval": false
     }
   },
   "cs-uk_UA": {
     "Shy": {
       "constrained": true,
-      "autorank": 1.0
+      "autorank": 1.0,
+      "will_humeval": true
     },
     "Gemini-2.5-Pro": {
       "constrained": false,
-      "autorank": 1.05
+      "autorank": 1.05,
+      "will_humeval": true
     },
     "CommandA-MT": {
       "constrained": false,
-      "autorank": 1.3
+      "autorank": 1.3,
+      "will_humeval": true
     },
     "GPT-4.1": {
       "constrained": false,
-      "autorank": 1.33
+      "autorank": 1.33,
+      "will_humeval": true
     },
     "DeepSeek-V3": {
       "constrained": false,
-      "autorank": 3.25
+      "autorank": 3.25,
+      "will_humeval": true
     },
     "Claude-4": {
       "constrained": false,
-      "autorank": 3.72
+      "autorank": 3.72,
+      "will_humeval": true
     },
     "Mistral-Medium": {
       "constrained": false,
-      "autorank": 4.2
+      "autorank": 4.2,
+      "will_humeval": true
     },
     "GemTrans": {
       "constrained": false,
-      "autorank": 4.39
+      "autorank": 4.39,
+      "will_humeval": true
     },
     "CommandA": {
       "constrained": false,
-      "autorank": 4.59
+      "autorank": 4.59,
+      "will_humeval": true
     },
     "Gemma-3-27B": {
       "constrained": false,
-      "autorank": 5.05
+      "autorank": 5.05,
+      "will_humeval": true
     },
     "UvA-MT": {
       "constrained": false,
-      "autorank": 5.08
+      "autorank": 5.08,
+      "will_humeval": true
     },
     "Wenyiil": {
       "constrained": true,
-      "autorank": 5.44
+      "autorank": 5.44,
+      "will_humeval": true
     },
     "Yolu": {
       "constrained": true,
-      "autorank": 6.01
+      "autorank": 6.01,
+      "will_humeval": true
     },
     "Algharb": {
       "constrained": true,
-      "autorank": 7.22
+      "autorank": 7.22,
+      "will_humeval": true
     },
     "Laniqo": {
       "constrained": true,
-      "autorank": 7.66
+      "autorank": 7.66,
+      "will_humeval": true
     },
     "SRPOL": {
       "constrained": true,
-      "autorank": 7.77
+      "autorank": 7.77,
+      "will_humeval": true
     },
     "TowerPlus-9B": {
       "constrained": true,
-      "autorank": 7.87
+      "autorank": 7.87,
+      "will_humeval": true
     },
     "IRB-MT": {
       "constrained": true,
-      "autorank": 9.13
+      "autorank": 9.13,
+      "will_humeval": true
+    },
+    "Llama-4-Maverick": {
+      "constrained": false,
+      "autorank": 7.48,
+      "will_humeval": false
+    },
+    "AyaExpanse-32B": {
+      "constrained": false,
+      "autorank": 7.51,
+      "will_humeval": false
+    },
+    "TowerPlus-72B": {
+      "constrained": false,
+      "autorank": 8.92,
+      "will_humeval": false
+    },
+    "EuroLLM-22B": {
+      "constrained": false,
+      "autorank": 8.95,
+      "will_humeval": false
+    },
+    "Gemma-3-12B": {
+      "constrained": true,
+      "autorank": 9.92,
+      "will_humeval": false
+    },
+    "Qwen3-235B": {
+      "constrained": false,
+      "autorank": 10.65,
+      "will_humeval": false
+    },
+    "IR-MultiagentMT": {
+      "constrained": false,
+      "autorank": 11.44,
+      "will_humeval": false
+    },
+    "ONLINE-B": {
+      "constrained": false,
+      "autorank": 11.71,
+      "will_humeval": false
+    },
+    "SalamandraTA": {
+      "constrained": true,
+      "autorank": 11.95,
+      "will_humeval": false
+    },
+    "CUNI-EdUKate-v1": {
+      "constrained": false,
+      "autorank": 12.8,
+      "will_humeval": false
+    },
+    "AyaExpanse-8B": {
+      "constrained": true,
+      "autorank": 13.57,
+      "will_humeval": false
+    },
+    "ONLINE-W": {
+      "constrained": false,
+      "autorank": 13.69,
+      "will_humeval": false
+    },
+    "TranssionTranslate": {
+      "constrained": false,
+      "autorank": 14.94,
+      "will_humeval": false
+    },
+    "EuroLLM-9B": {
+      "constrained": true,
+      "autorank": 15.17,
+      "will_humeval": false
+    },
+    "DLUT_GTCOM": {
+      "constrained": false,
+      "autorank": 15.38,
+      "will_humeval": false
+    },
+    "CUNI-SFT": {
+      "constrained": true,
+      "autorank": 15.44,
+      "will_humeval": false
+    },
+    "ONLINE-G": {
+      "constrained": false,
+      "autorank": 24.6,
+      "will_humeval": false
+    },
+    "Llama-3.1-8B": {
+      "constrained": true,
+      "autorank": 25.92,
+      "will_humeval": false
+    },
+    "CUNI-Transformer": {
+      "constrained": true,
+      "autorank": 26.27,
+      "will_humeval": false
+    },
+    "CommandR7B": {
+      "constrained": true,
+      "autorank": 26.38,
+      "will_humeval": false
+    },
+    "NLLB": {
+      "constrained": true,
+      "autorank": 29.21,
+      "will_humeval": false
+    },
+    "TranssionMT": {
+      "constrained": false,
+      "autorank": 33.76,
+      "will_humeval": false
+    },
+    "Mistral-7B": {
+      "constrained": true,
+      "autorank": 34.27,
+      "will_humeval": false
+    },
+    "Qwen2.5-7B": {
+      "constrained": true,
+      "autorank": 43.0,
+      "will_humeval": false
     }
   },
   "en-ar_EG": {
     "Shy": {
       "constrained": true,
-      "autorank": 1.0
+      "autorank": 1.0,
+      "will_humeval": true
     },
     "Wenyiil": {
       "constrained": true,
-      "autorank": 2.5
+      "autorank": 2.5,
+      "will_humeval": true
     },
     "Algharb": {
       "constrained": true,
-      "autorank": 2.67
+      "autorank": 2.67,
+      "will_humeval": true
     },
     "GemTrans": {
       "constrained": false,
-      "autorank": 3.5
+      "autorank": 3.5,
+      "will_humeval": true
     },
     "CommandA-MT": {
       "constrained": false,
-      "autorank": 4.07
+      "autorank": 4.07,
+      "will_humeval": true
     },
     "UvA-MT": {
       "constrained": false,
-      "autorank": 4.23
+      "autorank": 4.23,
+      "will_humeval": true
     },
     "Yolu": {
       "constrained": true,
-      "autorank": 5.48
+      "autorank": 5.48,
+      "will_humeval": true
     },
     "Gemini-2.5-Pro": {
       "constrained": false,
-      "autorank": 5.76
+      "autorank": 5.76,
+      "will_humeval": true
     },
     "ONLINE-B": {
       "constrained": false,
-      "autorank": 6.54
+      "autorank": 6.54,
+      "will_humeval": true
     },
     "GPT-4.1": {
       "constrained": false,
-      "autorank": 6.65
+      "autorank": 6.65,
+      "will_humeval": true
     },
     "DeepSeek-V3": {
       "constrained": false,
-      "autorank": 7.02
+      "autorank": 7.02,
+      "will_humeval": true
     },
     "Mistral-Medium": {
       "constrained": false,
-      "autorank": 7.69
+      "autorank": 7.69,
+      "will_humeval": true
     },
     "Claude-4": {
       "constrained": false,
-      "autorank": 7.82
+      "autorank": 7.82,
+      "will_humeval": true
     },
     "SRPOL": {
       "constrained": true,
-      "autorank": 8.12
+      "autorank": 8.12,
+      "will_humeval": true
     },
     "CommandA": {
       "constrained": false,
-      "autorank": 8.55
+      "autorank": 8.55,
+      "will_humeval": true
     },
     "AyaExpanse-8B": {
       "constrained": true,
-      "autorank": 9.95
+      "autorank": 9.95,
+      "will_humeval": true
     },
     "IRB-MT": {
       "constrained": true,
-      "autorank": 11.09
+      "autorank": 11.09,
+      "will_humeval": true
     },
     "CommandR7B": {
       "constrained": true,
-      "autorank": 11.61
+      "autorank": 11.61,
+      "will_humeval": true
+    },
+    "AyaExpanse-32B": {
+      "constrained": false,
+      "autorank": 8.56,
+      "will_humeval": false
+    },
+    "ONLINE-W": {
+      "constrained": false,
+      "autorank": 9.17,
+      "will_humeval": false
+    },
+    "Qwen3-235B": {
+      "constrained": false,
+      "autorank": 10.94,
+      "will_humeval": false
+    },
+    "Gemma-3-27B": {
+      "constrained": false,
+      "autorank": 10.97,
+      "will_humeval": false
+    },
+    "EuroLLM-22B": {
+      "constrained": false,
+      "autorank": 10.98,
+      "will_humeval": false
+    },
+    "Llama-4-Maverick": {
+      "constrained": false,
+      "autorank": 11.37,
+      "will_humeval": false
+    },
+    "IR-MultiagentMT": {
+      "constrained": false,
+      "autorank": 11.57,
+      "will_humeval": false
+    },
+    "Gemma-3-12B": {
+      "constrained": true,
+      "autorank": 11.96,
+      "will_humeval": false
+    },
+    "EuroLLM-9B": {
+      "constrained": true,
+      "autorank": 14.37,
+      "will_humeval": false
+    },
+    "TowerPlus-72B": {
+      "constrained": false,
+      "autorank": 15.97,
+      "will_humeval": false
+    },
+    "TranssionTranslate": {
+      "constrained": false,
+      "autorank": 16.23,
+      "will_humeval": false
+    },
+    "TranssionMT": {
+      "constrained": false,
+      "autorank": 17.33,
+      "will_humeval": false
+    },
+    "NLLB": {
+      "constrained": true,
+      "autorank": 18.42,
+      "will_humeval": false
+    },
+    "SalamandraTA": {
+      "constrained": true,
+      "autorank": 20.58,
+      "will_humeval": false
+    },
+    "ONLINE-G": {
+      "constrained": false,
+      "autorank": 23.19,
+      "will_humeval": false
+    },
+    "Llama-3.1-8B": {
+      "constrained": true,
+      "autorank": 23.35,
+      "will_humeval": false
+    },
+    "Qwen2.5-7B": {
+      "constrained": true,
+      "autorank": 24.6,
+      "will_humeval": false
+    },
+    "TowerPlus-9B": {
+      "constrained": true,
+      "autorank": 32.75,
+      "will_humeval": false
+    },
+    "Mistral-7B": {
+      "constrained": true,
+      "autorank": 38.0,
+      "will_humeval": false
     }
   },
   "en-bho_IN": {
     "Gemini-2.5-Pro": {
       "constrained": false,
-      "autorank": 1.0
+      "autorank": 1.0,
+      "will_humeval": true
     },
     "Wenyiil": {
       "constrained": true,
-      "autorank": 2.53
+      "autorank": 2.53,
+      "will_humeval": true
     },
     "Algharb": {
       "constrained": true,
-      "autorank": 2.83
+      "autorank": 2.83,
+      "will_humeval": true
     },
     "ONLINE-B": {
       "constrained": false,
-      "autorank": 4.14
+      "autorank": 4.14,
+      "will_humeval": true
     },
     "TranssionTranslate": {
       "constrained": false,
-      "autorank": 4.35
+      "autorank": 4.35,
+      "will_humeval": true
     },
     "Claude-4": {
       "constrained": false,
-      "autorank": 4.51
+      "autorank": 4.51,
+      "will_humeval": true
     },
     "DeepSeek-V3": {
       "constrained": false,
-      "autorank": 5.12
+      "autorank": 5.12,
+      "will_humeval": true
     },
     "GPT-4.1": {
       "constrained": false,
-      "autorank": 5.49
+      "autorank": 5.49,
+      "will_humeval": true
     },
     "Yolu": {
       "constrained": true,
-      "autorank": 5.65
+      "autorank": 5.65,
+      "will_humeval": true
     },
     "TranssionMT": {
       "constrained": false,
-      "autorank": 6.15
+      "autorank": 6.15,
+      "will_humeval": true
     },
     "Llama-4-Maverick": {
       "constrained": false,
-      "autorank": 6.5
+      "autorank": 6.5,
+      "will_humeval": true
     },
     "CommandA": {
       "constrained": false,
-      "autorank": 6.51
+      "autorank": 6.51,
+      "will_humeval": true
     },
     "NLLB": {
       "constrained": true,
-      "autorank": 6.64
+      "autorank": 6.64,
+      "will_humeval": true
     },
     "Gemma-3-27B": {
       "constrained": false,
-      "autorank": 8.27
+      "autorank": 8.27,
+      "will_humeval": true
     },
     "COILD-BHO": {
       "constrained": true,
-      "autorank": 8.86
+      "autorank": 8.86,
+      "will_humeval": true
     },
     "IRB-MT": {
       "constrained": true,
-      "autorank": 11.43
+      "autorank": 11.43,
+      "will_humeval": true
     },
     "Shy": {
       "constrained": true,
-      "autorank": 11.5
+      "autorank": 11.5,
+      "will_humeval": true
     },
     "SalamandraTA": {
       "constrained": true,
-      "autorank": 12.07
+      "autorank": 12.07,
+      "will_humeval": true
+    },
+    "CommandA-MT": {
+      "constrained": false,
+      "autorank": 8.84,
+      "will_humeval": false
+    },
+    "Mistral-Medium": {
+      "constrained": false,
+      "autorank": 9.03,
+      "will_humeval": false
+    },
+    "Qwen3-235B": {
+      "constrained": false,
+      "autorank": 11.15,
+      "will_humeval": false
+    },
+    "AyaExpanse-32B": {
+      "constrained": false,
+      "autorank": 11.44,
+      "will_humeval": false
+    },
+    "GemTrans": {
+      "constrained": false,
+      "autorank": 11.92,
+      "will_humeval": false
+    },
+    "Gemma-3-12B": {
+      "constrained": true,
+      "autorank": 12.33,
+      "will_humeval": false
+    },
+    "TowerPlus-9B": {
+      "constrained": true,
+      "autorank": 12.74,
+      "will_humeval": false
+    },
+    "TowerPlus-72B": {
+      "constrained": false,
+      "autorank": 12.8,
+      "will_humeval": false
+    },
+    "EuroLLM-22B": {
+      "constrained": false,
+      "autorank": 13.64,
+      "will_humeval": false
+    },
+    "EuroLLM-9B": {
+      "constrained": true,
+      "autorank": 14.72,
+      "will_humeval": false
+    },
+    "IR-MultiagentMT": {
+      "constrained": false,
+      "autorank": 15.86,
+      "will_humeval": false
+    },
+    "CommandR7B": {
+      "constrained": true,
+      "autorank": 16.7,
+      "will_humeval": false
+    },
+    "AyaExpanse-8B": {
+      "constrained": true,
+      "autorank": 16.71,
+      "will_humeval": false
+    },
+    "Qwen2.5-7B": {
+      "constrained": true,
+      "autorank": 17.74,
+      "will_humeval": false
+    },
+    "Mistral-7B": {
+      "constrained": true,
+      "autorank": 20.91,
+      "will_humeval": false
+    },
+    "UvA-MT": {
+      "constrained": false,
+      "autorank": 28.44,
+      "will_humeval": false
+    },
+    "Llama-3.1-8B": {
+      "constrained": true,
+      "autorank": 35.0,
+      "will_humeval": false
     }
   },
   "en-cs_CZ": {
     "Shy": {
       "constrained": true,
-      "autorank": 1.0
+      "autorank": 1.0,
+      "will_humeval": true
     },
     "Gemini-2.5-Pro": {
       "constrained": false,
-      "autorank": 3.43
+      "autorank": 3.43,
+      "will_humeval": true
     },
     "CommandA-MT": {
       "constrained": false,
-      "autorank": 3.59
+      "autorank": 3.59,
+      "will_humeval": true
     },
     "GPT-4.1": {
       "constrained": false,
-      "autorank": 3.97
+      "autorank": 3.97,
+      "will_humeval": true
     },
     "Wenyiil": {
       "constrained": true,
-      "autorank": 4.46
+      "autorank": 4.46,
+      "will_humeval": true
     },
     "DeepSeek-V3": {
       "constrained": false,
-      "autorank": 5.1
+      "autorank": 5.1,
+      "will_humeval": true
     },
     "GemTrans": {
       "constrained": false,
-      "autorank": 5.13
+      "autorank": 5.13,
+      "will_humeval": true
     },
     "Yolu": {
       "constrained": true,
-      "autorank": 6.35
+      "autorank": 6.35,
+      "will_humeval": true
     },
     "Algharb": {
       "constrained": true,
-      "autorank": 6.36
+      "autorank": 6.36,
+      "will_humeval": true
     },
     "UvA-MT": {
       "constrained": false,
-      "autorank": 6.52
+      "autorank": 6.52,
+      "will_humeval": true
     },
     "Mistral-Medium": {
       "constrained": false,
-      "autorank": 7.1
+      "autorank": 7.1,
+      "will_humeval": true
     },
     "SRPOL": {
       "constrained": true,
-      "autorank": 8.71
+      "autorank": 8.71,
+      "will_humeval": true
     },
     "Laniqo": {
       "constrained": true,
-      "autorank": 8.75
+      "autorank": 8.75,
+      "will_humeval": true
     },
     "CommandA": {
       "constrained": false,
-      "autorank": 8.77
+      "autorank": 8.77,
+      "will_humeval": true
     },
     "Claude-4": {
       "constrained": false,
-      "autorank": 8.99
+      "autorank": 8.99,
+      "will_humeval": true
     },
     "Gemma-3-27B": {
       "constrained": false,
-      "autorank": 9.17
+      "autorank": 9.17,
+      "will_humeval": true
     },
     "SalamandraTA": {
       "constrained": true,
-      "autorank": 10.52
+      "autorank": 10.52,
+      "will_humeval": true
     },
     "TowerPlus-9B": {
       "constrained": true,
-      "autorank": 11.61
+      "autorank": 11.61,
+      "will_humeval": true
     },
     "CUNI-MH-v2": {
       "constrained": true,
-      "autorank": 12.12
+      "autorank": 12.12,
+      "will_humeval": true
+    },
+    "ONLINE-B": {
+      "constrained": false,
+      "autorank": 10.37,
+      "will_humeval": false
+    },
+    "AyaExpanse-32B": {
+      "constrained": false,
+      "autorank": 10.39,
+      "will_humeval": false
+    },
+    "Llama-4-Maverick": {
+      "constrained": false,
+      "autorank": 11.35,
+      "will_humeval": false
+    },
+    "ONLINE-W": {
+      "constrained": false,
+      "autorank": 11.45,
+      "will_humeval": false
+    },
+    "Qwen3-235B": {
+      "constrained": false,
+      "autorank": 11.77,
+      "will_humeval": false
+    },
+    "EuroLLM-22B": {
+      "constrained": false,
+      "autorank": 12.81,
+      "will_humeval": false
+    },
+    "IRB-MT": {
+      "constrained": true,
+      "autorank": 12.85,
+      "will_humeval": false
+    },
+    "TowerPlus-72B": {
+      "constrained": false,
+      "autorank": 13.18,
+      "will_humeval": false
+    },
+    "TranssionTranslate": {
+      "constrained": false,
+      "autorank": 13.43,
+      "will_humeval": false
+    },
+    "Gemma-3-12B": {
+      "constrained": true,
+      "autorank": 13.72,
+      "will_humeval": false
+    },
+    "CUNI-SFT": {
+      "constrained": true,
+      "autorank": 16.15,
+      "will_humeval": false
+    },
+    "AyaExpanse-8B": {
+      "constrained": true,
+      "autorank": 16.39,
+      "will_humeval": false
+    },
+    "CUNI-DocTransformer": {
+      "constrained": true,
+      "autorank": 17.92,
+      "will_humeval": false
+    },
+    "IR-MultiagentMT": {
+      "constrained": false,
+      "autorank": 18.12,
+      "will_humeval": false
+    },
+    "EuroLLM-9B": {
+      "constrained": true,
+      "autorank": 19.36,
+      "will_humeval": false
+    },
+    "NLLB": {
+      "constrained": true,
+      "autorank": 26.09,
+      "will_humeval": false
+    },
+    "CommandR7B": {
+      "constrained": true,
+      "autorank": 28.64,
+      "will_humeval": false
+    },
+    "ONLINE-G": {
+      "constrained": false,
+      "autorank": 29.39,
+      "will_humeval": false
+    },
+    "Llama-3.1-8B": {
+      "constrained": true,
+      "autorank": 29.58,
+      "will_humeval": false
+    },
+    "Qwen2.5-7B": {
+      "constrained": true,
+      "autorank": 38.39,
+      "will_humeval": false
+    },
+    "Mistral-7B": {
+      "constrained": true,
+      "autorank": 41.81,
+      "will_humeval": false
+    },
+    "ctpc_nlp": {
+      "constrained": true,
+      "autorank": 42.03,
+      "will_humeval": false
+    },
+    "TranssionMT": {
+      "constrained": false,
+      "autorank": 43.0,
+      "will_humeval": false
     }
   },
   "en-et_EE": {
     "Shy": {
       "constrained": true,
-      "autorank": 1.0
+      "autorank": 1.0,
+      "will_humeval": true
     },
     "Gemini-2.5-Pro": {
       "constrained": false,
-      "autorank": 2.51
+      "autorank": 2.51,
+      "will_humeval": true
     },
     "Wenyiil": {
       "constrained": true,
-      "autorank": 2.61
+      "autorank": 2.61,
+      "will_humeval": true
     },
     "GPT-4.1": {
       "constrained": false,
-      "autorank": 3.05
+      "autorank": 3.05,
+      "will_humeval": true
     },
     "Yolu": {
       "constrained": true,
-      "autorank": 3.76
+      "autorank": 3.76,
+      "will_humeval": true
     },
     "Algharb": {
       "constrained": true,
-      "autorank": 3.91
+      "autorank": 3.91,
+      "will_humeval": true
     },
     "GemTrans": {
       "constrained": false,
-      "autorank": 5.06
+      "autorank": 5.06,
+      "will_humeval": true
     },
     "Laniqo": {
       "constrained": true,
-      "autorank": 5.25
+      "autorank": 5.25,
+      "will_humeval": true
     },
     "SRPOL": {
       "constrained": true,
-      "autorank": 5.65
+      "autorank": 5.65,
+      "will_humeval": true
     },
     "UvA-MT": {
       "constrained": false,
-      "autorank": 5.93
+      "autorank": 5.93,
+      "will_humeval": true
     },
     "ONLINE-B": {
       "constrained": false,
-      "autorank": 5.98
+      "autorank": 5.98,
+      "will_humeval": true
     },
     "CommandA-MT": {
       "constrained": false,
-      "autorank": 6.07
+      "autorank": 6.07,
+      "will_humeval": true
     },
     "SalamandraTA": {
       "constrained": true,
-      "autorank": 6.29
+      "autorank": 6.29,
+      "will_humeval": true
     },
     "Claude-4": {
       "constrained": false,
-      "autorank": 6.5
+      "autorank": 6.5,
+      "will_humeval": true
     },
     "TranssionTranslate": {
       "constrained": false,
-      "autorank": 7.33
+      "autorank": 7.33,
+      "will_humeval": true
     },
     "Gemma-3-27B": {
       "constrained": false,
-      "autorank": 7.59
+      "autorank": 7.59,
+      "will_humeval": true
     },
     "EuroLLM-22B": {
       "constrained": false,
-      "autorank": 8.08
+      "autorank": 8.08,
+      "will_humeval": true
     },
     "IRB-MT": {
       "constrained": true,
-      "autorank": 11.41
+      "autorank": 11.41,
+      "will_humeval": true
+    },
+    "Llama-4-Maverick": {
+      "constrained": false,
+      "autorank": 8.18,
+      "will_humeval": false
+    },
+    "ONLINE-W": {
+      "constrained": false,
+      "autorank": 8.78,
+      "will_humeval": false
+    },
+    "DeepSeek-V3": {
+      "constrained": false,
+      "autorank": 10.36,
+      "will_humeval": false
+    },
+    "IR-MultiagentMT": {
+      "constrained": false,
+      "autorank": 11.42,
+      "will_humeval": false
+    },
+    "Gemma-3-12B": {
+      "constrained": true,
+      "autorank": 12.47,
+      "will_humeval": false
+    },
+    "EuroLLM-9B": {
+      "constrained": true,
+      "autorank": 13.84,
+      "will_humeval": false
+    },
+    "Mistral-Medium": {
+      "constrained": false,
+      "autorank": 14.26,
+      "will_humeval": false
+    },
+    "Qwen3-235B": {
+      "constrained": false,
+      "autorank": 14.44,
+      "will_humeval": false
+    },
+    "CommandA": {
+      "constrained": false,
+      "autorank": 16.34,
+      "will_humeval": false
+    },
+    "NLLB": {
+      "constrained": true,
+      "autorank": 16.5,
+      "will_humeval": false
+    },
+    "ONLINE-G": {
+      "constrained": false,
+      "autorank": 17.31,
+      "will_humeval": false
+    },
+    "TowerPlus-72B": {
+      "constrained": false,
+      "autorank": 20.7,
+      "will_humeval": false
+    },
+    "TranssionMT": {
+      "constrained": false,
+      "autorank": 24.36,
+      "will_humeval": false
+    },
+    "Llama-3.1-8B": {
+      "constrained": true,
+      "autorank": 25.15,
+      "will_humeval": false
+    },
+    "TowerPlus-9B": {
+      "constrained": true,
+      "autorank": 27.99,
+      "will_humeval": false
+    },
+    "AyaExpanse-32B": {
+      "constrained": false,
+      "autorank": 33.12,
+      "will_humeval": false
+    },
+    "Qwen2.5-7B": {
+      "constrained": true,
+      "autorank": 34.49,
+      "will_humeval": false
+    },
+    "CommandR7B": {
+      "constrained": true,
+      "autorank": 36.76,
+      "will_humeval": false
+    },
+    "Mistral-7B": {
+      "constrained": true,
+      "autorank": 38.38,
+      "will_humeval": false
+    },
+    "AyaExpanse-8B": {
+      "constrained": true,
+      "autorank": 39.0,
+      "will_humeval": false
     }
   },
   "en-is_IS": {
     "Shy": {
       "constrained": true,
-      "autorank": 1.0
+      "autorank": 1.0,
+      "will_humeval": true
     },
     "Gemini-2.5-Pro": {
       "constrained": false,
-      "autorank": 1.84
+      "autorank": 1.84,
+      "will_humeval": true
     },
     "GPT-4.1": {
       "constrained": false,
-      "autorank": 1.95
+      "autorank": 1.95,
+      "will_humeval": true
     },
     "Erlendur": {
       "constrained": false,
-      "autorank": 2.21
+      "autorank": 2.21,
+      "will_humeval": true
     },
     "TowerPlus-9B": {
       "constrained": true,
-      "autorank": 3.9
+      "autorank": 3.9,
+      "will_humeval": true
     },
     "ONLINE-B": {
       "constrained": false,
-      "autorank": 4.38
+      "autorank": 4.38,
+      "will_humeval": true
     },
     "Claude-4": {
       "constrained": false,
-      "autorank": 5.22
+      "autorank": 5.22,
+      "will_humeval": true
     },
     "TowerPlus-72B": {
       "constrained": false,
-      "autorank": 5.65
+      "autorank": 5.65,
+      "will_humeval": true
     },
     "TranssionTranslate": {
       "constrained": false,
-      "autorank": 5.84
+      "autorank": 5.84,
+      "will_humeval": true
     },
     "UvA-MT": {
       "constrained": false,
-      "autorank": 6.75
+      "autorank": 6.75,
+      "will_humeval": true
     },
     "CommandA-MT": {
       "constrained": false,
-      "autorank": 6.81
+      "autorank": 6.81,
+      "will_humeval": true
     },
     "GemTrans": {
       "constrained": false,
-      "autorank": 6.97
+      "autorank": 6.97,
+      "will_humeval": true
     },
     "AMI": {
       "constrained": true,
-      "autorank": 7.4
+      "autorank": 7.4,
+      "will_humeval": true
     },
     "SalamandraTA": {
       "constrained": true,
-      "autorank": 8.57
+      "autorank": 8.57,
+      "will_humeval": true
     },
     "IRB-MT": {
       "constrained": true,
-      "autorank": 11.89
+      "autorank": 11.89,
+      "will_humeval": true
     },
     "Gemma-3-12B": {
       "constrained": true,
-      "autorank": 13.83
+      "autorank": 13.83,
+      "will_humeval": true
     },
     "NLLB": {
       "constrained": true,
-      "autorank": 15.24
+      "autorank": 15.24,
+      "will_humeval": true
     },
     "Llama-3.1-8B": {
       "constrained": true,
-      "autorank": 24.85
+      "autorank": 24.85,
+      "will_humeval": true
+    },
+    "Llama-4-Maverick": {
+      "constrained": false,
+      "autorank": 8.79,
+      "will_humeval": false
+    },
+    "Mistral-Medium": {
+      "constrained": false,
+      "autorank": 9.66,
+      "will_humeval": false
+    },
+    "Gemma-3-27B": {
+      "constrained": false,
+      "autorank": 9.68,
+      "will_humeval": false
+    },
+    "DeepSeek-V3": {
+      "constrained": false,
+      "autorank": 10.49,
+      "will_humeval": false
+    },
+    "IR-MultiagentMT": {
+      "constrained": false,
+      "autorank": 12.06,
+      "will_humeval": false
+    },
+    "Qwen3-235B": {
+      "constrained": false,
+      "autorank": 13.5,
+      "will_humeval": false
+    },
+    "ONLINE-G": {
+      "constrained": false,
+      "autorank": 15.78,
+      "will_humeval": false
+    },
+    "CommandA": {
+      "constrained": false,
+      "autorank": 16.16,
+      "will_humeval": false
+    },
+    "EuroLLM-9B": {
+      "constrained": true,
+      "autorank": 25.5,
+      "will_humeval": false
+    },
+    "AyaExpanse-32B": {
+      "constrained": false,
+      "autorank": 27.95,
+      "will_humeval": false
+    },
+    "CommandR7B": {
+      "constrained": true,
+      "autorank": 30.34,
+      "will_humeval": false
+    },
+    "EuroLLM-22B": {
+      "constrained": false,
+      "autorank": 30.83,
+      "will_humeval": false
+    },
+    "Mistral-7B": {
+      "constrained": true,
+      "autorank": 31.76,
+      "will_humeval": false
+    },
+    "Qwen2.5-7B": {
+      "constrained": true,
+      "autorank": 31.83,
+      "will_humeval": false
+    },
+    "AyaExpanse-8B": {
+      "constrained": true,
+      "autorank": 33.0,
+      "will_humeval": false
     }
   },
   "en-it_IT": {
     "Shy": {
       "constrained": true,
-      "autorank": 1.0
+      "autorank": 1.0,
+      "will_humeval": true
     },
     "CommandA-MT": {
       "constrained": false,
-      "autorank": 2.61
+      "autorank": 2.61,
+      "will_humeval": true
     },
     "Gemini-2.5-Pro": {
       "constrained": false,
-      "autorank": 4.43
+      "autorank": 4.43,
+      "will_humeval": true
     },
     "GPT-4.1": {
       "constrained": false,
-      "autorank": 4.53
+      "autorank": 4.53,
+      "will_humeval": true
     },
     "GemTrans": {
       "constrained": false,
-      "autorank": 5.16
+      "autorank": 5.16,
+      "will_humeval": true
     },
     "UvA-MT": {
       "constrained": false,
-      "autorank": 5.28
+      "autorank": 5.28,
+      "will_humeval": true
     },
     "DeepSeek-V3": {
       "constrained": false,
-      "autorank": 6.14
+      "autorank": 6.14,
+      "will_humeval": true
     },
     "Mistral-Medium": {
       "constrained": false,
-      "autorank": 7.07
+      "autorank": 7.07,
+      "will_humeval": true
     },
     "Qwen3-235B": {
       "constrained": false,
-      "autorank": 7.18
+      "autorank": 7.18,
+      "will_humeval": true
     },
     "Laniqo": {
       "constrained": true,
-      "autorank": 7.56
+      "autorank": 7.56,
+      "will_humeval": true
     },
     "Claude-4": {
       "constrained": false,
-      "autorank": 8.37
+      "autorank": 8.37,
+      "will_humeval": true
     },
     "CommandA": {
       "constrained": false,
-      "autorank": 8.45
+      "autorank": 8.45,
+      "will_humeval": true
     },
     "IRB-MT": {
       "constrained": true,
-      "autorank": 10.21
+      "autorank": 10.21,
+      "will_humeval": true
     },
     "SalamandraTA": {
       "constrained": true,
-      "autorank": 10.27
+      "autorank": 10.27,
+      "will_humeval": true
     },
     "TowerPlus-9B": {
       "constrained": true,
-      "autorank": 11.28
+      "autorank": 11.28,
+      "will_humeval": true
     },
     "AyaExpanse-8B": {
       "constrained": true,
-      "autorank": 14.87
+      "autorank": 14.87,
+      "will_humeval": true
     },
     "EuroLLM-9B": {
       "constrained": true,
-      "autorank": 15.22
+      "autorank": 15.22,
+      "will_humeval": true
     },
     "Gemma-3-12B": {
       "constrained": true,
-      "autorank": 15.52
+      "autorank": 15.52,
+      "will_humeval": true
+    },
+    "ONLINE-B": {
+      "constrained": false,
+      "autorank": 9.36,
+      "will_humeval": false
+    },
+    "TowerPlus-72B": {
+      "constrained": false,
+      "autorank": 9.44,
+      "will_humeval": false
+    },
+    "AyaExpanse-32B": {
+      "constrained": false,
+      "autorank": 10.06,
+      "will_humeval": false
+    },
+    "ONLINE-W": {
+      "constrained": false,
+      "autorank": 10.06,
+      "will_humeval": false
+    },
+    "EuroLLM-22B": {
+      "constrained": false,
+      "autorank": 10.99,
+      "will_humeval": false
+    },
+    "TranssionTranslate": {
+      "constrained": false,
+      "autorank": 11.0,
+      "will_humeval": false
+    },
+    "Gemma-3-27B": {
+      "constrained": false,
+      "autorank": 12.62,
+      "will_humeval": false
+    },
+    "IR-MultiagentMT": {
+      "constrained": false,
+      "autorank": 13.62,
+      "will_humeval": false
+    },
+    "Llama-4-Maverick": {
+      "constrained": false,
+      "autorank": 17.97,
+      "will_humeval": false
+    },
+    "CommandR7B": {
+      "constrained": true,
+      "autorank": 18.03,
+      "will_humeval": false
+    },
+    "Llama-3.1-8B": {
+      "constrained": true,
+      "autorank": 22.8,
+      "will_humeval": false
+    },
+    "Qwen2.5-7B": {
+      "constrained": true,
+      "autorank": 23.51,
+      "will_humeval": false
+    },
+    "NLLB": {
+      "constrained": true,
+      "autorank": 27.07,
+      "will_humeval": false
+    },
+    "ONLINE-G": {
+      "constrained": false,
+      "autorank": 29.96,
+      "will_humeval": false
+    },
+    "Mistral-7B": {
+      "constrained": true,
+      "autorank": 33.0,
+      "will_humeval": false
     }
   },
   "en-ja_JP": {
     "Shy": {
       "constrained": true,
-      "autorank": 1.0
+      "autorank": 1.0,
+      "will_humeval": true
     },
     "In2x": {
       "constrained": false,
-      "autorank": 2.32
+      "autorank": 2.32,
+      "will_humeval": true
     },
     "Gemini-2.5-Pro": {
       "constrained": false,
-      "autorank": 2.45
+      "autorank": 2.45,
+      "will_humeval": true
     },
     "GPT-4.1": {
       "constrained": false,
-      "autorank": 2.93
+      "autorank": 2.93,
+      "will_humeval": true
     },
     "Wenyiil": {
       "constrained": true,
-      "autorank": 2.96
+      "autorank": 2.96,
+      "will_humeval": true
     },
     "KIKIS": {
       "constrained": true,
-      "autorank": 3.18
+      "autorank": 3.18,
+      "will_humeval": true
     },
     "Algharb": {
       "constrained": true,
-      "autorank": 3.29
+      "autorank": 3.29,
+      "will_humeval": true
     },
     "CommandA-MT": {
       "constrained": false,
-      "autorank": 3.72
+      "autorank": 3.72,
+      "will_humeval": true
     },
     "DeepSeek-V3": {
       "constrained": false,
-      "autorank": 4.74
+      "autorank": 4.74,
+      "will_humeval": true
     },
     "Mistral-Medium": {
       "constrained": false,
-      "autorank": 5.5
+      "autorank": 5.5,
+      "will_humeval": true
     },
     "GemTrans": {
       "constrained": false,
-      "autorank": 5.57
+      "autorank": 5.57,
+      "will_humeval": true
     },
     "Claude-4": {
       "constrained": false,
-      "autorank": 5.83
+      "autorank": 5.83,
+      "will_humeval": true
     },
     "Yolu": {
       "constrained": true,
-      "autorank": 6.08
+      "autorank": 6.08,
+      "will_humeval": true
     },
     "ONLINE-B": {
       "constrained": false,
-      "autorank": 6.27
+      "autorank": 6.27,
+      "will_humeval": true
     },
     "UvA-MT": {
       "constrained": false,
-      "autorank": 6.54
+      "autorank": 6.54,
+      "will_humeval": true
     },
     "Systran": {
       "constrained": true,
-      "autorank": 7.47
+      "autorank": 7.47,
+      "will_humeval": true
     },
     "NTTSU": {
       "constrained": true,
-      "autorank": 8.12
+      "autorank": 8.12,
+      "will_humeval": true
     },
     "Laniqo": {
       "constrained": true,
-      "autorank": 9.53
+      "autorank": 9.53,
+      "will_humeval": true
+    },
+    "bb88": {
+      "constrained": false,
+      "autorank": 7.33,
+      "will_humeval": false
+    },
+    "Qwen3-235B": {
+      "constrained": false,
+      "autorank": 7.42,
+      "will_humeval": false
+    },
+    "CommandA": {
+      "constrained": false,
+      "autorank": 7.42,
+      "will_humeval": false
+    },
+    "Gemma-3-27B": {
+      "constrained": false,
+      "autorank": 8.03,
+      "will_humeval": false
+    },
+    "TowerPlus-72B": {
+      "constrained": false,
+      "autorank": 8.82,
+      "will_humeval": false
+    },
+    "Llama-4-Maverick": {
+      "constrained": false,
+      "autorank": 9.28,
+      "will_humeval": false
+    },
+    "AyaExpanse-32B": {
+      "constrained": false,
+      "autorank": 9.98,
+      "will_humeval": false
+    },
+    "IRB-MT": {
+      "constrained": true,
+      "autorank": 10.5,
+      "will_humeval": false
+    },
+    "TowerPlus-9B": {
+      "constrained": true,
+      "autorank": 10.68,
+      "will_humeval": false
+    },
+    "SRPOL": {
+      "constrained": true,
+      "autorank": 11.07,
+      "will_humeval": false
+    },
+    "TranssionTranslate": {
+      "constrained": false,
+      "autorank": 12.31,
+      "will_humeval": false
+    },
+    "Gemma-3-12B": {
+      "constrained": true,
+      "autorank": 13.86,
+      "will_humeval": false
+    },
+    "AyaExpanse-8B": {
+      "constrained": true,
+      "autorank": 15.99,
+      "will_humeval": false
+    },
+    "ONLINE-W": {
+      "constrained": false,
+      "autorank": 16.76,
+      "will_humeval": false
+    },
+    "SH": {
+      "constrained": false,
+      "autorank": 16.77,
+      "will_humeval": false
+    },
+    "EuroLLM-22B": {
+      "constrained": false,
+      "autorank": 17.12,
+      "will_humeval": false
+    },
+    "CommandR7B": {
+      "constrained": true,
+      "autorank": 20.39,
+      "will_humeval": false
+    },
+    "IR-MultiagentMT": {
+      "constrained": false,
+      "autorank": 23.42,
+      "will_humeval": false
+    },
+    "EuroLLM-9B": {
+      "constrained": true,
+      "autorank": 24.11,
+      "will_humeval": false
+    },
+    "Qwen2.5-7B": {
+      "constrained": true,
+      "autorank": 25.08,
+      "will_humeval": false
+    },
+    "Llama-3.1-8B": {
+      "constrained": true,
+      "autorank": 26.07,
+      "will_humeval": false
+    },
+    "SalamandraTA": {
+      "constrained": true,
+      "autorank": 27.03,
+      "will_humeval": false
+    },
+    "NLLB": {
+      "constrained": true,
+      "autorank": 38.8,
+      "will_humeval": false
+    },
+    "ONLINE-G": {
+      "constrained": false,
+      "autorank": 41.64,
+      "will_humeval": false
+    },
+    "Mistral-7B": {
+      "constrained": true,
+      "autorank": 44.0,
+      "will_humeval": false
     }
   },
   "en-ko_KR": {
     "Shy": {
       "constrained": true,
-      "autorank": 1.0
+      "autorank": 1.0,
+      "will_humeval": true
     },
     "Gemini-2.5-Pro": {
       "constrained": false,
-      "autorank": 2.52
+      "autorank": 2.52,
+      "will_humeval": true
     },
     "CommandA-MT": {
       "constrained": false,
-      "autorank": 2.85
+      "autorank": 2.85,
+      "will_humeval": true
     },
     "GPT-4.1": {
       "constrained": false,
-      "autorank": 2.88
+      "autorank": 2.88,
+      "will_humeval": true
     },
     "Wenyiil": {
       "constrained": true,
-      "autorank": 2.96
+      "autorank": 2.96,
+      "will_humeval": true
     },
     "Algharb": {
       "constrained": true,
-      "autorank": 3.09
+      "autorank": 3.09,
+      "will_humeval": true
     },
     "UvA-MT": {
       "constrained": false,
-      "autorank": 4.31
+      "autorank": 4.31,
+      "will_humeval": true
     },
     "Claude-4": {
       "constrained": false,
-      "autorank": 4.38
+      "autorank": 4.38,
+      "will_humeval": true
     },
     "GemTrans": {
       "constrained": false,
-      "autorank": 4.97
+      "autorank": 4.97,
+      "will_humeval": true
     },
     "DeepSeek-V3": {
       "constrained": false,
-      "autorank": 5.08
+      "autorank": 5.08,
+      "will_humeval": true
     },
     "CommandA": {
       "constrained": false,
-      "autorank": 5.96
+      "autorank": 5.96,
+      "will_humeval": true
     },
     "Mistral-Medium": {
       "constrained": false,
-      "autorank": 6.13
+      "autorank": 6.13,
+      "will_humeval": true
     },
     "Qwen3-235B": {
       "constrained": false,
-      "autorank": 6.49
+      "autorank": 6.49,
+      "will_humeval": true
     },
     "Yolu": {
       "constrained": true,
-      "autorank": 6.99
+      "autorank": 6.99,
+      "will_humeval": true
     },
     "ONLINE-B": {
       "constrained": false,
-      "autorank": 8.05
+      "autorank": 8.05,
+      "will_humeval": true
     },
     "IRB-MT": {
       "constrained": true,
-      "autorank": 8.62
+      "autorank": 8.62,
+      "will_humeval": true
     },
     "Laniqo": {
       "constrained": true,
-      "autorank": 9.16
+      "autorank": 9.16,
+      "will_humeval": true
     },
     "Gemma-3-12B": {
       "constrained": true,
-      "autorank": 9.23
+      "autorank": 9.23,
+      "will_humeval": true
     },
     "TowerPlus-9B": {
       "constrained": true,
-      "autorank": 10.05
+      "autorank": 10.05,
+      "will_humeval": true
+    },
+    "TowerPlus-72B": {
+      "constrained": false,
+      "autorank": 8.7,
+      "will_humeval": false
+    },
+    "AyaExpanse-32B": {
+      "constrained": false,
+      "autorank": 8.81,
+      "will_humeval": false
+    },
+    "Llama-4-Maverick": {
+      "constrained": false,
+      "autorank": 9.0,
+      "will_humeval": false
+    },
+    "ONLINE-W": {
+      "constrained": false,
+      "autorank": 10.68,
+      "will_humeval": false
+    },
+    "TranssionTranslate": {
+      "constrained": false,
+      "autorank": 12.35,
+      "will_humeval": false
+    },
+    "AyaExpanse-8B": {
+      "constrained": true,
+      "autorank": 13.06,
+      "will_humeval": false
+    },
+    "Gemma-3-27B": {
+      "constrained": false,
+      "autorank": 13.25,
+      "will_humeval": false
+    },
+    "EuroLLM-22B": {
+      "constrained": false,
+      "autorank": 13.36,
+      "will_humeval": false
+    },
+    "IR-MultiagentMT": {
+      "constrained": false,
+      "autorank": 16.79,
+      "will_humeval": false
+    },
+    "CommandR7B": {
+      "constrained": true,
+      "autorank": 18.73,
+      "will_humeval": false
+    },
+    "EuroLLM-9B": {
+      "constrained": true,
+      "autorank": 19.59,
+      "will_humeval": false
+    },
+    "SalamandraTA": {
+      "constrained": true,
+      "autorank": 23.41,
+      "will_humeval": false
+    },
+    "Llama-3.1-8B": {
+      "constrained": true,
+      "autorank": 25.45,
+      "will_humeval": false
+    },
+    "Qwen2.5-7B": {
+      "constrained": true,
+      "autorank": 25.73,
+      "will_humeval": false
+    },
+    "NLLB": {
+      "constrained": true,
+      "autorank": 28.83,
+      "will_humeval": false
+    },
+    "ONLINE-G": {
+      "constrained": false,
+      "autorank": 33.29,
+      "will_humeval": false
+    },
+    "Mistral-7B": {
+      "constrained": true,
+      "autorank": 37.0,
+      "will_humeval": false
     }
   },
   "en-mas_KE": {
     "Shy": {
       "constrained": true,
-      "autorank": 1.0
+      "autorank": 1.0,
+      "will_humeval": true
     },
     "Claude-4": {
       "constrained": false,
-      "autorank": 2.56
+      "autorank": 2.56,
+      "will_humeval": true
     },
     "Qwen3-235B": {
       "constrained": false,
-      "autorank": 3.05
+      "autorank": 3.05,
+      "will_humeval": true
     },
     "Llama-4-Maverick": {
       "constrained": false,
-      "autorank": 3.22
+      "autorank": 3.22,
+      "will_humeval": true
     },
     "CommandR7B": {
       "constrained": true,
-      "autorank": 4.33
+      "autorank": 4.33,
+      "will_humeval": true
     },
     "TowerPlus-9B": {
       "constrained": true,
-      "autorank": 5.35
+      "autorank": 5.35,
+      "will_humeval": true
     },
     "TranssionMT": {
       "constrained": false,
-      "autorank": 5.93
+      "autorank": 5.93,
+      "will_humeval": true
     },
     "Gemini-2.5-Pro": {
       "constrained": false,
-      "autorank": 6.09
+      "autorank": 6.09,
+      "will_humeval": true
     },
     "DeepSeek-V3": {
       "constrained": false,
-      "autorank": 6.16
+      "autorank": 6.16,
+      "will_humeval": true
     },
     "CommandA-MT": {
       "constrained": false,
-      "autorank": 6.38
+      "autorank": 6.38,
+      "will_humeval": true
     },
     "AyaExpanse-32B": {
       "constrained": false,
-      "autorank": 7.12
+      "autorank": 7.12,
+      "will_humeval": true
     },
     "CommandA": {
       "constrained": false,
-      "autorank": 7.9
+      "autorank": 7.9,
+      "will_humeval": true
     },
     "Llama-3.1-8B": {
       "constrained": true,
-      "autorank": 8.06
+      "autorank": 8.06,
+      "will_humeval": true
     },
     "EuroLLM-9B": {
       "constrained": true,
-      "autorank": 8.19
+      "autorank": 8.19,
+      "will_humeval": true
     },
     "EuroLLM-22B": {
       "constrained": false,
-      "autorank": 8.22
+      "autorank": 8.22,
+      "will_humeval": true
     },
     "AyaExpanse-8B": {
       "constrained": true,
-      "autorank": 8.25
+      "autorank": 8.25,
+      "will_humeval": true
     },
     "Qwen2.5-7B": {
       "constrained": true,
-      "autorank": 8.59
+      "autorank": 8.59,
+      "will_humeval": true
     },
     "Gemma-3-12B": {
       "constrained": true,
-      "autorank": 8.83
+      "autorank": 8.83,
+      "will_humeval": true
+    },
+    "TowerPlus-72B": {
+      "constrained": false,
+      "autorank": 8.78,
+      "will_humeval": false
+    },
+    "IR-MultiagentMT": {
+      "constrained": false,
+      "autorank": 8.98,
+      "will_humeval": false
+    },
+    "IRB-MT": {
+      "constrained": true,
+      "autorank": 9.72,
+      "will_humeval": false
+    },
+    "Mistral-7B": {
+      "constrained": true,
+      "autorank": 11.28,
+      "will_humeval": false
+    },
+    "Gemma-3-27B": {
+      "constrained": false,
+      "autorank": 13.27,
+      "will_humeval": false
+    },
+    "UvA-MT": {
+      "constrained": false,
+      "autorank": 14.71,
+      "will_humeval": false
+    },
+    "GPT-4.1": {
+      "constrained": false,
+      "autorank": 14.88,
+      "will_humeval": false
+    },
+    "GemTrans": {
+      "constrained": false,
+      "autorank": 16.67,
+      "will_humeval": false
+    },
+    "NLLB": {
+      "constrained": true,
+      "autorank": 27.0,
+      "will_humeval": false
     }
   },
   "en-ru_RU": {
     "Shy": {
       "constrained": true,
-      "autorank": 1.0
+      "autorank": 1.0,
+      "will_humeval": true
     },
     "CommandA-MT": {
       "constrained": false,
-      "autorank": 4.21
+      "autorank": 4.21,
+      "will_humeval": true
     },
     "Gemini-2.5-Pro": {
       "constrained": false,
-      "autorank": 4.4
+      "autorank": 4.4,
+      "will_humeval": true
     },
     "Yandex": {
       "constrained": false,
-      "autorank": 4.45
+      "autorank": 4.45,
+      "will_humeval": true
     },
     "UvA-MT": {
       "constrained": false,
-      "autorank": 4.51
+      "autorank": 4.51,
+      "will_humeval": true
     },
     "Wenyiil": {
       "constrained": true,
-      "autorank": 4.77
+      "autorank": 4.77,
+      "will_humeval": true
     },
     "GemTrans": {
       "constrained": false,
-      "autorank": 5.14
+      "autorank": 5.14,
+      "will_humeval": true
     },
     "Algharb": {
       "constrained": true,
-      "autorank": 5.16
+      "autorank": 5.16,
+      "will_humeval": true
     },
     "GPT-4.1": {
       "constrained": false,
-      "autorank": 5.38
+      "autorank": 5.38,
+      "will_humeval": true
     },
     "DeepSeek-V3": {
       "constrained": false,
-      "autorank": 5.68
+      "autorank": 5.68,
+      "will_humeval": true
     },
     "Yolu": {
       "constrained": true,
-      "autorank": 6.94
+      "autorank": 6.94,
+      "will_humeval": true
     },
     "Claude-4": {
       "constrained": false,
-      "autorank": 8.65
+      "autorank": 8.65,
+      "will_humeval": true
     },
     "Laniqo": {
       "constrained": true,
-      "autorank": 8.81
+      "autorank": 8.81,
+      "will_humeval": true
     },
     "Qwen3-235B": {
       "constrained": false,
-      "autorank": 8.84
+      "autorank": 8.84,
+      "will_humeval": true
     },
     "Gemma-3-27B": {
       "constrained": false,
-      "autorank": 8.86
+      "autorank": 8.86,
+      "will_humeval": true
     },
     "RuZh": {
       "constrained": true,
-      "autorank": 9.64
+      "autorank": 9.64,
+      "will_humeval": true
     },
     "IRB-MT": {
       "constrained": true,
-      "autorank": 10.1
+      "autorank": 10.1,
+      "will_humeval": true
     },
     "SRPOL": {
       "constrained": true,
-      "autorank": 10.59
+      "autorank": 10.59,
+      "will_humeval": true
+    },
+    "TowerPlus-72B": {
+      "constrained": false,
+      "autorank": 10.67,
+      "will_humeval": false
+    },
+    "CommandA": {
+      "constrained": false,
+      "autorank": 11.18,
+      "will_humeval": false
+    },
+    "ONLINE-W": {
+      "constrained": false,
+      "autorank": 11.68,
+      "will_humeval": false
+    },
+    "DLUT_GTCOM": {
+      "constrained": false,
+      "autorank": 11.78,
+      "will_humeval": false
+    },
+    "TowerPlus-9B": {
+      "constrained": true,
+      "autorank": 12.04,
+      "will_humeval": false
+    },
+    "SalamandraTA": {
+      "constrained": true,
+      "autorank": 12.5,
+      "will_humeval": false
+    },
+    "Llama-4-Maverick": {
+      "constrained": false,
+      "autorank": 12.52,
+      "will_humeval": false
+    },
+    "ONLINE-B": {
+      "constrained": false,
+      "autorank": 12.87,
+      "will_humeval": false
+    },
+    "TranssionTranslate": {
+      "constrained": false,
+      "autorank": 12.88,
+      "will_humeval": false
+    },
+    "AyaExpanse-32B": {
+      "constrained": false,
+      "autorank": 13.74,
+      "will_humeval": false
+    },
+    "ONLINE-G": {
+      "constrained": false,
+      "autorank": 14.39,
+      "will_humeval": false
+    },
+    "EuroLLM-22B": {
+      "constrained": false,
+      "autorank": 14.62,
+      "will_humeval": false
+    },
+    "Gemma-3-12B": {
+      "constrained": true,
+      "autorank": 14.96,
+      "will_humeval": false
+    },
+    "AyaExpanse-8B": {
+      "constrained": true,
+      "autorank": 17.68,
+      "will_humeval": false
+    },
+    "IR-MultiagentMT": {
+      "constrained": false,
+      "autorank": 19.86,
+      "will_humeval": false
+    },
+    "EuroLLM-9B": {
+      "constrained": true,
+      "autorank": 21.96,
+      "will_humeval": false
+    },
+    "Qwen2.5-7B": {
+      "constrained": true,
+      "autorank": 25.31,
+      "will_humeval": false
+    },
+    "Llama-3.1-8B": {
+      "constrained": true,
+      "autorank": 30.27,
+      "will_humeval": false
+    },
+    "NLLB": {
+      "constrained": true,
+      "autorank": 32.19,
+      "will_humeval": false
+    },
+    "TranssionMT": {
+      "constrained": false,
+      "autorank": 34.96,
+      "will_humeval": false
+    },
+    "Mistral-7B": {
+      "constrained": true,
+      "autorank": 39.86,
+      "will_humeval": false
+    },
+    "CommandR7B": {
+      "constrained": true,
+      "autorank": 41.0,
+      "will_humeval": false
     }
   },
   "en-sr_Cyrl_RS": {
     "Shy": {
       "constrained": true,
-      "autorank": 1.0
+      "autorank": 1.0,
+      "will_humeval": true
     },
     "Gemini-2.5-Pro": {
       "constrained": false,
-      "autorank": 3.02
+      "autorank": 3.02,
+      "will_humeval": true
     },
     "GPT-4.1": {
       "constrained": false,
-      "autorank": 3.42
+      "autorank": 3.42,
+      "will_humeval": true
     },
     "GemTrans": {
       "constrained": false,
-      "autorank": 4.59
+      "autorank": 4.59,
+      "will_humeval": true
     },
     "UvA-MT": {
       "constrained": false,
-      "autorank": 5.83
+      "autorank": 5.83,
+      "will_humeval": true
     },
     "ONLINE-B": {
       "constrained": false,
-      "autorank": 6.07
+      "autorank": 6.07,
+      "will_humeval": true
     },
     "Claude-4": {
       "constrained": false,
-      "autorank": 6.77
+      "autorank": 6.77,
+      "will_humeval": true
     },
     "CommandA-MT": {
       "constrained": false,
-      "autorank": 6.97
+      "autorank": 6.97,
+      "will_humeval": true
     },
     "TranssionTranslate": {
       "constrained": false,
-      "autorank": 8.0
+      "autorank": 8.0,
+      "will_humeval": true
     },
     "DeepSeek-V3": {
       "constrained": false,
-      "autorank": 8.61
+      "autorank": 8.61,
+      "will_humeval": true
     },
     "SalamandraTA": {
       "constrained": true,
-      "autorank": 8.82
+      "autorank": 8.82,
+      "will_humeval": true
     },
     "DLUT_GTCOM": {
       "constrained": false,
-      "autorank": 9.29
+      "autorank": 9.29,
+      "will_humeval": true
     },
     "IRB-MT": {
       "constrained": true,
-      "autorank": 9.92
+      "autorank": 9.92,
+      "will_humeval": true
     },
     "Gemma-3-12B": {
       "constrained": true,
-      "autorank": 12.09
+      "autorank": 12.09,
+      "will_humeval": true
     },
     "CUNI-SFT": {
       "constrained": true,
-      "autorank": 13.48
+      "autorank": 13.48,
+      "will_humeval": true
     },
     "Llama-3.1-8B": {
       "constrained": true,
-      "autorank": 19.43
+      "autorank": 19.43,
+      "will_humeval": true
     },
     "NLLB": {
       "constrained": true,
-      "autorank": 19.79
+      "autorank": 19.79,
+      "will_humeval": true
     },
     "EuroLLM-9B": {
       "constrained": true,
-      "autorank": 22.34
+      "autorank": 22.34,
+      "will_humeval": true
+    },
+    "Llama-4-Maverick": {
+      "constrained": false,
+      "autorank": 10.04,
+      "will_humeval": false
+    },
+    "Qwen3-235B": {
+      "constrained": false,
+      "autorank": 11.91,
+      "will_humeval": false
+    },
+    "Gemma-3-27B": {
+      "constrained": false,
+      "autorank": 12.22,
+      "will_humeval": false
+    },
+    "IR-MultiagentMT": {
+      "constrained": false,
+      "autorank": 14.09,
+      "will_humeval": false
+    },
+    "ONLINE-G": {
+      "constrained": false,
+      "autorank": 14.54,
+      "will_humeval": false
+    },
+    "CommandA": {
+      "constrained": false,
+      "autorank": 17.56,
+      "will_humeval": false
+    },
+    "EuroLLM-22B": {
+      "constrained": false,
+      "autorank": 20.62,
+      "will_humeval": false
+    },
+    "TowerPlus-72B": {
+      "constrained": false,
+      "autorank": 26.02,
+      "will_humeval": false
+    },
+    "TowerPlus-9B": {
+      "constrained": true,
+      "autorank": 26.75,
+      "will_humeval": false
+    },
+    "Mistral-7B": {
+      "constrained": true,
+      "autorank": 26.96,
+      "will_humeval": false
+    },
+    "AyaExpanse-8B": {
+      "constrained": true,
+      "autorank": 29.68,
+      "will_humeval": false
+    },
+    "CommandR7B": {
+      "constrained": true,
+      "autorank": 31.33,
+      "will_humeval": false
+    },
+    "AyaExpanse-32B": {
+      "constrained": false,
+      "autorank": 31.81,
+      "will_humeval": false
+    },
+    "Qwen2.5-7B": {
+      "constrained": true,
+      "autorank": 32.0,
+      "will_humeval": false
     }
   },
   "en-uk_UA": {
     "Shy": {
       "constrained": true,
-      "autorank": 1.0
+      "autorank": 1.0,
+      "will_humeval": true
     },
     "Gemini-2.5-Pro": {
       "constrained": false,
-      "autorank": 3.3
+      "autorank": 3.3,
+      "will_humeval": true
     },
     "Wenyiil": {
       "constrained": true,
-      "autorank": 3.46
+      "autorank": 3.46,
+      "will_humeval": true
     },
     "GPT-4.1": {
       "constrained": false,
-      "autorank": 3.51
+      "autorank": 3.51,
+      "will_humeval": true
     },
     "CommandA-MT": {
       "constrained": false,
-      "autorank": 3.85
+      "autorank": 3.85,
+      "will_humeval": true
     },
     "Algharb": {
       "constrained": true,
-      "autorank": 4.17
+      "autorank": 4.17,
+      "will_humeval": true
     },
     "UvA-MT": {
       "constrained": false,
-      "autorank": 4.43
+      "autorank": 4.43,
+      "will_humeval": true
     },
     "GemTrans": {
       "constrained": false,
-      "autorank": 4.56
+      "autorank": 4.56,
+      "will_humeval": true
     },
     "DeepSeek-V3": {
       "constrained": false,
-      "autorank": 5.02
+      "autorank": 5.02,
+      "will_humeval": true
     },
     "Yolu": {
       "constrained": true,
-      "autorank": 6.0
+      "autorank": 6.0,
+      "will_humeval": true
     },
     "Mistral-Medium": {
       "constrained": false,
-      "autorank": 6.01
+      "autorank": 6.01,
+      "will_humeval": true
     },
     "Claude-4": {
       "constrained": false,
-      "autorank": 7.04
+      "autorank": 7.04,
+      "will_humeval": true
     },
     "CommandA": {
       "constrained": false,
-      "autorank": 7.44
+      "autorank": 7.44,
+      "will_humeval": true
     },
     "Laniqo": {
       "constrained": true,
-      "autorank": 7.68
+      "autorank": 7.68,
+      "will_humeval": true
     },
     "IRB-MT": {
       "constrained": true,
-      "autorank": 8.2
+      "autorank": 8.2,
+      "will_humeval": true
     },
     "SRPOL": {
       "constrained": true,
-      "autorank": 8.39
+      "autorank": 8.39,
+      "will_humeval": true
     },
     "TowerPlus-9B": {
       "constrained": true,
-      "autorank": 8.78
+      "autorank": 8.78,
+      "will_humeval": true
     },
     "Llama-4-Maverick": {
       "constrained": false,
-      "autorank": 8.81
+      "autorank": 8.81,
+      "will_humeval": true
+    },
+    "CGFOKUS": {
+      "constrained": false,
+      "autorank": 8.94,
+      "will_humeval": false
+    },
+    "ONLINE-B": {
+      "constrained": false,
+      "autorank": 9.0,
+      "will_humeval": false
+    },
+    "AyaExpanse-32B": {
+      "constrained": false,
+      "autorank": 9.27,
+      "will_humeval": false
+    },
+    "ONLINE-W": {
+      "constrained": false,
+      "autorank": 9.29,
+      "will_humeval": false
+    },
+    "Qwen3-235B": {
+      "constrained": false,
+      "autorank": 9.53,
+      "will_humeval": false
+    },
+    "SalamandraTA": {
+      "constrained": true,
+      "autorank": 10.12,
+      "will_humeval": false
+    },
+    "TowerPlus-72B": {
+      "constrained": false,
+      "autorank": 10.43,
+      "will_humeval": false
+    },
+    "TranssionTranslate": {
+      "constrained": false,
+      "autorank": 10.94,
+      "will_humeval": false
+    },
+    "DLUT_GTCOM": {
+      "constrained": false,
+      "autorank": 11.26,
+      "will_humeval": false
+    },
+    "Gemma-3-27B": {
+      "constrained": false,
+      "autorank": 12.19,
+      "will_humeval": false
+    },
+    "EuroLLM-22B": {
+      "constrained": false,
+      "autorank": 12.81,
+      "will_humeval": false
+    },
+    "AyaExpanse-8B": {
+      "constrained": true,
+      "autorank": 13.43,
+      "will_humeval": false
+    },
+    "CUNI-SFT": {
+      "constrained": true,
+      "autorank": 13.6,
+      "will_humeval": false
+    },
+    "ONLINE-G": {
+      "constrained": false,
+      "autorank": 14.04,
+      "will_humeval": false
+    },
+    "IR-MultiagentMT": {
+      "constrained": false,
+      "autorank": 14.35,
+      "will_humeval": false
+    },
+    "Gemma-3-12B": {
+      "constrained": true,
+      "autorank": 14.69,
+      "will_humeval": false
+    },
+    "EuroLLM-9B": {
+      "constrained": true,
+      "autorank": 17.42,
+      "will_humeval": false
+    },
+    "NLLB": {
+      "constrained": true,
+      "autorank": 24.6,
+      "will_humeval": false
+    },
+    "Llama-3.1-8B": {
+      "constrained": true,
+      "autorank": 24.9,
+      "will_humeval": false
+    },
+    "TranssionMT": {
+      "constrained": false,
+      "autorank": 28.81,
+      "will_humeval": false
+    },
+    "CommandR7B": {
+      "constrained": true,
+      "autorank": 29.71,
+      "will_humeval": false
+    },
+    "Mistral-7B": {
+      "constrained": true,
+      "autorank": 29.99,
+      "will_humeval": false
+    },
+    "Qwen2.5-7B": {
+      "constrained": true,
+      "autorank": 37.46,
+      "will_humeval": false
+    },
+    "KYUoM": {
+      "constrained": false,
+      "autorank": 43.0,
+      "will_humeval": false
     }
   },
   "en-zh_CN": {
     "Shy": {
       "constrained": true,
-      "autorank": 1.0
+      "autorank": 1.0,
+      "will_humeval": true
     },
     "Wenyiil": {
       "constrained": true,
-      "autorank": 4.01
+      "autorank": 4.01,
+      "will_humeval": true
     },
     "Gemini-2.5-Pro": {
       "constrained": false,
-      "autorank": 4.04
+      "autorank": 4.04,
+      "will_humeval": true
     },
     "Algharb": {
       "constrained": true,
-      "autorank": 4.18
+      "autorank": 4.18,
+      "will_humeval": true
     },
     "GPT-4.1": {
       "constrained": false,
-      "autorank": 4.65
+      "autorank": 4.65,
+      "will_humeval": true
     },
     "Qwen3-235B": {
       "constrained": false,
-      "autorank": 4.88
+      "autorank": 4.88,
+      "will_humeval": true
     },
     "Yolu": {
       "constrained": true,
-      "autorank": 4.88
+      "autorank": 4.88,
+      "will_humeval": true
     },
     "GemTrans": {
       "constrained": false,
-      "autorank": 4.95
+      "autorank": 4.95,
+      "will_humeval": true
     },
     "Mistral-Medium": {
       "constrained": false,
-      "autorank": 4.98
+      "autorank": 4.98,
+      "will_humeval": true
     },
     "CommandA-MT": {
       "constrained": false,
-      "autorank": 5.73
+      "autorank": 5.73,
+      "will_humeval": true
     },
     "UvA-MT": {
       "constrained": false,
-      "autorank": 6.4
+      "autorank": 6.4,
+      "will_humeval": true
     },
     "Claude-4": {
       "constrained": false,
-      "autorank": 7.17
+      "autorank": 7.17,
+      "will_humeval": true
     },
     "DeepSeek-V3": {
       "constrained": false,
-      "autorank": 7.28
+      "autorank": 7.28,
+      "will_humeval": true
     },
     "Llama-4-Maverick": {
       "constrained": false,
-      "autorank": 8.13
+      "autorank": 8.13,
+      "will_humeval": true
     },
     "Laniqo": {
       "constrained": true,
-      "autorank": 9.26
+      "autorank": 9.26,
+      "will_humeval": true
     },
     "IRB-MT": {
       "constrained": true,
-      "autorank": 9.51
+      "autorank": 9.51,
+      "will_humeval": true
     },
     "SRPOL": {
       "constrained": true,
-      "autorank": 10.52
+      "autorank": 10.52,
+      "will_humeval": true
     },
     "RuZh": {
       "constrained": true,
-      "autorank": 10.59
+      "autorank": 10.59,
+      "will_humeval": true
+    },
+    "ONLINE-B": {
+      "constrained": false,
+      "autorank": 8.42,
+      "will_humeval": false
+    },
+    "Gemma-3-27B": {
+      "constrained": false,
+      "autorank": 9.24,
+      "will_humeval": false
+    },
+    "CommandA": {
+      "constrained": false,
+      "autorank": 9.65,
+      "will_humeval": false
+    },
+    "TowerPlus-72B": {
+      "constrained": false,
+      "autorank": 10.05,
+      "will_humeval": false
+    },
+    "Gemma-3-12B": {
+      "constrained": true,
+      "autorank": 10.84,
+      "will_humeval": false
+    },
+    "Qwen2.5-7B": {
+      "constrained": true,
+      "autorank": 11.76,
+      "will_humeval": false
+    },
+    "AyaExpanse-32B": {
+      "constrained": false,
+      "autorank": 11.91,
+      "will_humeval": false
+    },
+    "TowerPlus-9B": {
+      "constrained": true,
+      "autorank": 12.13,
+      "will_humeval": false
+    },
+    "TranssionTranslate": {
+      "constrained": false,
+      "autorank": 12.95,
+      "will_humeval": false
+    },
+    "EuroLLM-22B": {
+      "constrained": false,
+      "autorank": 13.13,
+      "will_humeval": false
+    },
+    "ONLINE-W": {
+      "constrained": false,
+      "autorank": 13.73,
+      "will_humeval": false
+    },
+    "AyaExpanse-8B": {
+      "constrained": true,
+      "autorank": 15.39,
+      "will_humeval": false
+    },
+    "EuroLLM-9B": {
+      "constrained": true,
+      "autorank": 16.84,
+      "will_humeval": false
+    },
+    "IR-MultiagentMT": {
+      "constrained": false,
+      "autorank": 17.62,
+      "will_humeval": false
+    },
+    "SalamandraTA": {
+      "constrained": true,
+      "autorank": 18.32,
+      "will_humeval": false
+    },
+    "Llama-3.1-8B": {
+      "constrained": true,
+      "autorank": 18.9,
+      "will_humeval": false
+    },
+    "CommandR7B": {
+      "constrained": true,
+      "autorank": 18.91,
+      "will_humeval": false
+    },
+    "ONLINE-G": {
+      "constrained": false,
+      "autorank": 31.96,
+      "will_humeval": false
+    },
+    "Mistral-7B": {
+      "constrained": true,
+      "autorank": 32.78,
+      "will_humeval": false
+    },
+    "NLLB": {
+      "constrained": true,
+      "autorank": 39.0,
+      "will_humeval": false
     }
   },
   "ja-zh_CN": {
     "Shy": {
       "constrained": true,
-      "autorank": 1.0
+      "autorank": 1.0,
+      "will_humeval": true
     },
     "In2x": {
       "constrained": false,
-      "autorank": 3.03
+      "autorank": 3.03,
+      "will_humeval": true
     },
     "Gemini-2.5-Pro": {
       "constrained": false,
-      "autorank": 3.28
+      "autorank": 3.28,
+      "will_humeval": true
     },
     "Kaze-MT": {
       "constrained": false,
-      "autorank": 3.88
+      "autorank": 3.88,
+      "will_humeval": true
     },
     "Algharb": {
       "constrained": true,
-      "autorank": 4.32
+      "autorank": 4.32,
+      "will_humeval": true
     },
     "GPT-4.1": {
       "constrained": false,
-      "autorank": 4.55
+      "autorank": 4.55,
+      "will_humeval": true
     },
     "Wenyiil": {
       "constrained": true,
-      "autorank": 4.55
+      "autorank": 4.55,
+      "will_humeval": true
     },
     "CommandA-MT": {
       "constrained": false,
-      "autorank": 5.22
+      "autorank": 5.22,
+      "will_humeval": true
     },
     "NTTSU": {
       "constrained": true,
-      "autorank": 5.91
+      "autorank": 5.91,
+      "will_humeval": true
     },
     "Claude-4": {
       "constrained": false,
-      "autorank": 6.4
+      "autorank": 6.4,
+      "will_humeval": true
     },
     "DeepSeek-V3": {
       "constrained": false,
-      "autorank": 6.47
+      "autorank": 6.47,
+      "will_humeval": true
     },
     "Mistral-Medium": {
       "constrained": false,
-      "autorank": 6.58
+      "autorank": 6.58,
+      "will_humeval": true
     },
     "GemTrans": {
       "constrained": false,
-      "autorank": 6.61
+      "autorank": 6.61,
+      "will_humeval": true
     },
     "Yolu": {
       "constrained": true,
-      "autorank": 7.07
+      "autorank": 7.07,
+      "will_humeval": true
     },
     "Qwen3-235B": {
       "constrained": false,
-      "autorank": 7.63
+      "autorank": 7.63,
+      "will_humeval": true
     },
     "Laniqo": {
       "constrained": true,
-      "autorank": 11.3
+      "autorank": 11.3,
+      "will_humeval": true
     },
     "TowerPlus-9B": {
       "constrained": true,
-      "autorank": 11.5
+      "autorank": 11.5,
+      "will_humeval": true
     },
     "IRB-MT": {
       "constrained": true,
-      "autorank": 12.38
+      "autorank": 12.38,
+      "will_humeval": true
+    },
+    "bb88": {
+      "constrained": false,
+      "autorank": 6.27,
+      "will_humeval": false
+    },
+    "CommandA": {
+      "constrained": false,
+      "autorank": 7.82,
+      "will_humeval": false
+    },
+    "UvA-MT": {
+      "constrained": false,
+      "autorank": 8.46,
+      "will_humeval": false
+    },
+    "TowerPlus-72B": {
+      "constrained": false,
+      "autorank": 9.88,
+      "will_humeval": false
+    },
+    "AyaExpanse-32B": {
+      "constrained": false,
+      "autorank": 10.92,
+      "will_humeval": false
+    },
+    "Gemma-3-27B": {
+      "constrained": false,
+      "autorank": 13.12,
+      "will_humeval": false
+    },
+    "Llama-4-Maverick": {
+      "constrained": false,
+      "autorank": 13.41,
+      "will_humeval": false
+    },
+    "Qwen2.5-7B": {
+      "constrained": true,
+      "autorank": 13.96,
+      "will_humeval": false
+    },
+    "IR-MultiagentMT": {
+      "constrained": false,
+      "autorank": 14.03,
+      "will_humeval": false
+    },
+    "SRPOL": {
+      "constrained": true,
+      "autorank": 14.12,
+      "will_humeval": false
+    },
+    "EuroLLM-22B": {
+      "constrained": false,
+      "autorank": 15.02,
+      "will_humeval": false
+    },
+    "AyaExpanse-8B": {
+      "constrained": true,
+      "autorank": 15.85,
+      "will_humeval": false
+    },
+    "ONLINE-B": {
+      "constrained": false,
+      "autorank": 16.64,
+      "will_humeval": false
+    },
+    "Gemma-3-12B": {
+      "constrained": true,
+      "autorank": 17.51,
+      "will_humeval": false
+    },
+    "CommandR7B": {
+      "constrained": true,
+      "autorank": 18.8,
+      "will_humeval": false
+    },
+    "TranssionTranslate": {
+      "constrained": false,
+      "autorank": 19.25,
+      "will_humeval": false
+    },
+    "Llama-3.1-8B": {
+      "constrained": true,
+      "autorank": 20.7,
+      "will_humeval": false
+    },
+    "EuroLLM-9B": {
+      "constrained": true,
+      "autorank": 21.3,
+      "will_humeval": false
+    },
+    "ONLINE-W": {
+      "constrained": false,
+      "autorank": 25.81,
+      "will_humeval": false
+    },
+    "Mistral-7B": {
+      "constrained": true,
+      "autorank": 33.6,
+      "will_humeval": false
+    },
+    "SalamandraTA": {
+      "constrained": true,
+      "autorank": 33.91,
+      "will_humeval": false
+    },
+    "ONLINE-G": {
+      "constrained": false,
+      "autorank": 41.84,
+      "will_humeval": false
+    },
+    "NLLB": {
+      "constrained": true,
+      "autorank": 42.0,
+      "will_humeval": false
     }
   }
 }
