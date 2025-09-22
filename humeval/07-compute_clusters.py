@@ -34,9 +34,6 @@ def get_significance(a: list[float], b: list[float]) -> bool:
     ).pvalue < 0.05/2
 
 
-
-# %%
-
 with open("../data/systems_humeval.json", "r") as f:
     systems_metadata_humeval = json.load(f)
     systems_metadata_humeval_not = {
