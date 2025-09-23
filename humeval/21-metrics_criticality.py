@@ -18,7 +18,7 @@ for line in data:
 import matplotlib.pyplot as plt
 plt.rcParams["font.family"] = "serif"
 
-fig, axs = plt.subplots(2, 7, figsize=(9, 3))
+fig, axs = plt.subplots(2, 7, figsize=(9, 3), sharey=True)
 for ax, langs in zip(axs.flatten(), {x["doc_id"].split("_#_", 1)[0] for x in data}):
     data_y = [
         sys_v.get("human1", sys_v["human"])
@@ -28,27 +28,16 @@ for ax, langs in zip(axs.flatten(), {x["doc_id"].split("_#_", 1)[0] for x in dat
     data_y_0 = [y for y in data_y if y < 10]
     data_y_1 = [y for y in data_y if y >= 10 and y < 90]
     data_y_2 = [y for y in data_y if y >= 90]
-    ax.hist(
-        data_y_0,
+    out = ax.hist(
+        data_y,
         bins=10,
         range=(0, 100),
-        density=False,
-        color="#c9a",
-    )
-    ax.hist(
-        data_y_1,
-        bins=10,
-        range=(0, 100),
-        density=False,
+        density=True,
         color="#ccc",
+        linewidth=0,
     )
-    ax.hist(
-        data_y_2,
-        bins=10,
-        range=(0, 100),
-        density=False,
-        color="#9ca",
-    )
+    out[2][0].set_color("#c99")
+    out[2][-1].set_color("#9ca")
     ax.set_yticks([])
     lang1, lang2 = langs.split("_")[0].split("-")
     ax.text(
