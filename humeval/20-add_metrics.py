@@ -11,7 +11,9 @@ with open("../data/wmt25-genmt-humeval.jsonl", "r") as f:
         item["doc_id"]: item for item in data_humeval
     }
 
-for fname in glob.glob("/home/vilda/Downloads/all-task1-submissions/*.seg.*.tsv"):
+for fname in glob.glob("/home/vilda/Downloads/all-task1-submissions/*.tsv"):
+    if ".sys." in fname:
+        continue
     metric_name = fname.rsplit("/", 1)[1].split(".", 1)[0]
     print(metric_name)
     with open(fname, "r") as f:
@@ -32,6 +34,6 @@ with open("../data/wmt25-genmt-humeval.jsonl", "w") as f:
         f.write(json.dumps(item, ensure_ascii=False) + "\n")
 
 """
-cp data/wmt25-genmt-humeval.jsonl data/TMP_Sep20-wmt25-genmt-humeval.jsonl
-tar -czf data/TMP_Sep20-wmt25-genmt-humeval.jsonl.gz data/TMP_Sep20-wmt25-genmt-humeval.jsonl
+cp data/wmt25-genmt-humeval.jsonl data/TMP_Sep24-wmt25-genmt-humeval.jsonl
+tar -czf data/TMP_Sep24-wmt25-genmt-humeval.jsonl.gz data/TMP_Sep24-wmt25-genmt-humeval.jsonl
 """
