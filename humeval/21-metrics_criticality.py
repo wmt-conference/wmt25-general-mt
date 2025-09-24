@@ -3,7 +3,7 @@
 import json
 import statistics
 
-with open("../data/wmt25-genmt-humeval.jsonl", "r") as f:
+with open("data/wmt25-genmt-humeval.jsonl", "r") as f:
     data = [json.loads(line) for line in f]
     data = [x for x in data if x["scores"] != {}]
 
@@ -58,7 +58,7 @@ for ax, langs in zip(axs.flatten(), {x["doc_id"].split("_#_", 1)[0] for x in dat
 
 plt.tight_layout(pad=0)
 plt.subplots_adjust(hspace=0.1)
-plt.savefig("../generated/humeval_distribution.pdf")
+plt.savefig("generated/humeval_distribution.pdf")
 plt.show()
 
 # %%
@@ -76,7 +76,7 @@ def format_cell(acc):
     color = f"Firebrick3!{100-acc*100:.0f}!SeaGreen3!{acc*100:.0f}"
     return r"\cellcolor{" + color + "} " + f"{acc:>4.0%}".replace("%", r"\%")
 
-with open("../generated/criticality_prediction_0.tex", "w") as f0:
+with open("generated/criticality_prediction_0.tex", "w") as f0:
     print(
         r"\begin{tabular}{l" + "r"*len(langs_all_0)+ r"}",
         r"\toprule",
@@ -110,11 +110,18 @@ with open("../generated/criticality_prediction_0.tex", "w") as f0:
                 ]
                 data_yhum_0 = {doc_id for y_hum, doc_id in data_yhum if y_hum < 10}
                 # take the bottom or top, whichever is better
-                data_ymet.sort(key=lambda x: x[0])
+                data_ymet.sort(key=lambda x: x[0], reverse=False)
                 data_ymet_0 = {doc_id for y_met, doc_id in data_ymet[:len(data_yhum_0)]}
-                acc_bot = 2 * len(data_yhum_0 & data_ymet_0) / (len(data_yhum_0)+len(data_ymet_0))
+                # normalize by chance
+                # (len(data_yhum_0)*len(data_yhum_0)/len(data_yhum))
+                acc_bot = len(data_yhum_0 & data_ymet_0) / len(data_yhum_0)
                 data_ymet_0 = {doc_id for y_met, doc_id in data_ymet[-len(data_yhum_0):]}
-                acc_top = 2 * len(data_yhum_0 & data_ymet_0) / (len(data_yhum_0)+len(data_ymet_0))
+
+                # sort the other way
+                data_ymet.sort(key=lambda x: x[0], reverse=True)
+                # normalize by chance
+                # (len(data_yhum_0)*len(data_yhum_0)/len(data_yhum))
+                acc_top = len(data_yhum_0 & data_ymet_0) / len(data_yhum_0)
                 acc_0.append(max(acc_bot, acc_top))
 
             metrics_out_local.append(statistics.mean(acc_0))
