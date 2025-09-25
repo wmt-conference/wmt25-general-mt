@@ -78,7 +78,12 @@ data = {
         "src_text": src,
         "tgt_text": {sys: sys_v[i] for sys, sys_v in v["tgt_text"].items()},
         "doc_id": v["doc_id"] + f"_#_{i}",
-    } 
+    } | (
+        {"video": v["video"]}
+        if v["video"] is not None else
+        {"screenshot": f'{v["screenshot"]}/{v["screenshot"].split("/")[-1]}_{i+1}'}
+        if v["screenshot"] is not None else {}
+    )
     for k, v in data.items()
     for i, src in enumerate(v["src_text"])
 }

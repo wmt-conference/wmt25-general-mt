@@ -367,3 +367,5 @@ The lists are in the following format:
     },
 ]
 ```
+
+The video and screenshot assets are hosted at [data.statmt.org/wmt25/general-mt/wmt25_genmt_assets.zip](https://data.statmt.org/wmt25/general-mt/wmt25_genmt_assets.zip) and items optionally have `video` or `screenshot` keys which point to the path inside of this archive.
