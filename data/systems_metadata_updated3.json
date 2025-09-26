@@ -15,7 +15,7 @@
     }
   },
   "Yolu": {
-    "constrained": true,
+    "constrained": false,
     "description": "This paper details Yolu's submission for the WMT'25 General Machine Translation Task. Our work, situated within the constrained track, investigates the efficacy of Reinforcement Learning (RL) in enhancing machine translation. Our system is built upon the open-source Qwen3 model. We introduce a robust methodology for continuous performance improvement, which combines meticulous data cleaning with advanced data distillation techniques. This is complemented by a multi-stage optimization strategy, sequentially employing Continued Pre-Training (CPT), Supervised Fine-Tuning (SFT), Contrastive Preference Optimization (CPO), and a novel policy optimization algorithm, Decoupled Clip and Dynamic sAmpling Policy Optimization (DAPO). Furthermore, we integrate a Quality Estimation (QE) model to facilitate online QE distillation, thereby refining the model's output during the decoding phase.",
     "architecture": "LLMs",
     "base_model": "qwen",
@@ -559,7 +559,7 @@
     }
   },
   "Wenyiil": {
-    "constrained": true,
+    "constrained": false,
     "description": "Our submission introduces a state-of-the-art translation system, Wenyiil, built upon a sophisticated Large Language Model (LLM). The model's exceptional performance is achieved through a comprehensive training pipeline, featuring multi-stage supervised fine-tuning (SFT) on translation tasks and a two-stage post-training regimen. To overcome the limitations of standard decoding, we employ a novel hybrid decoding strategy that integrates word alignment with an advanced Minimum Bayes Risk (MBR) reranking algorithm. This approach not only enhances translation stability but also ensures superior accuracy across diverse linguistic contexts.",
     "architecture": "LLMs",
     "base_model": "qwen3",
