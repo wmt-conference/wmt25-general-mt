@@ -56,7 +56,7 @@
       "will_humeval": true
     },
     "Yolu": {
-      "constrained": true,
+      "constrained": false,
       "autorank": 9.26,
       "will_humeval": true
     },
@@ -71,7 +71,7 @@
       "will_humeval": true
     },
     "Wenyiil": {
-      "constrained": true,
+      "constrained": false,
       "autorank": 10.94,
       "will_humeval": true
     },
@@ -258,12 +258,12 @@
       "will_humeval": true
     },
     "Wenyiil": {
-      "constrained": true,
+      "constrained": false,
       "autorank": 5.44,
       "will_humeval": true
     },
     "Yolu": {
-      "constrained": true,
+      "constrained": false,
       "autorank": 6.01,
       "will_humeval": true
     },
@@ -420,7 +420,7 @@
       "will_humeval": true
     },
     "Wenyiil": {
-      "constrained": true,
+      "constrained": false,
       "autorank": 2.5,
       "will_humeval": true
     },
@@ -445,7 +445,7 @@
       "will_humeval": true
     },
     "Yolu": {
-      "constrained": true,
+      "constrained": false,
       "autorank": 5.48,
       "will_humeval": true
     },
@@ -607,7 +607,7 @@
       "will_humeval": true
     },
     "Wenyiil": {
-      "constrained": true,
+      "constrained": false,
       "autorank": 2.53,
       "will_humeval": true
     },
@@ -642,7 +642,7 @@
       "will_humeval": true
     },
     "Yolu": {
-      "constrained": true,
+      "constrained": false,
       "autorank": 5.65,
       "will_humeval": true
     },
@@ -799,7 +799,7 @@
       "will_humeval": true
     },
     "Wenyiil": {
-      "constrained": true,
+      "constrained": false,
       "autorank": 4.46,
       "will_humeval": true
     },
@@ -814,7 +814,7 @@
       "will_humeval": true
     },
     "Yolu": {
-      "constrained": true,
+      "constrained": false,
       "autorank": 6.35,
       "will_humeval": true
     },
@@ -1001,7 +1001,7 @@
       "will_humeval": true
     },
     "Wenyiil": {
-      "constrained": true,
+      "constrained": false,
       "autorank": 2.61,
       "will_humeval": true
     },
@@ -1011,7 +1011,7 @@
       "will_humeval": true
     },
     "Yolu": {
-      "constrained": true,
+      "constrained": false,
       "autorank": 3.76,
       "will_humeval": true
     },
@@ -1537,7 +1537,7 @@
       "will_humeval": true
     },
     "Wenyiil": {
-      "constrained": true,
+      "constrained": false,
       "autorank": 2.96,
       "will_humeval": true
     },
@@ -1577,7 +1577,7 @@
       "will_humeval": true
     },
     "Yolu": {
-      "constrained": true,
+      "constrained": false,
       "autorank": 6.08,
       "will_humeval": true
     },
@@ -1754,7 +1754,7 @@
       "will_humeval": true
     },
     "Wenyiil": {
-      "constrained": true,
+      "constrained": false,
       "autorank": 2.96,
       "will_humeval": true
     },
@@ -1799,7 +1799,7 @@
       "will_humeval": true
     },
     "Yolu": {
-      "constrained": true,
+      "constrained": false,
       "autorank": 6.99,
       "will_humeval": true
     },
@@ -2078,7 +2078,7 @@
       "will_humeval": true
     },
     "Wenyiil": {
-      "constrained": true,
+      "constrained": false,
       "autorank": 4.77,
       "will_humeval": true
     },
@@ -2103,7 +2103,7 @@
       "will_humeval": true
     },
     "Yolu": {
-      "constrained": true,
+      "constrained": false,
       "autorank": 6.94,
       "will_humeval": true
     },
@@ -2427,7 +2427,7 @@
       "will_humeval": true
     },
     "Wenyiil": {
-      "constrained": true,
+      "constrained": false,
       "autorank": 3.46,
       "will_humeval": true
     },
@@ -2462,7 +2462,7 @@
       "will_humeval": true
     },
     "Yolu": {
-      "constrained": true,
+      "constrained": false,
       "autorank": 6.0,
       "will_humeval": true
     },
@@ -2634,7 +2634,7 @@
       "will_humeval": true
     },
     "Wenyiil": {
-      "constrained": true,
+      "constrained": false,
       "autorank": 4.01,
       "will_humeval": true
     },
@@ -2659,7 +2659,7 @@
       "will_humeval": true
     },
     "Yolu": {
-      "constrained": true,
+      "constrained": false,
       "autorank": 4.88,
       "will_humeval": true
     },
@@ -2851,7 +2851,7 @@
       "will_humeval": true
     },
     "Wenyiil": {
-      "constrained": true,
+      "constrained": false,
       "autorank": 4.55,
       "will_humeval": true
     },
@@ -2886,7 +2886,7 @@
       "will_humeval": true
     },
     "Yolu": {
-      "constrained": true,
+      "constrained": false,
       "autorank": 7.07,
       "will_humeval": true
     },
