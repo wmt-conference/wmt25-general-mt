@@ -23,7 +23,6 @@ Each line corresponds to one source segment. Each line is a dictionary with the 
 ```python
 {
   # maps from system names to annotations
-  # if this is empty, then the segment wasn't selected for human evaluation (about 50% of data)
   "scores": {                      
     "sysA": {
       "human1": 90,                # score from the first round of annotations
