@@ -8,7 +8,11 @@ Data:
 
 # Human Evaluation Data
 
-The human evaluation data is stored as `jsonl`, so can be parsed as:
+The human evaluation data is stored as `jsonl`, so can be downloaded as
+```bash
+wget https://github.com/wmt-conference/wmt25-general-mt/raw/refs/heads/main/data/wmt25-genmt-humeval.jsonl
+```
+and parsed as:
 ```python
 import json
 with open("wmt25-genmt-humeval.jsonl", "r") as f:
@@ -54,6 +58,12 @@ Each line corresponds to one source segment. Each line is a dictionary with the 
   # segment/document identifier with the described sturcture (separated by _#_)
   "doc_id": "lang1-lan2_variant#_domain_#_documentname_#_segmentid"
 }
+```
+For convenience, the `scores` contain also automatic metric scores from Metrics Shared Task 2025.
+This is not documented as it is not the focus:
+
+```bash
+wget https://github.com/wmt-conference/wmt25-general-mt/raw/refs/heads/main/data/wmt25-genmt-humeval_control.jsonl
 ```
 
 As an example, see:
