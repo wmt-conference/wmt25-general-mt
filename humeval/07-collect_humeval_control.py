@@ -95,6 +95,13 @@ data = {
     k: v for k, v in data.items() if v["scores"] != {}
 }
 
+# last minute format change
+data = [
+    line
+    for line in data.values()
+    if line["scores"] != {}
+]
+
 # save
 with open("../data/wmt25-genmt-humeval_control.jsonl", "w") as f:
     f.writelines([json.dumps(x, ensure_ascii=False) + "\n" for x in data.values()])

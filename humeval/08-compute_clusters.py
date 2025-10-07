@@ -123,17 +123,16 @@ Rank & System & Human & AutoRank & """ + " & ".join(domains) + r""" \\
         # should be aligned
         systems = {
             sys: [
-                # default to NaN but consider everything
                 # flatten out human scores and treat them as two separate segments
-                v["scores"].get(sys, {}).get(f"human{wave_i}", np.nan)
-                for wave_i in [1, 2]
+                v["scores"][sys][wave_i]["score"]
+                for wave_i in [0, 1]
                 for v in data_local
             ]
             for sys in systems
         }
         domain_names = [
             v["doc_id"].split("_#_")[1]
-            for _wave_i in [1, 2]
+            for _wave_i in [0, 1]
             for v in data_local
         ]
         # sort systems

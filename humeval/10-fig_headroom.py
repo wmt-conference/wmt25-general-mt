@@ -21,22 +21,16 @@ for lp in {x["doc_id"].split("_#_", 1)[0] for x in data}:
     
     # avg translation
     data_agg_avgtgt += [
-        x
+        x["score"]
         for line in data
         for sys_v in line["scores"].values()
-        for x in (
-            ([sys_v["human1"]] if "human1" in sys_v else []) + 
-            ([sys_v["human2"]] if "human2" in sys_v else [])
-        )
+        for x in sys_v
     ]
 
     # best translation
     data_agg_toptgt += [
         max([
-            statistics.mean(
-                ([sys_v["human1"]] if "human1" in sys_v else []) + 
-                ([sys_v["human2"]] if "human2" in sys_v else [])
-            )
+            (sys_v[0]["score"]+sys_v[1]["score"])/2
             for sys_v in line["scores"].values()
         ])
         for line in data
@@ -46,10 +40,7 @@ for lp in {x["doc_id"].split("_#_", 1)[0] for x in data}:
     sys_avg = collections.defaultdict(list)
     for line in data_local:
         for sys, sys_v in line["scores"].items():
-            sys_avg[sys] += (
-                ([sys_v["human1"]] if "human1" in sys_v else []) + 
-                ([sys_v["human2"]] if "human2" in sys_v else [])
-            )
+            sys_avg[sys] += [sys_v[0]["score"], sys_v[1]["score"]]
     sys_top = max(sys_avg.keys(), key=lambda k: statistics.mean(sys_avg[k]))
     data_agg_topsys += sys_avg[sys_top]
 

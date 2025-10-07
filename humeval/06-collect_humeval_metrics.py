@@ -1,5 +1,7 @@
 # %%
 
+raise DeprecationWarning()
+
 import csv
 import glob
 import json

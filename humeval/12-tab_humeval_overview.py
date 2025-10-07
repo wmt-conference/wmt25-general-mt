@@ -8,11 +8,9 @@ import itertools
 
 with open("../data/wmt25-genmt-humeval.jsonl", "r") as f:
     data = [json.loads(line) for line in f]
-    data = [x for x in data if x["scores"] != {}]
 
 with open("../data/wmt25-genmt-humeval_control.jsonl", "r") as f:
     data_ctrl = [json.loads(line) for line in f]
-    data_ctrl = [x for x in data_ctrl if x["scores"] != {}]
 
 # %%
 with open("../generated/humeval_overview.tex", "w") as f:
@@ -43,8 +41,7 @@ with open("../generated/humeval_overview.tex", "w") as f:
             None
             for line in data_local
             for sys_v in line["scores"].values()
-            for k in ["human1", "human2"]
-            if k in sys_v
+            for k in sys_v
         ])
         systems_total = len({
             sys
@@ -52,39 +49,34 @@ with open("../generated/humeval_overview.tex", "w") as f:
             for sys in line["scores"].keys()
         })
         major_avg = statistics.mean([
-            len([x for x in sys_v[k] if x["severity"] != "major"])
+            len([x for x in k["errors"] if x["severity"] != "major"])
             for line in data_local
             for sys_v in line["scores"].values()
-            for k in ["errors1", "errors1"]
-            if k in sys_v
+            for k in sys_v
         ])
         minor_avg = statistics.mean([
-            len([x for x in sys_v[k] if x["severity"] != "minor"])
+            len([x for x in k["errors"] if x["severity"] != "minor"])
             for line in data_local
             for sys_v in line["scores"].values()
-            for k in ["errors1", "errors1"]
-            if k in sys_v
+            for k in sys_v
         ])
         time_avg = statistics.mean([
-            sys_v[k][1] - sys_v[k][0]
+            k["times"][1] - k["times"][0]
             for line in data_local
             for sys_v in line["scores"].values()
-            for k in ["times1", "times2"]
-            if k in sys_v
+            for k in sys_v
         ])
         time_avg_srcword = statistics.mean([
-            (sys_v[k][1] - sys_v[k][0]) / len(line["src_text"].split())
+            k["times"][1] - k["times"][0] / len(line["src_text"].split())
             for line in data_local
             for sys_v in line["scores"].values()
-            for k in ["times1", "times2"]
-            if k in sys_v
+            for k in sys_v
         ])
         annotators = {
-            sys_v[k]
+            k["annotator"]
             for line in data_local
             for sys_v in line["scores"].values()
-            for k in ["annotator1", "annotator2"]
-            if k in sys_v
+            for k in sys_v
         }
         # print(list(data_local_ctrl[0]["scores"].values()))
         # print([d["annotator"] for d in data_local_ctrl[0]["scores"].values()])

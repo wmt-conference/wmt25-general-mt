@@ -73,10 +73,7 @@ with open("../generated/domain_difficulty.tex", "w") as f:
             sys_avg = collections.defaultdict(list)
             for line in data_local:
                 for sys, sys_v in line["scores"].items():
-                    sys_avg[sys] += (
-                        ([sys_v["human1"]] if "human1" in sys_v else []) +
-                        ([sys_v["human2"]] if "human2" in sys_v else [])
-                    )
+                    sys_avg[sys] += [sys_v[0]["score"], sys_v[1]["score"]]
             sys_top = max([statistics.mean(v) for v in sys_avg.values()])
             print(
                 r"\cellcolor{" +

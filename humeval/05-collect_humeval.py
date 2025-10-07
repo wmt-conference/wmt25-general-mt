@@ -153,9 +153,22 @@ for wave_i, line in data_csv:
         }
     )
 
+# last minute format change
+data = [
+    line | {"scores": {
+        sys: (
+            [{"score": sys_v["human1"], "annotator": sys_v["annotator1"], "times": sys_v["times1"], "errors": sys_v["errors1"]}] +
+            [{"score": sys_v["human2"], "annotator": sys_v["annotator2"], "times": sys_v["times2"], "errors": sys_v["errors2"]}] 
+        )
+        for sys, sys_v in line["scores"].items()
+    }}
+    for line in data.values()
+    if line["scores"] != {}
+]
+
 # save
 with open("../data/wmt25-genmt-humeval.jsonl", "w") as f:
-    f.writelines([json.dumps(x, ensure_ascii=False) + "\n" for x in data.values()])
+    f.writelines([json.dumps(x, ensure_ascii=False) + "\n" for x in data])
 
 # %%
 
