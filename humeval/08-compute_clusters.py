@@ -245,13 +245,26 @@ with open("../generated/generated_human_ranking.tex", "w") as f:
     text_base = ""
     for line in text_ext:
         if line.startswith(r"\begin{tabular}{C{8mm}L{31mm}C{9mm}C{10mm}"):
-            line = r"\begin{tabular}{C{8mm}L{31mm}C{9mm}C{10mm}}"
+            if CONSTRAINED_ONLY:
+                line = r"\begin{tabular}{>{\hspace{-2mm}}C{7mm}L{27mm}C{6mm}}"
+            else:
+                line = r"\begin{tabular}{C{8mm}L{31mm}C{9mm}C{10mm}}"
             text_base += line + "\n"
         elif line.startswith(r"\textcolor{"):
             text_base += line + "\n"
         elif line.count("&") >= 2:
-            line = "&".join(line.split("&")[:4]) + r" \\"
+            if CONSTRAINED_ONLY:
+                line = "&".join(line.split("&")[:3]) + r" \\"
+            else:
+                line = "&".join(line.split("&")[:4]) + r" \\"
             text_base += line + "\n"
+        elif CONSTRAINED_ONLY and line.startswith(r"\begin{table}"):
+            pass
+            # text_base += r"\begin{wraptable}{l}{\linewidth}\begin{table}" + "\n"
+        elif CONSTRAINED_ONLY and line.startswith(r"\end{table}"):
+            pass
+        elif CONSTRAINED_ONLY and line.startswith(r"\end{tabular}"):
+            text_base += r"\end{tabular}\vspace{4mm}\\" + "\n"
         else:
             text_base += line + "\n"
         
