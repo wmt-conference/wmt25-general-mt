@@ -8,6 +8,8 @@ import os
 import tqdm
 import utils
 
+CONSTRAINED_ONLY = False
+
 os.makedirs("../generated/", exist_ok=True)
 with open("../data/wmt25-genmt-humeval.jsonl", "r") as f:
     data = [json.loads(line) for line in f]
@@ -98,6 +100,13 @@ with open("../generated/generated_human_ranking_ext.tex", "w") as f:
 
         # take all systems
         systems = {sys for x in data_local for sys in x["scores"].keys()}
+
+        if CONSTRAINED_ONLY:
+            systems = {
+                sys
+                for sys in systems
+                if sys == "refA" or systems_metadata_humeval[langs][sys]["constrained"]
+            }
 
         if not systems:
             continue
@@ -199,15 +208,16 @@ Rank & System & Human & AutoRank & """ + " & ".join(domains) + r""" \\
             if sys_i+1 != len(systems_info) and does_cluster_end_here(sys_i+1, [x[3] for x in systems_info]):
                 print(r"\cmidrule{1-3}", file=f)
         
-        print(r"\cmidrule{1-3}", file=f)
-        print(
-            r"\textcolor{black!60}{" + f"{sys_i+2}-{sys_i+2+len(systems_metadata_humeval_not[langs])}" + r"}",
-            r"\multicolumn{2}{l}{\textcolor{black!50}{\constrained{" + f"{len(systems_metadata_humeval_not[langs])} systems not human-evaluated" + r"}}}",
-            r"\textcolor{black!50}{...}",
-            sep=" & ",
-            end="\\\\\n",
-            file=f,
-        )
+        if not CONSTRAINED_ONLY:
+            print(r"\cmidrule{1-3}", file=f)
+            print(
+                r"\textcolor{black!60}{" + f"{sys_i+2}-{sys_i+2+len(systems_metadata_humeval_not[langs])}" + r"}",
+                r"\multicolumn{2}{l}{\textcolor{black!50}{\constrained{" + f"{len(systems_metadata_humeval_not[langs])} systems not human-evaluated" + r"}}}",
+                r"\textcolor{black!50}{...}",
+                sep=" & ",
+                end="\\\\\n",
+                file=f,
+            )
 
         print(
             r"\bottomrule",
