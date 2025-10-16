@@ -13,6 +13,7 @@ LANG_TO_LONG = {
     "is": "Icelandic",
     "bho": "Bhojpuri",
     "en": "English",
+    "ko": "Korean",
 }
 
 
