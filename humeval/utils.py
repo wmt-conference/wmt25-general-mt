@@ -5,7 +5,7 @@ LANG_TO_LONG = {
     "uk": "Ukrainian",
     "ar": "Arabic (Egyptian)",
     "et": "Estonian",
-    "mas": "Masai",
+    "mas": "Maasai",
     "cs": "Czech",
     "de": "German",
     "zh": "Chinese",
