@@ -1,5 +1,5 @@
 # %%
-"""Remove YouTube sourced documents from the human evaluation files.
+"""Write copies of the human evaluation files without YouTube sourced documents.
 
 The speech domain of the WMT25 general MT human evaluation is sourced
 entirely from YouTube. Those documents carry a doc_id whose source field
@@ -10,20 +10,29 @@ is vid_<video_id>, for example
 and no vid_ document appears outside the speech domain, so dropping them
 removes the speech domain and leaves every other domain untouched.
 
-Both human evaluation files are filtered in place. Kept lines are written
-back exactly as they were read, so the only change is whole records going
-away. Re-running the script is a no-op.
+The inputs are never modified. For each one a sibling file with a
+noyoutube suffix is written, so
 
-Run from the humeval directory. Set DRY_RUN to True to report what would
-be removed without touching anything.
+    wmt25-genmt-humeval.jsonl
+    wmt25-genmt-humeval_control.jsonl
+
+produce
+
+    wmt25-genmt-humeval-noyoutube.jsonl
+    wmt25-genmt-humeval_control-noyoutube.jsonl
+
+Kept lines are copied as raw bytes rather than re-serialized, so records
+that survive are identical to their originals.
+
+Run from the humeval directory.
 """
 
 import json
 import os
 
-DRY_RUN = False
+SUFFIX = "-noyoutube"
 
-TARGETS = [
+SOURCES = [
     "../data/wmt25-genmt-humeval.jsonl",
     "../data/wmt25-genmt-humeval_control.jsonl",
 ]
@@ -40,10 +49,16 @@ def domain(doc_id):
     return parts[1] if len(parts) > 1 else ""
 
 
+def filtered_name(fname):
+    base, ext = os.path.splitext(fname)
+    return base + SUFFIX + ext
+
+
 def filter_file(fname):
-    # read and write bytes so that kept lines survive untouched, and stage
-    # through a temporary file so an interrupted run cannot truncate the data
-    tmp = fname + ".tmp"
+    # write through a temporary file so an interrupted run leaves no
+    # half-written output behind for the next step to pick up
+    fname_out = filtered_name(fname)
+    tmp = fname_out + ".tmp"
     kept = 0
     dropped = {}
     with open(fname, "rb") as f_in, open(tmp, "wb") as f_out:
@@ -54,18 +69,15 @@ def filter_file(fname):
             else:
                 f_out.write(line)
                 kept += 1
-    if DRY_RUN:
-        os.remove(tmp)
-    else:
-        os.replace(tmp, fname)
-    return kept, dropped
+    os.replace(tmp, fname_out)
+    return fname_out, kept, dropped
 
 
 # %%
-for fname in TARGETS:
-    kept, dropped = filter_file(fname)
+for fname in SOURCES:
+    fname_out, kept, dropped = filter_file(fname)
     total = kept + sum(dropped.values())
-    print(fname)
+    print(f"{fname} -> {fname_out}")
     print(f"  {total} documents, kept {kept}, removed {sum(dropped.values())}")
     for dom, count in sorted(dropped.items()):
         print(f"    {count} from {dom}")
