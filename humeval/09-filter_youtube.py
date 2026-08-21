@@ -1,4 +1,3 @@
-# %%
 """Write copies of the human evaluation files without YouTube sourced documents.
 
 The speech domain of the WMT25 general MT human evaluation is sourced
