@@ -660,3 +660,4 @@ wget https://github.com/wmt-conference/wmt25-general-mt/raw/refs/heads/main/data
 ```
 
 The video and screenshot assets are hosted at [data.statmt.org/wmt25/general-mt/wmt25_genmt_assets.zip](https://data.statmt.org/wmt25/general-mt/wmt25_genmt_assets.zip) and items optionally have `video` or `screenshot` keys which point to the path inside of this archive.
+MQM annotations were done separatedly and are [hosted here](https://data.statmt.org/wmt25/metrics-qetask2/).
